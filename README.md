@@ -1,7 +1,7 @@
 # Datio ML
 
 Machine Learning Server for predictive analysis.
-Initially was part of SiQueries QuickSense (a CloudBI), refactored and will be release as an open source project.
+Initially was part of SiQueries QuickSense (Cloud BI), refactored and will be release as an open source project.
 
 Built-On:
     * Spark MLLib
