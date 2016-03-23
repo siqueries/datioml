@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="SBT: org.glassfish.jersey.ext:jersey-bean-validation:2.22.1:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.glassfish.jersey.ext/jersey-bean-validation/jars/jersey-bean-validation-2.22.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.glassfish.jersey.ext/jersey-bean-validation/docs/jersey-bean-validation-2.22.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/org.glassfish.jersey.ext/jersey-bean-validation/srcs/jersey-bean-validation-2.22.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

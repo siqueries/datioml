@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="SBT: io.dropwizard:dropwizard-servlets:0.9.2:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/io.dropwizard/dropwizard-servlets/jars/dropwizard-servlets-0.9.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.ivy2/cache/io.dropwizard/dropwizard-servlets/docs/dropwizard-servlets-0.9.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/io.dropwizard/dropwizard-servlets/srcs/dropwizard-servlets-0.9.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

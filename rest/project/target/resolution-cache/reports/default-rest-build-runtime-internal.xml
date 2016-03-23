@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="default"
+		module="rest-build"
+		revision="0.1-SNAPSHOT"
+		extra-scalaVersion="2.10"
+		extra-sbtVersion="0.13"
+		conf="runtime-internal"
+		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
+		date="20160323134642"/>
+	<dependencies>
+		<module organisation="com.eed3si9n" name="sbt-assembly">
+			<revision name="0.11.2" status="release" pubdate="20140319165202" resolver="sbt-chain" artresolver="sbt-chain" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="9">
+				<license name="MIT License" url="https://github.com/sbt/sbt-assembly/blob/master/LICENSE"/>
+				<metadata-artifact status="no" details="" size="1564" time="0" location="/Users/ebottabi/.ivy2/cache/scala_2.10/sbt_0.13/com.eed3si9n/sbt-assembly/ivy-0.11.2.xml" searched="false" origin-is-local="false" origin-location="http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.11.2/ivys/ivy.xml"/>
+				<caller organisation="default" name="rest-build" conf="compile, runtime-internal, runtime, optional" rev="0.11.2" rev-constraint-default="0.11.2" rev-constraint-dynamic="0.11.2" callerrev="0.1-SNAPSHOT" extra-scalaVersion="2.10" extra-sbtVersion="0.13"/>
+				<artifacts>
+					<artifact name="sbt-assembly" type="jar" ext="jar" status="no" details="" size="153282" time="0" location="/Users/ebottabi/.ivy2/cache/scala_2.10/sbt_0.13/com.eed3si9n/sbt-assembly/jars/sbt-assembly-0.11.2.jar">
+						<origin-location is-local="false" location="http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.eed3si9n/sbt-assembly/scala_2.10/sbt_0.13/0.11.2/jars/sbt-assembly.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-compiler">
+			<revision name="2.10.4" status="release" pubdate="20151024041001" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="4">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html    "/>
+				<metadata-artifact status="no" details="" size="2809" time="0" location="/Users/ebottabi/.ivy2/cache/org.scala-lang/scala-compiler/ivy-2.10.4.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/scala-lang/scala-compiler/2.10.4/scala-compiler-2.10.4.pom"/>
+				<caller organisation="org.fusesource.scalate" name="scalate-core_2.10" conf="compile, runtime" rev="2.10.4" rev-constraint-default="2.10.4" rev-constraint-dynamic="2.10.0" callerrev="1.6.1"/>
+				<artifacts>
+					<artifact name="scala-compiler" type="jar" ext="jar" status="no" details="" size="14445780" time="0" location="/Users/ebottabi/.ivy2/cache/org.scala-lang/scala-compiler/jars/scala-compiler-2.10.4.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.10.4/scala-compiler-2.10.4.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-reflect">
+			<revision name="2.10.4" status="release" pubdate="20151024041002" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.10.4/" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="5">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html    "/>
+				<metadata-artifact status="no" details="" size="2647" time="0" location="/Users/ebottabi/.ivy2/cache/org.scala-lang/scala-reflect/ivy-2.10.4.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/scala-lang/scala-reflect/2.10.4/scala-reflect-2.10.4.pom"/>
+				<caller organisation="org.scala-lang" name="scala-compiler" conf="compile, runtime" rev="2.10.4" rev-constraint-default="2.10.4" rev-constraint-dynamic="2.10.4" callerrev="2.10.4"/>
+				<artifacts>
+					<artifact name="scala-reflect" type="jar" ext="jar" status="no" details="" size="3203471" time="0" location="/Users/ebottabi/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.10.4.jar">
+						<origin-location is-local="false" location="UNKNOWN"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-library">
+			<revision name="2.10.4" status="release" pubdate="20151024040930" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.10.4/" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), master(compile), runtime, compile(*), master" position="3">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html          "/>
+				<metadata-artifact status="no" details="" size="2487" time="0" location="/Users/ebottabi/.ivy2/cache/org.scala-lang/scala-library/ivy-2.10.4.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/org/scala-lang/scala-library/2.10.4/scala-library-2.10.4.pom"/>
+				<caller organisation="org.scala-lang" name="scala-compiler" conf="compile, runtime" rev="2.10.4" rev-constraint-default="2.10.4" rev-constraint-dynamic="2.10.4" callerrev="2.10.4"/>
+				<caller organisation="org.scala-lang" name="scala-reflect" conf="compile, runtime" rev="2.10.4" rev-constraint-default="2.10.4" rev-constraint-dynamic="2.10.4" callerrev="2.10.4"/>
+				<caller organisation="org.fusesource.scalate" name="scalate-util_2.10" conf="compile, runtime" rev="2.10.4" rev-constraint-default="2.10.4" rev-constraint-dynamic="2.10.0" callerrev="1.6.1"/>
+				<artifacts>
+					<artifact name="scala-library" type="jar" ext="jar" status="no" details="" size="7126372" time="0" location="/Users/ebottabi/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.4.jar">
+						<origin-location is-local="false" location="UNKNOWN"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.xerial.sbt" name="sbt-pack">
+			<revision name="0.5.1" status="release" pubdate="20140224073824" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://xerial.org/" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="0">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3413" time="0" location="/Users/ebottabi/.ivy2/cache/scala_2.10/sbt_0.13/org.xerial.sbt/sbt-pack/ivy-0.5.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/xerial/sbt/sbt-pack_2.10_0.13/0.5.1/sbt-pack-0.5.1.pom"/>
+				<caller organisation="default" name="rest-build" conf="compile, runtime-internal, runtime, optional" rev="0.5.1" rev-constraint-default="0.5.1" rev-constraint-dynamic="0.5.1" callerrev="0.1-SNAPSHOT" extra-scalaVersion="2.10" extra-sbtVersion="0.13"/>
+				<artifacts>
+					<artifact name="sbt-pack" type="jar" ext="jar" status="successful" details="" size="124951" time="2675" location="/Users/ebottabi/.ivy2/cache/scala_2.10/sbt_0.13/org.xerial.sbt/sbt-pack/jars/sbt-pack-0.5.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/xerial/sbt/sbt-pack_2.10_0.13/0.5.1/sbt-pack-0.5.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.slf4j" name="slf4j-nop">
+			<revision name="1.7.5" status="release" pubdate="20130325215234" resolver="public" artresolver="public" homepage="http://www.slf4j.org" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="7">
+				<metadata-artifact status="successful" details="" size="1480" time="1042" location="/Users/ebottabi/.ivy2/cache/org.slf4j/slf4j-nop/ivy-1.7.5.xml" searched="true" original-local-location="/Users/ebottabi/.ivy2/cache/org.slf4j/slf4j-nop/ivy-1.7.5.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/slf4j-nop/1.7.5/slf4j-nop-1.7.5.pom"/>
+				<caller organisation="org.xerial.sbt" name="sbt-pack" conf="default, compile, runtime, master" rev="1.7.5" rev-constraint-default="1.7.5" rev-constraint-dynamic="1.7.5" callerrev="0.5.1"/>
+				<artifacts>
+					<artifact name="slf4j-nop" type="jar" ext="jar" status="successful" details="" size="4091" time="1207" location="/Users/ebottabi/.ivy2/cache/org.slf4j/slf4j-nop/jars/slf4j-nop-1.7.5.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/slf4j/slf4j-nop/1.7.5/slf4j-nop-1.7.5.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.slf4j" name="slf4j-api">
+			<revision name="1.7.5" status="release" pubdate="20130325205215" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="8">
+				<metadata-artifact status="no" details="" size="4469" time="0" location="/Users/ebottabi/.ivy2/cache/org.slf4j/slf4j-api/ivy-1.7.5.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.pom"/>
+				<caller organisation="org.slf4j" name="slf4j-nop" conf="compile, runtime" rev="1.7.5" rev-constraint-default="1.7.5" rev-constraint-dynamic="1.7.5" callerrev="1.7.5"/>
+				<caller organisation="org.fusesource.scalate" name="scalate-util_2.10" conf="compile, runtime" rev="1.6.1" rev-constraint-default="1.6.1" rev-constraint-dynamic="1.6.1" callerrev="1.6.1"/>
+				<caller organisation="org.fusesource.scalate" name="scalate-core_2.10" conf="compile, runtime" rev="1.6.1" rev-constraint-default="1.6.1" rev-constraint-dynamic="1.6.1" callerrev="1.6.1"/>
+				<artifacts>
+					<artifact name="slf4j-api" type="jar" ext="jar" status="no" details="" size="26084" time="0" location="/Users/ebottabi/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.5.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+			<revision name="1.6.1" status="release" pubdate="20100705212924" resolver="public" artresolver="public" evicted="latest-revision" evicted-reason="" homepage="http://www.slf4j.org" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="-1">
+				<metadata-artifact status="successful" details="" size="2994" time="763" location="/Users/ebottabi/.ivy2/cache/org.slf4j/slf4j-api/ivy-1.6.1.xml" searched="true" original-local-location="/Users/ebottabi/.ivy2/cache/org.slf4j/slf4j-api/ivy-1.6.1.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.pom"/>
+				<evicted-by rev="1.7.5"/>
+				<caller organisation="org.fusesource.scalate" name="scalate-util_2.10" conf="compile, runtime" rev="1.6.1" rev-constraint-default="1.6.1" rev-constraint-dynamic="1.6.1" callerrev="1.6.1"/>
+				<caller organisation="org.fusesource.scalate" name="scalate-core_2.10" conf="compile, runtime" rev="1.6.1" rev-constraint-default="1.6.1" rev-constraint-dynamic="1.6.1" callerrev="1.6.1"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.kamranzafar" name="jtar">
+			<revision name="2.2" status="release" pubdate="20121106201219" resolver="public" artresolver="public" homepage="" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="6">
+				<license name="Apache Software License" url="${basedir}/LICENSE.txt
+            "/>
+				<metadata-artifact status="successful" details="" size="3075" time="1039" location="/Users/ebottabi/.ivy2/cache/org.kamranzafar/jtar/ivy-2.2.xml" searched="true" original-local-location="/Users/ebottabi/.ivy2/cache/org.kamranzafar/jtar/ivy-2.2.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/kamranzafar/jtar/2.2/jtar-2.2.pom"/>
+				<caller organisation="org.xerial.sbt" name="sbt-pack" conf="default, compile, runtime, master" rev="2.2" rev-constraint-default="2.2" rev-constraint-dynamic="2.2" callerrev="0.5.1"/>
+				<artifacts>
+					<artifact name="jtar" type="jar" ext="jar" status="successful" details="" size="12999" time="2150" location="/Users/ebottabi/.ivy2/cache/org.kamranzafar/jtar/jars/jtar-2.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/kamranzafar/jtar/2.2/jtar-2.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.fusesource.scalate" name="scalate-core_2.10">
+			<revision name="1.6.1" status="release" pubdate="20121229164120" resolver="public" artresolver="public" homepage="" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="1">
+				<metadata-artifact status="successful" details="" size="6173" time="1874" location="/Users/ebottabi/.ivy2/cache/org.fusesource.scalate/scalate-core_2.10/ivy-1.6.1.xml" searched="true" original-local-location="/Users/ebottabi/.ivy2/cache/org.fusesource.scalate/scalate-core_2.10/ivy-1.6.1.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/fusesource/scalate/scalate-core_2.10/1.6.1/scalate-core_2.10-1.6.1.pom"/>
+				<caller organisation="org.xerial.sbt" name="sbt-pack" conf="default, compile, runtime, master" rev="1.6.1" rev-constraint-default="1.6.1" rev-constraint-dynamic="1.6.1" callerrev="0.5.1"/>
+				<artifacts>
+					<artifact name="scalate-core_2.10" type="bundle" ext="jar" status="successful" details="" size="1979885" time="8377" location="/Users/ebottabi/.ivy2/cache/org.fusesource.scalate/scalate-core_2.10/bundles/scalate-core_2.10-1.6.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/fusesource/scalate/scalate-core_2.10/1.6.1/scalate-core_2.10-1.6.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.fusesource.scalate" name="scalate-util_2.10">
+			<revision name="1.6.1" status="release" pubdate="20121229163654" resolver="public" artresolver="public" homepage="" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="2">
+				<metadata-artifact status="successful" details="" size="2519" time="804" location="/Users/ebottabi/.ivy2/cache/org.fusesource.scalate/scalate-util_2.10/ivy-1.6.1.xml" searched="true" original-local-location="/Users/ebottabi/.ivy2/cache/org.fusesource.scalate/scalate-util_2.10/ivy-1.6.1.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/fusesource/scalate/scalate-util_2.10/1.6.1/scalate-util_2.10-1.6.1.pom"/>
+				<caller organisation="org.fusesource.scalate" name="scalate-core_2.10" conf="compile, runtime" rev="1.6.1" rev-constraint-default="1.6.1" rev-constraint-dynamic="1.6.1" callerrev="1.6.1"/>
+				<artifacts>
+					<artifact name="scalate-util_2.10" type="bundle" ext="jar" status="successful" details="" size="295250" time="2071" location="/Users/ebottabi/.ivy2/cache/org.fusesource.scalate/scalate-util_2.10/bundles/scalate-util_2.10-1.6.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/fusesource/scalate/scalate-util_2.10/1.6.1/scalate-util_2.10-1.6.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+	</dependencies>
+</ivy-report>
