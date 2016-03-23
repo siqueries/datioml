@@ -6,7 +6,7 @@ Initially was part of SiQueries QuickSense (a CloudBI), refactored and will be r
 Built-On:
     * Spark MLLib
     * Redis
-    * MongoDB
+    * MySQL
     * Gearman
     * RabbitMQ
     * Akka
