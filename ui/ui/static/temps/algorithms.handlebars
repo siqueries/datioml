@@ -1,0 +1,103 @@
+<style>
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+    .form-atfooter {
+        margin-top: 15px;
+        padding: 14px 0 15px;
+        /* text-align: right; */
+        border-top: 1px solid #ddd;
+    }
+</style>
+
+
+
+<div class="row" id="algorithms">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div style="margin: 0 auto; margin-top:40px;" class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">Step 2: Algorithms.</h4>
+            </div>
+            <div class="panel-body">
+               
+                    <div class="form-group">
+                        <label for="name" class="control-label">Algorithm name</label>
+                        <div class="input-control text">
+                            <select id="algorithm-name" name="algorithm-name" class="form-control">
+                                <optgroup label="Numerical Prediction">
+                                    <option value="LINEAR_REGRESSION">LINEAR REGRESSION</option>
+                                    <option value="RIDGE_REGRESSION">RIDGE REGRESSION</option>
+                                    <option value="LASSO_REGRESSION">LASSO REGRESSION</option>
+                                    <option value="RANDOM_FOREST_REGRESSION">RANDOM FOREST REGRESSION</option>
+                                </optgroup>                        
+                                <optgroup label="Binary Classification">
+                                    <option value="LOGISTIC_REGRESSION">LOGISTIC REGRESSION SGD</option>
+                                    <option value="SVM">SVM</option>
+                                </optgroup>
+                                <optgroup label="Multiclass Classification">
+                                <option value="LOGISTIC_REGRESSION_LBFGS">LOGISTIC REGRESSION L-BFGS</option>
+                                    <option value="DECISION_TREE">DECISION TREE</option>
+                                    <option value="RANDOM_FOREST_CLASSIFICATION">RANDOM FOREST CLASSIFICATION</option>
+                                    <option value="NAIVE_BAYES">NAIVE BAYES</option>
+                                </optgroup>                        
+                                <optgroup label="Clustering">
+                                    <option value="K_MEANS">K-MEANS</option>
+                                </optgroup>
+                                <optgroup label="Anomaly Detection">
+                                    <option value="K_MEANS_ANOMALY_DETECTION_WITH_UNLABELED_DATA">K-MEANS WITH UNLABELED DATA</option>
+                                    <option value="K_MEANS_ANOMALY_DETECTION_WITH_LABELED_DATA">K-MEANS WITH LABELED DATA</option>
+                                </optgroup>
+                    <optgroup label="Deep Learning">
+                                    <option value="STACKED_AUTOENCODERS">STACKED AUTOENCODERS</option>
+                                </optgroup>
+                    <optgroup label="Recommendation">
+                                    <option value="COLLABORATIVE_FILTERING">COLLABORATIVE FILTERING (Explicit Data)</option>
+                                    <option value="COLLABORATIVE_FILTERING_IMPLICIT">COLLABORATIVE FILTERING (Implicit Feedback Data)</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="target-variable" class="control-label">Response variable</label>
+                        <select class="form-control" id="target-variable" name="target-variable">
+                            {{#each models}}
+                                <option value="{{attributes.name}}" data-index="{{attributes.index}}">{{attributes.name}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="training-fraction" class="control-label">Train data fraction</label>
+                        <input type="text" id="training-fraction" name="training-fraction" value="0.7" class="form-control">
+                    </div>
+
+                    <div class="form-atfooter">
+                        <button name="create" type="submit" id="submit-btn" class="btn btn-primary"><i class="fa fa-fw fa-bolt"></i> Proceed to Parameters</button>
+                        <a href="javascript:void(0);" id="back-btn" class="btn btn-default"><i class="fa fa-fw fa-reply"></i>
+                Back</a>
+
+                        <span id="notice" class="btn btn-link"></span>
+                    </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+

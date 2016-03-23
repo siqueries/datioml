@@ -1,0 +1,142 @@
+<div class="subnav-report" id="subnav-report">
+   <div class="container-fluid">
+      <ul class="report-menu-list-rt">
+        <li>
+            <a href="">{{ name }} - {{type}}</a>
+        </li>
+      </ul>
+      <ul class="report-menu-list">
+         <li>
+             <a href="/project/{{id}}/datasets"><span class="glyphicon glyphicon-cloud-upload"></span> DATASETS</a>
+         </li>
+         <li>
+             <a href="/project/{{id}}/analysis"><span class="glyphicon glyphicon-sort"></span> ANALYSIS</a>
+         </li>
+         <li>
+            <a href="javascript:void(0);"><span class="glyphicon glyphicon-play"></span> JOBS</a>
+         </li>
+         <li>
+             <a class="settings-link" href="javascript:void(0);">
+                 <span class="glyphicon glyphicon-cog"></span> SETTINGS
+             </a>
+         </li>
+
+
+      </ul>
+   </div>
+</div>
+<div class="page-header" style="margin-top:15px; border-bottom:none;">
+
+</div>
+
+<div class="row">
+<div class="col-md-2"></div>
+    <div class="col-md-8">
+
+        <div class="panel panel-default" style="">
+            <div class="panel-body">
+                <h4>{{name}}</h4>
+                <p>The project was created by {{ user}} on {{ created_at}}</p>
+                <p>
+                    <ul>
+                        <li>
+                            <a href="/project/{{id}}/analysis">Analysis</a> where you can prepare, visualize, audit and create Machine Learning models
+                        </li>
+                        <li>
+                            <a href="/project/{{id}}/datasets">Datasets</a> where you import and explore your data
+                        </li>
+                        <li>
+                            <a href="/project/{{id}}/models">Models</a> where you try out your created models and export them into PMML to use in your apps.
+                        </li>
+                    </ul>
+                </p>
+
+
+                        <div class="col-md-4">
+
+                            <div class="panel panel-default">
+                                <a href="/project/{{id}}/analysis">
+                                    <div class="panel-body">
+                                        <h5>ANALYSIS: (<span id='analysis-counter'>0</span>)</h5>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4">
+
+                            <div class="panel panel-default">
+                                <a href="/project/{{id}}/datasets">
+                                    <div class="panel-body">
+                                        <h5>DATASETS: (<span id='datasets-counter'>0</span>)</h5>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4">
+
+                            <div class="panel panel-default">
+                                <a href="/project/{{id}}/datasets">
+                                    <div class="panel-body">
+                                        <h5>MODELS: (<span id='datasets-counter'>0</span>)</h5>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="col-md-4" style="display:none;">
+
+                            <div class="panel panel-default">
+                                <a href="/project/{{id}}/analysis">
+                                    <div class="panel-body">
+                                        <h5>INSIGHTS: (<span id='analysis-counter'>0</span>)</h5>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4" style="display:none;">
+
+                            <div class="panel panel-default">
+                                <a href="/project/{{id}}/datasets">
+                                    <div class="panel-body">
+                                        <h5>DATASETS: (<span id='datasets-counter'>0</span>)</h5>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4" style="display:none;">
+
+                            <div class="panel panel-default">
+                                <a href="/project/{{id}}/datasets">
+                                    <div class="panel-body">
+                                        <h5>MODELS: (<span id='datasets-counter'>0</span>)</h5>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+
+
+            </div>
+        </div>
+
+	</div>
+
+
+
+    
+
+</div>
+<script>
+
+</script>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="SBT: com.twitter:scrooge-core_2.11:3.20.0:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.twitter/scrooge-core_2.11/jars/scrooge-core_2.11-3.20.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.twitter/scrooge-core_2.11/docs/scrooge-core_2.11-3.20.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.twitter/scrooge-core_2.11/srcs/scrooge-core_2.11-3.20.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

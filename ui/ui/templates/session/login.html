@@ -1,0 +1,60 @@
+{% extends "layouts/session.html" %}
+{% block body %}
+
+
+    <div class="row login-container">
+        <div class="col-md-3 col-md-offset-1">
+            <a href="/" title="Go to Home" style="display : none ;">
+                <img title="Go to Home" width="164" height="160" src="/static/images/logo.png" style="margin-top : 30 px ; margin-left : 170 px ;">
+            </a>
+            <br><br><br>
+        </div>
+        <div class="col-md-6 " style="margin-top:-65px;">
+            <h4><a href="/" title="Go to Home">
+                <img title="Go to Home" width="144" height="60" src="/static/images/logo_black.png"></a></h4>
+
+
+            <form method="POST" action="{{url_for('login')}}">
+                {{ form.csrf_token }}
+              
+                <input type="hidden" name="next" value="{{next}}"/>
+                <div class="row">
+                    <div class="form-group col-md-10">
+                        <label class="form-label">Email Address</label>
+                        <div class="controls">
+                            <div class="input-with-icon  right">
+                                <i class=""></i>
+                                <input type="text" name="email" id="email" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-10">
+                        <label class="form-label">Password</label>
+                        <span class="help"></span>
+                        <div class="controls">
+                            <div class="input-with-icon  right">
+                                <i class=""></i>
+                                <input type="password" name="password" id="password" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="control-group  col-md-10">
+                        <div class="checkbox checkbox check-success"> <a href="/forgot">Forgot password?</a>&nbsp;&nbsp;
+                            <input type="checkbox" id="checkbox1" name="remember_me" checked="checked">
+                            <label for="checkbox1">Keep me reminded </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-10">
+                        <button class="btn btn-primary btn-cons" type="submit">Login</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

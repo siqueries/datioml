@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:e="http://ant.apache.org/ivy/extra">
+	<info organisation="default"
+		module="mlengine$sbt_2.10"
+		revision="1.0"
+		status="integration"
+		publication="20160319012817"
+	/>
+	<configurations>
+		<conf name="default" visibility="public"/>
+	</configurations>
+	<publications>
+	</publications>
+	<dependencies>
+		<dependency org="org.scala-sbt" name="sbt" rev="0.13.8" conf="default->default(compile)"/>
+		<dependency org="com.eed3si9n" name="sbt-assembly" rev="0.12.0" conf="default->default(compile)" scalaVersion="2.10" sbtVersion="0.13"/>
+		<dependency org="com.twitter" name="scrooge-sbt-plugin" rev="3.14.1" conf="default->default(compile)" scalaVersion="2.10" sbtVersion="0.13"/>
+		<dependency org="com.twitter" name="scrooge-generator_2.10" rev="3.14.1" conf="default->default(compile)"/>
+		<dependency org="org.scala-lang" name="scala-library" rev="2.10.4" conf="default->default(compile)" info.apiURL="http://www.scala-lang.org/api/2.10.4/"/>
+		<dependency org="com.twitter" name="util-core_2.10" rev="6.15.0" conf="default->default(compile)"/>
+		<dependency org="com.twitter" name="util-codec_2.10" rev="6.15.0" conf="default->default(compile)"/>
+		<dependency org="org.apache.thrift" name="libthrift" rev="0.8.0" conf="default->default(compile)"/>
+		<dependency org="com.github.scopt" name="scopt_2.10" rev="2.1.0" conf="default->default(compile)"/>
+		<dependency org="com.github.spullara.mustache.java" name="compiler" rev="0.8.12" conf="default->default(compile)"/>
+		<dependency org="com.google.code.findbugs" name="jsr305" rev="1.3.9" conf="default->default(compile)"/>
+		<dependency org="commons-cli" name="commons-cli" rev="1.2" conf="default->default(compile)"/>
+		<dependency org="com.typesafe.sbt" name="sbt-scalariform" rev="1.3.0" conf="default->default(compile)" scalaVersion="2.10" sbtVersion="0.13"/>
+		<dependency org="org.scalariform" name="scalariform_2.10" rev="0.1.4" conf="default->default(compile)"/>
+		<dependency org="com.typesafe.sbt" name="sbt-native-packager" rev="1.0.6" conf="default->default(compile)" scalaVersion="2.10" sbtVersion="0.13"/>
+		<dependency org="com.spotify" name="docker-client" rev="3.2.1" conf="default->default(compile)"/>
+		<dependency org="org.slf4j" name="slf4j-api" rev="1.7.12" conf="default->default(compile)"/>
+		<dependency org="com.google.guava" name="guava" rev="18.0" conf="default->default(compile)"/>
+		<dependency org="com.fasterxml.jackson.jaxrs" name="jackson-jaxrs-json-provider" rev="2.6.0" conf="default->default(compile)"/>
+		<dependency org="com.fasterxml.jackson.jaxrs" name="jackson-jaxrs-base" rev="2.6.0" conf="default->default(compile)"/>
+		<dependency org="com.fasterxml.jackson.core" name="jackson-core" rev="2.6.0" conf="default->default(compile)"/>
+		<dependency org="com.fasterxml.jackson.core" name="jackson-databind" rev="2.6.0" conf="default->default(compile)"/>
+		<dependency org="com.fasterxml.jackson.core" name="jackson-annotations" rev="2.6.0" conf="default->default(compile)"/>
+		<dependency org="com.fasterxml.jackson.module" name="jackson-module-jaxb-annotations" rev="2.6.0" conf="default->default(compile)"/>
+		<dependency org="com.fasterxml.jackson.datatype" name="jackson-datatype-guava" rev="2.6.0" conf="default->default(compile)"/>
+		<dependency org="org.glassfish.jersey.core" name="jersey-client" rev="2.19" conf="default->default(compile)"/>
+		<dependency org="javax.ws.rs" name="javax.ws.rs-api" rev="2.0.1" conf="default->default(compile)"/>
+		<dependency org="org.glassfish.jersey.core" name="jersey-common" rev="2.19" conf="default->default(compile)"/>
+		<dependency org="javax.annotation" name="javax.annotation-api" rev="1.2" conf="default->default(compile)"/>
+		<dependency org="org.glassfish.jersey.bundles.repackaged" name="jersey-guava" rev="2.19" conf="default->default(compile)"/>
+		<dependency org="org.glassfish.hk2" name="hk2-api" rev="2.4.0-b25" conf="default->default(compile)"/>
+		<dependency org="org.glassfish.hk2" name="hk2-utils" rev="2.4.0-b25" conf="default->default(compile)"/>
+		<dependency org="org.glassfish.hk2.external" name="aopalliance-repackaged" rev="2.4.0-b25" conf="default->default(compile)"/>
+		<dependency org="org.glassfish.hk2.external" name="javax.inject" rev="2.4.0-b25" conf="default->default(compile)"/>
+		<dependency org="org.glassfish.hk2" name="hk2-locator" rev="2.4.0-b25" conf="default->default(compile)"/>
+		<dependency org="org.javassist" name="javassist" rev="3.18.1-GA" conf="default->default(compile)"/>
+		<dependency org="org.glassfish.hk2" name="osgi-resource-locator" rev="1.0.1" conf="default->default(compile)"/>
+		<dependency org="org.glassfish.jersey.connectors" name="jersey-apache-connector" rev="2.19" conf="default->default(compile)"/>
+		<dependency org="org.apache.httpcomponents" name="httpcore" rev="4.4.1" conf="default->default(compile)"/>
+		<dependency org="commons-codec" name="commons-codec" rev="1.9" conf="default->default(compile)"/>
+		<dependency org="org.glassfish.jersey.media" name="jersey-media-json-jackson" rev="2.19" conf="default->default(compile)"/>
+		<dependency org="org.glassfish.jersey.ext" name="jersey-entity-filtering" rev="2.19" conf="default->default(compile)"/>
+		<dependency org="org.apache.commons" name="commons-compress" rev="1.9" conf="default->default(compile)"/>
+		<dependency org="org.apache.httpcomponents" name="httpclient" rev="4.5" conf="default->default(compile)"/>
+		<dependency org="commons-logging" name="commons-logging" rev="1.2" conf="default->default(compile)"/>
+		<dependency org="com.github.jnr" name="jnr-unixsocket" rev="0.8" conf="default->default(compile)"/>
+		<dependency org="com.github.jnr" name="jnr-ffi" rev="2.0.3" conf="default->default(compile)"/>
+		<dependency org="com.github.jnr" name="jffi" rev="1.2.9" conf="default->default(compile)"/>
+		<dependency org="org.ow2.asm" name="asm" rev="5.0.3" conf="default->default(compile)"/>
+		<dependency org="org.ow2.asm" name="asm-commons" rev="5.0.3" conf="default->default(compile)"/>
+		<dependency org="org.ow2.asm" name="asm-tree" rev="5.0.3" conf="default->default(compile)"/>
+		<dependency org="org.ow2.asm" name="asm-analysis" rev="5.0.3" conf="default->default(compile)"/>
+		<dependency org="org.ow2.asm" name="asm-util" rev="5.0.3" conf="default->default(compile)"/>
+		<dependency org="com.github.jnr" name="jnr-x86asm" rev="1.0.2" conf="default->default(compile)"/>
+		<dependency org="com.github.jnr" name="jnr-constants" rev="0.8.7" conf="default->default(compile)"/>
+		<dependency org="com.github.jnr" name="jnr-enxio" rev="0.9" conf="default->default(compile)"/>
+		<dependency org="com.github.jnr" name="jnr-posix" rev="3.0.12" conf="default->default(compile)"/>
+		<dependency org="commons-lang" name="commons-lang" rev="2.6" conf="default->default(compile)"/>
+		<dependency org="org.bouncycastle" name="bcpkix-jdk15on" rev="1.52" conf="default->default(compile)"/>
+		<dependency org="org.bouncycastle" name="bcprov-jdk15on" rev="1.52" conf="default->default(compile)"/>
+		<dependency org="javax.inject" name="javax.inject" rev="1" conf="default->default(compile)"/>
+		<dependency org="org.vafer" name="jdeb" rev="1.3" conf="default->default(compile)"/>
+		<dependency org="commons-io" name="commons-io" rev="2.4" conf="default->default(compile)"/>
+		<dependency org="org.apache.maven" name="maven-core" rev="3.2.2" conf="default->default(compile)"/>
+		<dependency org="org.apache.maven" name="maven-model" rev="3.2.2" conf="default->default(compile)"/>
+		<dependency org="org.codehaus.plexus" name="plexus-utils" rev="3.0.17" conf="default->default(compile)"/>
+		<dependency org="org.apache.maven" name="maven-settings" rev="3.2.2" conf="default->default(compile)"/>
+		<dependency org="org.apache.maven" name="maven-settings-builder" rev="3.2.2" conf="default->default(compile)"/>
+		<dependency org="org.codehaus.plexus" name="plexus-interpolation" rev="1.19" conf="default->default(compile)"/>
+		<dependency org="org.codehaus.plexus" name="plexus-component-annotations" rev="1.5.5" conf="default->default(compile)"/>
+		<dependency org="org.sonatype.plexus" name="plexus-sec-dispatcher" rev="1.3" conf="default->default(compile)"/>
+		<dependency org="org.sonatype.plexus" name="plexus-cipher" rev="1.7" conf="default->default(compile)"/>
+		<dependency org="org.apache.maven" name="maven-repository-metadata" rev="3.2.2" conf="default->default(compile)"/>
+		<dependency org="org.apache.maven" name="maven-artifact" rev="3.2.2" conf="default->default(compile)"/>
+		<dependency org="org.apache.maven" name="maven-plugin-api" rev="3.2.2" conf="default->default(compile)"/>
+		<dependency org="org.eclipse.sisu" name="org.eclipse.sisu.plexus" rev="0.0.0.M5" conf="default->default(compile)"/>
+		<dependency org="javax.enterprise" name="cdi-api" rev="1.0" conf="default->default(compile)"/>
+		<dependency org="javax.annotation" name="jsr250-api" rev="1.0" conf="default->default(compile)"/>
+		<dependency org="org.sonatype.sisu" name="sisu-guice" rev="3.1.3" conf="default->default(compile)"/>
+		<dependency org="aopalliance" name="aopalliance" rev="1.0" conf="default->default(compile)"/>
+		<dependency org="org.eclipse.sisu" name="org.eclipse.sisu.inject" rev="0.0.0.M5" conf="default->default(compile)"/>
+		<dependency org="org.codehaus.plexus" name="plexus-classworlds" rev="2.5.1" conf="default->default(compile)"/>
+		<dependency org="org.apache.maven" name="maven-model-builder" rev="3.2.2" conf="default->default(compile)"/>
+		<dependency org="org.apache.maven" name="maven-aether-provider" rev="3.2.2" conf="default->default(compile)"/>
+		<dependency org="org.eclipse.aether" name="aether-api" rev="0.9.0.M2" conf="default->default(compile)"/>
+		<dependency org="org.eclipse.aether" name="aether-spi" rev="0.9.0.M2" conf="default->default(compile)"/>
+		<dependency org="org.eclipse.aether" name="aether-util" rev="0.9.0.M2" conf="default->default(compile)"/>
+		<dependency org="org.eclipse.aether" name="aether-impl" rev="0.9.0.M2" conf="default->default(compile)"/>
+		<dependency org="org.apache.ant" name="ant" rev="1.9.3" conf="default->default(compile)"/>
+		<dependency org="org.apache.ant" name="ant-launcher" rev="1.9.3" conf="default->default(compile)"/>
+		<dependency org="org.bouncycastle" name="bcpg-jdk15on" rev="1.51" conf="default->default(compile)"/>
+	</dependencies>
+</ivy-module>

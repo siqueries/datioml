@@ -1,0 +1,80 @@
+<style>
+table.fixed { table-layout:fixed; }
+table.fixed td { overflow: hidden; }
+.fixed{
+}
+</style>
+<div class="subnav-report" id="subnav-report">
+   <div class="container-fluid">
+      <ul class="report-menu-list-rt">
+
+          <li>
+              <a href="/project/{{id}}/datasets/new">New Dataset</a>
+          </li>
+
+      </ul>
+      <ul class="report-menu-list">
+
+        <li>
+             <a href="/project/{{id}}"><span class="glyphicon glyphicon-chevron-left"></span> BACK TO PROJECT</a>
+         </li>
+
+         <li>
+             <a href="/project/{{id}}/datasets"><span class="glyphicon glyphicon-cloud-upload"></span> DATASETS</a>
+         </li>
+         <li>
+             <a href="/project/{{id}}/analysis"><span class="glyphicon glyphicon-sort"></span> ANALYSIS</a>
+         </li>
+         <li>
+            <a href="javascript:void(0);"><span class="glyphicon glyphicon-play"></span> JOBS</a>
+         </li>
+         <li>
+             <a class="settings-link" href="javascript:void(0);">
+                 <span class="glyphicon glyphicon-cog"></span> SETTINGS
+             </a>
+         </li>
+
+
+      </ul>
+   </div>
+</div>
+<div class="page-header" style="margin-top:15px; border-bottom:none;">
+
+</div>
+
+
+
+<div class="col-md-12">
+    <div id="listPane" class="tab-pane fade active in">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Explore {{model.name}} dataset</h3>
+            </div>
+
+            <div style="overflow-y: auto; height:450px;">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        {{#each model.header_list}}
+                        <th class="fixed" style="font-size:12px; white-space: nowrap; font-family: sans-serif;">
+                        {{name}}
+                        <p style="font-size:10px; font-weight:normal;">{{dataType}}</p>
+                        </th>
+                        {{/each}}
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {{#each model.header_content}}
+                        <tr>
+                            {{#each this}}
+                                <td style="font-size:12px; white-space: nowrap;">{{value}}</td>
+                            {{/each}}
+                        </tr>
+                    {{/each}}
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>

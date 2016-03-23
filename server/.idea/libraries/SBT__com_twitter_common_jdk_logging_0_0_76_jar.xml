@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="SBT: com.twitter.common:jdk-logging:0.0.76:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.twitter.common/jdk-logging/jars/jdk-logging-0.0.76.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.twitter.common/jdk-logging/srcs/jdk-logging-0.0.76-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

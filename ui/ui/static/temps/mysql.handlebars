@@ -1,0 +1,73 @@
+
+
+
+<style>
+    .form-atfooter {
+        margin-top: 15px;
+        padding: 14px 0 15px;
+        /* text-align: right; */
+        border-top: 1px solid #ddd;
+    }
+</style>
+<div class="page-header">
+    <div class="actions"><a href="/projects/{{id}}/datasets/new" class="btn btn-default"><i class="fa fa-fw fa-reply"></i>
+        Back to Connectors</a>
+    </div>
+    <h4>Add a new MySQL data source</h4>
+</div>
+
+<div style="max-width: 512px; margin: 0 auto;" class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">Add a new MySQL data source.</h4>
+    </div>
+    <div class="panel-body">
+        <form method="post" id="mysqlForm">
+            <div class="bg-callout bg-callout-info">
+                <h4>Security and networking</h4>
+                <p>Depending on your network security settings, you may need to grant us inbound access to your database. </p>
+                <p>SiQueries will connect to your database from following IP Addresses:
+                    <strong class="click-to-select">45.55.241.135, 104.236.95.148, 159.203.107.31</strong>
+                </p>
+            </div>
+            <div class="form-group">
+                <label for="name" class="control-label">Title</label>
+                <input type="text" id="name" name="name" placeholder="A name for this data source, e.g., Demo Analytics" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="host" class="control-label">Server (hostname or IP address)</label>
+                <input type="text" id="host" name="host" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="port" class="control-label">Port number</label>
+                <input type="text" id="port" name="port" value="3306" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="database" class="control-label">Database name</label>
+                <input type="text" id="database" name="database" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="username" class="control-label">Database user</label>
+                <input type="text" id="username" name="username" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="password" class="control-label">Database password</label>
+                <input type="password" id="password" name="password" class="form-control">
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="ssl" name="ssl" value="true" checked="checked">Use SSL to connect to your database</label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="validateSsl" name="validateSsl" value="true">Validate the SSL certificate on your server</label>
+            </div>
+            <div class="form-group" style="display: none;">
+                <label for="sslCert" class="control-label">Paste your SSL certificate in PEM format here:</label>
+                <textarea type="textarea" rows="3" id="sslCert" name="sslCert" class="form-control" disabled=""></textarea>
+            </div>
+            <div class="form-atfooter">
+                <button name="create" type="submit" id="submit-btn" class="btn btn-primary"><i class="fa fa-fw fa-bolt"></i> Connect to this data source</button><span id="notice" class="btn btn-link"></span>
+            </div>
+        </form>
+    </div>
+</div>

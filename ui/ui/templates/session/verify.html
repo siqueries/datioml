@@ -1,0 +1,61 @@
+{% extends "layouts/session.html" %}
+{% block body %}
+
+<div class="row login-container column-seperation">
+   <div class="col-md-5 col-md-offset-1">
+      <a href="{{url_for('home')}}" title="Go to Home"> <img  title="Go to Home" width="164" height="160" src="{{url_for('static', filename='images/logo.png')}}" style="margin-top:30px; margin-left:170px;"></a>
+      <br><br><br><br><br><br><br><br>
+   </div>
+   <div class="col-md-5 ">
+      <br>
+      <form id="login-form" class="login-form" action="{{url_for('complete')}}" method="post">
+         {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        {% for category, message in messages %}
+        <div class="{{ category }}" style="color:red;">{{message}}</div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+
+        <span style="margin-left:40px;">
+            {% for message in form.password.errors %}
+            <div class="flash" style="color:red;">{{ message }}</div>
+            {% endfor %}
+        </span>
+        {{ form.csrf_token }}
+         <div class="row">
+            <div class="form-group col-md-10">
+               <label class="form-label">Company</label>
+               <span class="help"></span>
+               <div class="controls">
+                  <div class="input-with-icon  right">
+                     <i class=""></i>
+                      <input type="hidden" name="token" value="{{u['id']}}">
+                     <input type="text" name="company" id="company" class="form-control">
+                  </div>
+               </div>
+            </div>
+         </div>
+
+          <div class="row">
+            <div class="form-group col-md-10">
+               <label class="form-label">Password</label>
+               <span class="help"></span>
+               <div class="controls">
+                  <div class="input-with-icon  right">
+                     <i class=""></i>
+                     <input type="password" name="password" id="password" class="form-control">
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="row">
+            <div class="col-md-10">
+               <button class="btn btn-primary btn-cons" type="submit">Continue</button>
+            </div>
+         </div>
+      </form>
+   </div>
+</div>
+{% endblock %}

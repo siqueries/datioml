@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="SBT: com.twitter:util-codec_2.11:6.26.0:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.twitter/util-codec_2.11/jars/util-codec_2.11-6.26.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.twitter/util-codec_2.11/docs/util-codec_2.11-6.26.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.twitter/util-codec_2.11/srcs/util-codec_2.11-6.26.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

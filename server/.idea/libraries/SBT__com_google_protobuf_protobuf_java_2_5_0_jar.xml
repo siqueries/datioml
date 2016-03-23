@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="SBT: com.google.protobuf:protobuf-java:2.5.0:jar">
+    <CLASSES>
+      <root url="jar:///srv/activator-dist-1.3.7/repository/com.google.protobuf/protobuf-java/2.5.0/bundles/protobuf-java.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="SBT: com.github.spullara.mustache.java:compiler:0.8.12.1:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.github.spullara.mustache.java/compiler/bundles/compiler-0.8.12.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.github.spullara.mustache.java/compiler/docs/compiler-0.8.12.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.github.spullara.mustache.java/compiler/srcs/compiler-0.8.12.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

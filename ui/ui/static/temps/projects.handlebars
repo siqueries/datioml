@@ -1,0 +1,92 @@
+<style>
+.page-header {
+    padding-bottom: 9px;
+    margin: 10px 0 20px;
+    border-bottom: 1px solid #eee;
+
+}
+.page-header1 {
+    padding-bottom: 9px;
+    margin: 10px 0 20px;
+    border-bottom: 0px solid #eee;
+
+}
+</style>
+<div class="container-fluid">
+    <ul class="report-menu-list">
+        <li>
+            <a>PROJECTS</a>
+        </li>
+    </ul>
+</div>
+
+<div class="page-header page-header1">
+
+</div>
+
+<div class="row">
+
+    <div class="app-sidebar" style="margin-top:4px;">
+        <input name="" class="form-control" style="width:200px; margin-left:-5px;"><br>
+        <a href="/project/add" class="btn btn-default" style="width:200px; margin-left:-5px;">
+            <i class="fa fa-fw fa-plus"></i> create project
+        </a>
+
+    </div>
+
+    <div id="main" class="main-app" style="margin-top:0px;">
+
+        <div class="col-md-12 side-nav" style="margin-top:30px;" id="project-content">
+
+
+            {{#each models}}
+
+            <div class="col-md-4 col-sm-6" id="project_{{attributes.id}}">
+			        <div class="data-source-card">
+			            <div class="ds-header">
+							<div class="controls dropdown">
+                                <a data-toggle="dropdown" href="javscript://" class="dropdown-toggle actions">Actions
+                                    <b class="caret"></b>
+                                </a>
+                                <ul class="dropdown-menu pull-right">
+                                    <li>
+                                        <a  href="javascript://" id="{{attributes.id}}" class="delete-project">
+                                            <i class="fa fa-fw fa-ban"></i>
+                                            Delete project
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+			            </div>
+			            <div class="ds-body">
+			                <a data-form-method="post" href="/project/{{attributes.id}}" class="ds-body-title">
+			                    <div class="ds-body-inner">
+			                        <div class="title" style="font-size:18px;">{{attributes.name}}...</div>
+			                        <div class="subtitle"></div>
+                                    <div class="subtitle">Created on: {{attributes.created_at}}</div>
+
+			                    </div>
+			                </a>
+			            </div>
+			            <div class="ds-footer">
+
+                                <i class="fa fa-fw fa-pie-chart type"  style="font-size:30px; color: #C2C6CB;"></i>
+
+			                <div class="controls">
+			                <a href="/project/edit/{{attributes.id}}"
+                               class="edit-project" title="Edit this project's details." style="margin-top:5px;">
+			                	<i class="fa fa-lg fa-gear"  id="{{attributes.id}}"></i>
+			                </a>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+
+            {{/each}}
+
+        </div>
+
+    </div>
+
+
+    </div>

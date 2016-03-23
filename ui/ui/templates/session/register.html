@@ -1,0 +1,100 @@
+{% extends "layouts/session.html" %}
+{% block body %}
+
+    <div class="row login-container">
+        <div class="col-md-3 col-md-offset-1">
+            <a href="/" title="Go to Home" style="display: none;">
+                <img  title="Go to Home" width="164" height="160" src="/static/images/logo.png" style="margin-top:30px; margin-left:170px;">
+            </a>
+            <br><br><br>
+        </div>
+        <div class="col-md-6 " style="margin-top: -75px; margin-bottom: 30px;">
+            <h4><a href="/" title="Go to Home">
+                <img  title="Go to Home" width="144" height="60" src="/static/images/logo_black.png"></a></h4>
+
+
+            <form method="POST" action="{{url_for('signup')}}">
+                
+                <input type="hidden" name="next" value="{{next}}"/>
+                {{ form.csrf_token }}
+                  {% with messages = get_flashed_messages(with_categories=true) %}
+                  {% if messages %}
+                  {% for category, message in messages %}
+                  <div class="{{ category }}" style="color:red;">{{message}}</div>
+                  {% endfor %}
+                  {% endif %}
+                  {% endwith %}
+                  <span style="margin-left:40px;">
+                     {% for message in form.email.errors %}
+                     <div class="flash" style="color:red;">{{ message }}</div>
+                     {% endfor %}
+
+                     {% for message in form.password.errors %}
+                     <div class="flash" style="color:red;">{{ message }}</div>
+                     {% endfor %}
+
+                     {% for message in form.first_name.errors %}
+                     <div class="flash" style="color:red;">{{ message }}</div>
+                     {% endfor %}
+
+                     {% for message in form.last_name.errors %}
+                     <div class="flash" style="color:red;">{{ message }}</div>
+                     {% endfor %}
+                  </span>
+
+                <div class="row">
+                    <div class="form-group col-md-10">
+                        <label class="form-label">First Name</label>
+                        <div class="controls">
+                            <div class="input-with-icon  right">
+                                <i class=""></i>
+                                <input type="text" name="first_name" id="first_name" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-md-10">
+                        <label class="form-label">Last Name</label>
+                        <div class="controls">
+                            <div class="input-with-icon  right">
+                                <i class=""></i>
+                                <input type="text" name="last_name" id="last_name" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-md-10">
+                        <label class="form-label">Email Address</label>
+                        <div class="controls">
+                            <div class="input-with-icon  right">
+                                <i class=""></i>
+                                <input type="text" name="email" id="email" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-10">
+                        <label class="form-label">Password</label>
+                        <span class="help"></span>
+                        <div class="controls">
+                            <div class="input-with-icon  right">
+                                <i class=""></i>
+                                <input type="password" name="password" id="password" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-10">
+                        <button class="btn btn-primary btn-cons" type="submit">Request Demo</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

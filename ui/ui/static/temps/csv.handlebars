@@ -1,0 +1,75 @@
+<style>
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+    .form-atfooter {
+        margin-top: 15px;
+        padding: 14px 0 15px;
+        /* text-align: right; */
+        border-top: 1px solid #ddd;
+    }
+</style>
+
+<div style="max-width: 512px; margin: 0 auto; margin-top:40px;" class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">Create dataset from file source.</h4>
+    </div>
+    <div class="panel-body">
+        <form method="post" id="fileForm" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="name" class="control-label">Dataset Name</label>
+                <input type="text" id="name" name="name" placeholder="e.g. name for this dataset: Churn Dataset" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="description" class="control-label">Description</label>
+                <input type="text" id="description" name="description" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="file" class="control-label">Data Source (max size: 100MB)</label>
+                <input type="file" id="file" name="file" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="dataformat" class="control-label">Data Format</label>
+                <select class="form-control" id="dataformat" name="dataformat">
+                    <option value="csv">CSV</option>
+                    <option value="tsv">TSV</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="columnheader" class="control-label">Column header available</label>
+                <select class="form-control" id="columnheader" name="columnheader">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <div class="progress progress-small" id="progressb" style="display:none;">
+                    <div class="progress-bar progress-bar-success"></div>
+                </div>
+            </div>
+           
+            <div class="form-atfooter">
+                <button name="create" type="submit" id="submit-btn" class="btn btn-primary"><i class="fa fa-fw fa-bolt"></i> Create dataset</button>
+                <a href="/project/{{id}}/datasets/new" class="btn btn-default"><i class="fa fa-fw fa-reply"></i>
+        Cancel</a>
+
+                <span id="notice" class="btn btn-link"></span>
+            </div>
+        </form>
+    </div>
+</div>

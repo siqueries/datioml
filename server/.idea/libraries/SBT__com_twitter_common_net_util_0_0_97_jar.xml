@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="SBT: com.twitter.common:net-util:0.0.97:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.twitter.common/net-util/jars/net-util-0.0.97.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.twitter.common/net-util/srcs/net-util-0.0.97-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

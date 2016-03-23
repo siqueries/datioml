@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="SBT: com.twitter.common:dynamic-host-set:0.0.53:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.twitter.common/dynamic-host-set/jars/dynamic-host-set-0.0.53.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.twitter.common/dynamic-host-set/srcs/dynamic-host-set-0.0.53-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

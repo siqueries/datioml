@@ -1,0 +1,154 @@
+<div class="subnav-report" id="subnav-report">
+    <div class="container-fluid">
+        <ul class="report-menu-list-rt">
+
+            <!--<li>-->
+                <!--<a href="/project/{{id}}/datasets/new">New Dataset</a>-->
+            <!--</li>-->
+
+        </ul>
+        <ul class="report-menu-list">
+             <li>
+             <a href="/project/{{id}}/datasets"><span class="glyphicon glyphicon-cloud-upload"></span> DATASETS</a>
+         </li>
+         <li>
+             <a href="/project/{{id}}/analysis"><span class="glyphicon glyphicon-sort"></span> ANALYSIS</a>
+         </li>
+         <li>
+            <a href="javascript:void(0);"><span class="glyphicon glyphicon-play"></span> JOBS</a>
+         </li>
+         <li>
+             <a class="settings-link" href="javascript:void(0);">
+                 <span class="glyphicon glyphicon-cog"></span> SETTINGS
+             </a>
+         </li>
+
+
+        </ul>
+    </div>
+</div>
+<div class="page-header" style="margin-top:15px; border-bottom:none;">
+
+</div>
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <p style="margin-bottom: 20px;" class="lead text-center">Choose a new data source from the list below:</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <ul class="page-list">
+
+
+            <li class="page-list-item">
+                <a href="/project/{{id}}/datasets/new/upload" title="Uplaod a CSV data file to SiQueries." class="page-list-title">
+                    <div class="page-list-inner"><img src="/static/images/connectors/csv.png" class="type">
+                        <div class="title">CSV</div>
+                    </div>
+                </a>
+            </li>
+
+            <li class="page-list-item">
+                <a href="/project/{{id}}/datasets/new/mysql" title="Add a new MySQL data source to SiQueries." class="page-list-title">
+                    <div class="page-list-inner"><img src="/static/images/connectors/mysql.png" class="type">
+                        <div class="title">MySQL</div>
+                    </div>
+                </a>
+            </li>
+            
+            <li class="page-list-item">
+                <a href="/project/{{id}}/datasets/new/postgresql" title="Add a new PostgreSQL data source to SiQueries." class="page-list-title">
+                    <div class="page-list-inner"><img src="/static/images/connectors/postgresql.png" class="type">
+                        <div class="title">PostgreSQL</div>
+                    </div>
+                </a>
+            </li>
+            <li class="page-list-item">
+                <a href="/project/{{id}}/datasets/new/cloudsql" title="Add a new Google Cloud SQL data source to SiQueries." class="page-list-title">
+                    <div class="page-list-inner"><img src="/static/images/connectors/cloudsql.png" class="type">
+                        <div class="title">Google Cloud SQL</div>
+                    </div>
+                </a>
+            </li>
+
+            <li class="page-list-item">
+                <a href="/project/{{id}}/datasets/new/redshift" title="Add a new Amazon Redshift data source to SiQueries." class="page-list-title">
+                    <div class="page-list-inner"><img src="/static/images/connectors/redshift.png" class="type">
+                        <div class="title">Amazon Redshift</div>
+                    </div>
+                </a>
+            </li>
+            <li class="page-list-item" style="display: none;">
+                <a href="#" title="Add a new Salesforce data source to SiQueries." class="page-list-title">
+                    <div class="page-list-inner"><img src="/static/images/connectors/sfdc.png" class="type">
+                        <div class="title">Salesforce (coming soon...) </div>
+                    </div>
+                </a>
+            </li>
+            <li class="page-list-item" style="display:none;">
+                <a href="#" title="Add a new Oracle data source to SiQueries." class="page-list-title">
+                    <div class="page-list-inner"><img src="/static/images/connectors/oracle.png" class="type">
+                        <div class="title">Oracle (coming soon...)</div>
+                    </div>
+                </a>
+            </li>
+            <li class="page-list-item" style="display:none;">
+                <a href="" title="Add a new Azure SQL Database data source to SiQueries." class="page-list-title">
+                    <div class="page-list-inner"><img src="/static/images/connectors/microsoftsql.png" class="type">
+                        <div class="title">Azure SQL Database (coming soon...)</div>
+                    </div>
+                </a>
+            </li>
+            <li class="page-list-item" style="display:none;">
+                <a href="" title="Add a new SQL Server data source to SiQueries." class="page-list-title">
+                    <div class="page-list-inner"><img src="/static/images/connectors/microsoftsql.png" class="type">
+                        <div class="title">SQL Server (coming soon...)</div>
+                    </div>
+                </a>
+            </li>
+
+            <li class="page-list-item" style="display:none;">
+                <a href="#" title="Add a new Amazon RDS data source to SiQueries." class="page-list-title">
+                    <div class="page-list-inner"><img src="/static/images/connectors/amazon.png" class="type">
+                        <div class="title">Amazon RDS (coming soon...)</div>
+                    </div>
+                </a>
+            </li>
+            <li class="page-list-item" style="display:none;">
+                <a href="#" title="Add a new HP Vertica source to SiQueries." class="page-list-title">
+                    <div class="page-list-inner"><img src="/static/images/connectors/vertica.png" class="type">
+                        <div class="title">HP Vertica (coming soon...)</div>
+                    </div>
+                </a>
+            </li>
+
+            <li class="page-list-item" style="display:none;">
+                <a href="#" title="Add a new Heroku data source to SiQueries." class="page-list-title">
+                    <div class="page-list-inner"><img src="/static/images/connectors/heroku.png" class="type">
+                        <div class="title">Heroku (coming soon...)</div>
+                    </div>
+                </a>
+            </li>
+
+            <li class="page-list-item" style="display:none;">
+                <a href="#" title="Add a new IBM DB2 data source to SiQueries." class="page-list-title">
+                    <div class="page-list-inner"><img src="/static/images/connectors/db2.png" class="type">
+                        <div class="title">IBM DB2 (coming soon...)</div>
+                    </div>
+                </a>
+            </li>
+
+            <li class="page-list-item" style="display:none;">
+                <a href="#" title="Add a new IBM DashDB data source to SiQueries." class="page-list-title">
+                    <div class="page-list-inner"><img src="/static/images/connectors/dashdb.png" class="type">
+                        <div class="title">IBM DashDB (coming soon...)</div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

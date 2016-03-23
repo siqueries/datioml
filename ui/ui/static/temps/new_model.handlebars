@@ -1,0 +1,88 @@
+<style>
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+    .form-atfooter {
+        margin-top: 15px;
+        padding: 14px 0 15px;
+        /* text-align: right; */
+        border-top: 1px solid #ddd;
+    }
+</style>
+
+<div class="row">
+    <div class="col-md-12">
+        <div style="margin: 0 auto; margin-top:40px;" class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">Step 1: Preprocess.</h4>
+            </div>
+            <div class="panel-body">
+                    <div class="form-group" style="display:none;">
+                        <label for="name" class="control-label">Model Name</label>
+                        <input type="text" id="name" name="name" placeholder="e.g. name for this dataset: Churn Dataset" class="form-control">
+                    </div>
+
+                    <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>Include</th>
+                                <th>Type</th>
+                                <th>Impute</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {{#each models}}
+                                <tr>
+                                    <td>{{attributes.name}}</td>
+                                    <td><input type="checkbox" id="include_{{attributes.index}}" name="include_{{attributes.index}}" checked="checked"></td>
+                                    <td>
+                                        <select style="width:120px;" class="form-control" id="type_{{attributes.index}}" name="type_{{attributes.index}}">
+                                            {{#if_eq attributes.dataType  "NUMERICAL"}}
+                                                <option value="numerical" selected="">NUMERICAL</option>
+                                                <option value="categorical">CATEGORICAL</option>
+                                            {{else}}
+                                                <option value="numerical">NUMERICAL</option>
+                                                <option value="categorical" selected="">CATEGORICAL</option>
+                                            {{/if_eq}}
+                                        </select>
+                                    
+                                    </td>
+                                    <td>
+                                        <select style="width:120px;" class="form-control" id="impute_{{attributes.index}}" name="impute_{{attributes.index}}">
+                                                <option value="discard">DISCARD</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                           {{/each}}
+                            </tbody>
+                        </table>
+
+                    <div class="form-atfooter">
+                        <button name="create" type="submit" id="submit-btn" class="btn btn-primary"><i class="fa fa-fw fa-bolt"></i> Proceed to Algorithms</button>
+                        <a href="/project/{{project_id}}/analysis/{{analysis_id}}/models" class="btn btn-default"><i class="fa fa-fw fa-reply"></i>
+                Back</a>
+
+                        <span id="notice" class="btn btn-link"></span>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

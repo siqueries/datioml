@@ -1,0 +1,55 @@
+<style>
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+    .form-atfooter {
+        margin-top: 15px;
+        padding: 14px 0 15px;
+        /* text-align: right; */
+        border-top: 1px solid #ddd;
+    }
+</style>
+
+
+
+<div class="row" id="build_model">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div style="margin: 0 auto; margin-top:40px;" class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">Step 4: Build Model.</h4>
+            </div>
+            <div class="panel-body">
+                    <div class="form-group">
+                        <label for="model_name" class="control-label">Model Name</label>
+                        <input type="text" id="model_name" name="model_name" value="" class="form-control">
+                    </div>
+
+                    <div class="form-atfooter">
+                        <button name="create" type="submit" id="submit-btn" class="btn btn-primary"><i class="fa fa-fw fa-bolt"></i> Build Model</button>
+                        <a href="javascript:void(0);" id="back-btn" class="btn btn-default"><i class="fa fa-fw fa-reply"></i>
+                Back</a>
+
+                        <span id="notice" class="btn btn-link"></span>
+                    </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
