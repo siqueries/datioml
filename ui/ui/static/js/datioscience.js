@@ -13,6 +13,8 @@ var DatioRoutes = Backbone.Router.extend({
         "/project/:id/analysis/new": "new_analysis",
         "/project/:id/analysis": "analysis",
         "/project/:id/analysis/:analysis_id": "view_analysis",
+        "/project/:id/analysis/:analysis_id/workflow/:i": "build_analysis",
+        "/project/:id/analysis/:analysis_id/workflow/:i/ml": "model",
 
         "/project/:id/analysis/:analysis_id/models": "models",
 
@@ -28,6 +30,7 @@ var DatioRoutes = Backbone.Router.extend({
         "/docs": "docs"
     },
     initialize: function() {
+        
     },
 
     home: function(){
@@ -99,12 +102,23 @@ var DatioRoutes = Backbone.Router.extend({
     datasets: function(id){
         var $layout = $("#viewLayout");
         $layout.empty();
-        var datasetCollections = new datioscience.collections.Datasets([], {"id": id});
-        datasetCollections.fetch();
 
-        var view = new datioscience.views.datasetsView({collection: datasetCollections, "id": id});
-        var htmlView = view.render().el;
-        $layout.html(htmlView);
+        var loader = new datioscience.views.loadingView();
+        var loaderView = loader.render().el;
+        $layout.html(loaderView);
+
+        var datasetCollections = new datioscience.collections.Datasets([], {"id": id});
+        datasetCollections.fetch({
+            reset: true,
+            success: function(collection, response, options){
+                var view = new datioscience.views.datasetsView({collection: collection, "id": id});
+                $layout.empty();
+                var htmlView = view.render().el;
+                $layout.html(htmlView);
+            }
+        });
+
+        
     },
 
     new_dataset: function(id){
@@ -135,15 +149,31 @@ var DatioRoutes = Backbone.Router.extend({
     },
 
     explore: function(project_id, dataset_id){
+        var $layout = $("#viewLayout");
+        $layout.empty();
+
+        var loader = new datioscience.views.loadingView();
+        var loaderView = loader.render().el;
+        $layout.html(loaderView);
+
         var datasetModel = new datioscience.models.Dataset({"project_id": project_id, "id": dataset_id})
-        datasetModel.fetch()
-        var layout = $("#viewLayout");
-        layout.empty();
-        setTimeout(function(){
-            var view = new datioscience.views.exploreDatasetView({model: datasetModel, "project_id": project_id, "id": dataset_id});
-            var htmlView = view.render().el;
-            layout.html(htmlView);
-        }, 200);
+        datasetModel.fetch({
+            reset: true,
+            success: function(model, response, options){
+                var view = new datioscience.views.exploreDatasetView({model: model, "project_id": project_id, "id": dataset_id});
+                setTimeout(function(){
+                    $layout.empty();
+                    var htmlView = view.render().el;
+                    $layout.html(htmlView).slideDown();
+                    //$layout;
+                }, 1000);
+                
+            }
+        });
+        
+        // setTimeout(function(){
+            
+        // }, 200);
     },
 
     new_analysis: function(id){
@@ -178,6 +208,64 @@ var DatioRoutes = Backbone.Router.extend({
         var view = new datioscience.views.connectorsView({"id": id});
         var htmlView = view.render().el;
         $layout.html(htmlView);
+    },
+
+    build_analysis: function(project_id, analysis_id, i){
+        var $layout = $("#viewLayout");
+        $layout.empty();
+
+        var loader = new datioscience.views.loadingView();
+        var loaderView = loader.render().el;
+        $layout.html(loaderView);
+
+        var analysisModel = new datioscience.models.Analyze({"project_id": project_id, "id": analysis_id});
+        analysisModel.fetch({
+            reset: true,
+            success: function(analysisModel, response, options){
+                var datasetModel = new datioscience.models.Dataset({"project_id": project_id, "id": response.dataset_id});
+                datasetModel.fetch({
+                    reset: true,
+                    success: function(dsModel, response, options){
+                        var view = new datioscience.views.buildAnalysisView({make_id: i, model: dsModel, "project_id": project_id, "id": analysis_id});
+                        var htmlView = view.render().el;
+                        setTimeout(function(){
+                            $layout.empty();
+                            $layout.html(htmlView);
+                            //view.initializeDraggble();
+                            //$layout;
+                        }, 1000);
+                        
+                    }
+                });
+            }
+        });
+
+        
+        
+    },
+
+    model: function(id, analysis_id, i){
+        var $layout = $("#viewLayout");
+        $layout.empty();
+
+        var loader = new datioscience.views.loadingView();
+        var loaderView = loader.render().el;
+        $layout.html(loaderView);
+
+        var modelsCollection = new datioscience.collections.MModels([], {"id": id, "analysis_id": analysis_id});
+        modelsCollection.fetch({
+            reset: true,
+            success: function(collection, response, options){
+                var view = new datioscience.views.modelView({collection: collection, "id": analysis_id, make_id: i, "project_id": id, });
+                var htmlView = view.render().el;
+                setTimeout(function(){
+                    $layout.empty();
+                    $layout.html(htmlView);
+                }, 1000);
+                
+            }
+        });
+        
     },
 
     models: function(id, analysis_id){
@@ -280,6 +368,10 @@ $(document).on('click', 'a[href^="/"]', function (e) {
         datioscience.sqr.navigate(href, { trigger: true });
     }
 
+});
+
+window.addEventListener('popstate', function(e) {
+    datioscience.sqr.navigate(window.location.pathname, { trigger: true });
 });
 
 

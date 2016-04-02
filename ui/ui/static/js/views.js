@@ -201,10 +201,11 @@
         initialize: function() {
             _.bindAll(this, 'render');
             this.id = this.options.id;
+            this.makeid = datioscience.makeid();
             this.collection.bind('reset', this.render);
         },
         render: function() {
-            $(this.el).html(Handlebars.templates.analysis(this.collection));
+            $(this.el).html(Handlebars.templates.analysis({id: this.id, models: this.collection.models}));
             return this;
         }
     });
@@ -242,6 +243,209 @@
         }
     });
 
+    buildAnalysisView = Backbone.View.extend({
+        events: {
+            'click #data-extraction': 'toggle_data_extraction',
+            'click #transformations': 'toggle_transformations',
+            'click #sampler': 'toggle_sampler',
+            'click #exploration': 'toggle_exploration',
+            'click #models': 'toggle_models',
+            'click #scoring': 'toggle_scoring',
+            'click #save-btn': 'save_btn',
+            'click #delete-btn': 'delete_btn'  
+        },
+        tagName: "div",
+        className: "",
+        id: "",
+        initialize: function() {
+            _.bindAll(this, 'render');
+            this.id = this.options.id;
+            this.make_id = this.options.make_id;
+            this.project_id = this.options.project_id;
+        },
+        render: function() {
+            var model = this.model.toJSON();
+            $(this.el).html(Handlebars.templates.build({make_id: this.make_id, id: this.id, project_id: this.project_id, model: model}));
+            return this;
+        },
+        save_btn: function(){
+            $('#BusyBox').stop(true).animate({ 'margin-bottom': -350, 'opacity': '1' }, { queue: false, duration: 300 });
+            datioscience.flag = 1;
+        },
+        delete_btn: function(){
+            $('#BusyBox').stop(true).animate({ 'margin-bottom': -350, 'opacity': '1' }, { queue: false, duration: 300 });
+            datioscience.flag = 1;
+            $("#" + datioscience.openId).remove();
+            jsPlumb.remove(datioscience.openId);
+        },
+        toggle_data_extraction: function(){
+            $("#data-extraction-operators").slideToggle('fast');
+        },
+        toggle_transformations: function(){
+            $("#transformations-operators").slideToggle('fast');
+        },
+        toggle_sampler: function(){
+            $("#sampler-operators").slideToggle('fast');
+        },
+        toggle_exploration: function(){
+            $("#exploration-operators").slideToggle('fast');
+        },
+        toggle_models: function(){
+            $("#models-operators").slideToggle('fast');
+        },
+        toggle_scoring: function(){
+            $("#scoring-operators").slideToggle('fast');
+        },
+
+        inputDataSet: function(id, ui, commonA){
+            var $newPosX = ui.offset.left - id.offset().left;
+            var $newPosY = ui.offset.top - id.offset().top;
+            var tmpId = ""+jQuery.now()+"";
+            var view = new datioscience.views.inputView({"top": $newPosY, "left": $newPosX, "tmpId": tmpId});
+            var htmlView = view.render().el;
+            $("#theCanvas").append(htmlView);
+            jsPlumb.addEndpoint(tmpId, commonA, {uuid: tmpId});
+            //jsPlumb.addEndpoint(htmlView);
+            jsPlumb.draggable(htmlView, {
+              containment: 'parent'
+            });
+        },
+
+        aggre: function(id, ui, commonA, commonT){
+            var $newPosX = ui.offset.left - id.offset().left;
+            var $newPosY = ui.offset.top - id.offset().top;
+            var tmpId = ""+jQuery.now()+"";
+            var view = new datioscience.views.aggrView({"top": $newPosY, "left": $newPosX, "tmpId": tmpId});
+            var htmlView = view.render().el;
+            $("#theCanvas").append(htmlView);
+            var mp = tmpId + tmpId;
+            jsPlumb.addEndpoint(tmpId, commonA, {uuid: tmpId});
+            jsPlumb.addEndpoint(tmpId, commonT, {uuid: mp});
+            //jsPlumb.addEndpoint(htmlView);
+            jsPlumb.draggable(htmlView, {
+              containment: 'parent'
+            });
+        },
+
+        initializeDraggble: function(){
+
+            jsPlumb.ready(function() {
+                //jsPlumb.setContainer("theCanvas");
+                jsPlumb.makeSource($('.item'), {
+                    connector: 'StateMachine'
+                });
+                jsPlumb.makeTarget($('.item'), {
+                    anchor: 'Continuous'
+                });
+                var html = "<h1>Example</h1>";
+                $(".selection_element").draggable({
+                    helper: 'clone',
+                    revert: false,
+                    opacity: 1,
+                    helper: function(){ 
+                        var view = new datioscience.views.emptyDragView({"top": "", "left": ""});
+                        var htmlView = view.render().el;
+                        return $(htmlView); 
+                    },
+                    start: function(e, ui) {
+                    },
+                    stop: function(e, ui){
+                    }
+                });
+                $("#theCanvas").droppable({
+                    accept: '.selection_element',
+                    drop: function(event, ui) {
+                        //$("#theCanvas").append("hello world!")
+                        var dataType = $(ui.draggable).data('type');
+                        var title = $(ui.draggable).attr('title');
+                        var id = $(ui.draggable).attr("id");
+                        var name = $(ui.draggable).attr('name');
+
+                        var connectorHoverStyle = {
+                            lineWidth: 1,
+                            strokeStyle: "#888",
+                            outlineWidth: 1.5,
+                            outlineColor: "white"
+                        };
+
+                        var endpointHoverStyle = {
+                            fillStyle: "#888"
+                        };
+
+                        var connectorPaintStyle = {
+                            lineWidth: 1,
+                            strokeStyle: "#afafaf",
+                            joinstyle: "round",
+                            outlineColor: "white",
+                            outlineWidth: 1.5
+                        };
+                        var commonA = {
+                            connector: [ "Straight", { cornerRadius: 5, alwaysRespectStubs: false, midpoint: 0.5 } ],
+                            //connector: ["Straight"],
+                            //connectior: ["Bezier", { curviness: 150 }],
+                            //connectior: ["State Machine"],
+                            anchor: "Right",
+                            isSource: true,
+                            endpoint: "Dot",
+                            connectorStyle: connectorPaintStyle,
+                            hoverPaintStyle: endpointHoverStyle,
+                            connectorHoverStyle: connectorHoverStyle,
+                            connectorOverlays: [
+                            [ "Arrow", { width:4, length:7, location:1, id:"arrow" } ],
+                            //[ "Label", { label:"Relationship", id:"lblPrimary_" + table.name } ]
+                            ],
+                            paintStyle: {
+                                fillStyle: "#9cbdd1",
+                                radius: 4.7
+                            }
+                        };
+                        
+                        var commonT = {
+                            anchor: ["Left", "Right"],
+                            isTarget: true,
+                            //isSource: true,
+                            endpoint: "Rectangle",
+                            maxConnections: 2,
+                            connectorStyle: {
+                                lineWidth: 1,
+                                strokeStyle: "#afafaf",
+                                joinstyle: "round",
+                                outlineColor: "white",
+                                outlineWidth: 1.5
+                            },
+                            hoverPaintStyle: endpointHoverStyle,
+                            connectorHoverStyle: connectorHoverStyle,
+                            dropOptions: { hoverClass: "hover", activeClass: "active" },
+                            paintStyle: {
+                                fillStyle: "#9cbdd1",
+                                radius: 4
+                            }
+                        };
+                        var id = $(this);
+                        var u = ui
+                        
+                        switch(dataType){
+                            case "datasets":
+                                if(name == "input-dataset"){
+                                    new datioscience.views.buildAnalysisView().inputDataSet(id, u, commonA);
+                                }
+                            break;
+                            case "transformation":
+                                if(name == "aggregation"){
+                                    new datioscience.views.buildAnalysisView().aggre(id, u, commonA, commonT);
+                                }
+                            break;
+                        }
+                        
+
+                    }
+                });
+
+            });
+
+        }
+    });
+
     exploreDatasetView = Backbone.View.extend({
             events: {
             },
@@ -255,11 +459,28 @@
             },
             render: function() {
                 var model = this.model.toJSON();
-                console.log(model)
-                var headers = "";
                 $(this.el).html(Handlebars.templates.explore({id: this.project_id, model: model}));
                 return this;
             }
+    });
+
+    modelView = Backbone.View.extend({
+        events: {
+        },
+        tagName: "div",
+        className: "",
+        id: "",
+        initialize: function() {
+            _.bindAll(this, 'render');
+            this.id = this.options.id;
+            this.project_id = this.options.project_id;
+            this.make_id = this.options.make_id;
+            this.collection.bind('reset', this.render);
+        },
+        render: function() {
+            $(this.el).html(Handlebars.templates.model({models: this.collection.models, make_id: this.make_id, id: this.id, project_id: this.project_id}));
+            return this;
+        }
     });
 
 
@@ -271,7 +492,6 @@
         id: "",
         initialize: function() {
             _.bindAll(this, 'render');
-            this.id = this.options.id;
             this.collection.bind('reset', this.render);
         },
         render: function() {
@@ -598,6 +818,19 @@
         }
     });
 
+    loadingView = Backbone.View.extend({
+        tagName: "div",
+        className: "loading",
+        id: "loading",
+        initialize: function() {
+            _.bindAll(this, 'render');
+        },
+        render: function() {
+            $(this.el).html(Handlebars.templates.loading());
+            return this;
+        }
+    });
+
 
 
 
@@ -620,10 +853,13 @@
         analysisView: analysisView,
         newAnalysisView: newAnalysisView,
         modelsView: modelsView,
+        modelView: modelView,
         newModelView: newModelView,
         buildModelView: buildModelView,
         parametersView: parametersView,
         algorithmsView: algorithmsView,
-        exploreDatasetView: exploreDatasetView
+        exploreDatasetView: exploreDatasetView,
+        loadingView: loadingView,
+        buildAnalysisView: buildAnalysisView
     });
 }(datioscience));

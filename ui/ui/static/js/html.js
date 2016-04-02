@@ -1,5 +1,13 @@
 (function() {
   var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
+templates['aggr'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  
+
+
+  return "<div style=\"padding-left:8px;\"><i class=\"fa fa-cogs fa-2x\"></i></div>\n<div class=\"label\">Aggregation</div>";
+  });
 templates['algorithms'] = template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
@@ -31,7 +39,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 
 function program1(depth0,data) {
   
-  var buffer = "", stack1;
+  var buffer = "", stack1, helper;
   buffer += "\n                    <tr>\n                        <td>"
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.name)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "</td>\n                        <td>"
@@ -40,11 +48,15 @@ function program1(depth0,data) {
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.project_id)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "/analysis/"
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.id)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "/view\">View</a>&nbsp;\n                             <a href=\"/project/"
+    + "/workflow/";
+  if (helper = helpers.makeid) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.makeid); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\">Open Workflow</a>&nbsp;\n                             <a href=\"/project/"
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.project_id)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "/analysis/"
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.id)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "/models\">Models</a>&nbsp;\n                            <a href=\"/project/"
+    + "/edit\">Edit</a>&nbsp;\n                            <a href=\"/project/"
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.project_id)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "/analysis/"
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.id)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
@@ -68,10 +80,103 @@ function program1(depth0,data) {
   if (helper = helpers.id) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "/analysis\"><span class=\"glyphicon glyphicon-sort\"></span> ANALYSIS</a>\n         </li>\n         <li>\n            <a href=\"javascript:void(0);\"><span class=\"glyphicon glyphicon-play\"></span> JOBS</a>\n         </li>\n         <li>\n             <a class=\"settings-link\" href=\"javascript:void(0);\">\n                 <span class=\"glyphicon glyphicon-cog\"></span> SETTINGS\n             </a>\n         </li>\n\n\n      </ul>\n   </div>\n</div>\n<div class=\"page-header\" style=\"margin-top:15px; border-bottom:none;\">\n\n</div>\n\n\n<div class=\"row\">\n\n<div class=\"col-md-2\"></div>\n\n<div class=\"col-md-8\">\n    <div id=\"listPane\" class=\"tab-pane fade active in\">\n        <div class=\"panel panel-default\">\n            <div class=\"panel-heading\">\n                <h3 class=\"panel-title\">Analysis</h3>\n            </div>\n\n            <table class=\"table table-hover\">\n                <thead>\n                <tr>\n                    <th>Name</th>\n                    <th>Date</th>\n                    <th></th>\n                </tr>\n                </thead>\n                <tbody>\n                ";
+    + "/analysis\"><span class=\"glyphicon glyphicon-sort\"></span> ANALYSIS</a>\n         </li>\n\n\n      </ul>\n   </div>\n</div>\n<div class=\"page-header\" style=\"margin-top:15px; border-bottom:none;\">\n\n</div>\n\n\n<div class=\"row\">\n\n<div class=\"col-md-2\"></div>\n\n<div class=\"col-md-8\">\n    <div id=\"listPane\" class=\"tab-pane fade active in\">\n        <div class=\"panel panel-default\">\n            <div class=\"panel-heading\">\n                <h3 class=\"panel-title\">Analysis</h3>\n            </div>\n\n            <table class=\"table table-hover\">\n                <thead>\n                <tr>\n                    <th>Name</th>\n                    <th>Date</th>\n                    <th></th>\n                </tr>\n                </thead>\n                <tbody>\n                ";
   stack1 = helpers.each.call(depth0, (depth0 && depth0.models), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n                </tbody>\n            </table>\n\n        </div>\n    </div>\n</div>\n</div>";
+  return buffer;
+  });
+templates['build'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, helper, functionType="function", escapeExpression=this.escapeExpression, self=this;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1, helper;
+  buffer += "\n              <th class=\"fixed\" style=\"border: 1px solid #EEEEEE; font-size:12px; white-space: nowrap; font-family: sans-serif;\">\n              ";
+  if (helper = helpers.name) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.name); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\n              <p style=\"font-size:10px; font-weight:normal;\">";
+  if (helper = helpers.dataType) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.dataType); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</p>\n              </th>\n              ";
+  return buffer;
+  }
+
+function program3(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n              <tr>\n                  ";
+  stack1 = helpers.each.call(depth0, depth0, {hash:{},inverse:self.noop,fn:self.program(4, program4, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n              </tr>\n          ";
+  return buffer;
+  }
+function program4(depth0,data) {
+  
+  var buffer = "", stack1, helper;
+  buffer += "\n                      <td style=\"font-size:12px; white-space: nowrap; border: 1px solid #EEEEEE;\">";
+  if (helper = helpers.value) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.value); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</td>\n                  ";
+  return buffer;
+  }
+
+  buffer += "<style>\ntable.fixed { table-layout:fixed; }\ntable.fixed td { overflow: hidden; }\n.column {\n    padding: 5px 10px;\n    margin-bottom: 2;\n    /*background: #d5b1b1;*/\n    background: #efe3e3;\n    border: 2px solid #d5b1b1;\n    color: #494949;\n    border-radius: 0;\n    font-size: 13px;\n    height: 30px;\n    cursor: move;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    border-bottom: 1px solid #be8a8a;\n    -webkit-transition: box-shadow 0.3s;\n    transition: box-shadow 0.3s;\n}\n.header:hover{\n  background: #ededed;\n  cursor: pointer;\n}\n.item {\n        height: 64px;\n        width: 64px;\n        position: absolute;\n        border: 1px solid #9c9c9c;\n        float: left;\n        text-align: center;\n        font-size: 12px;\n\n        list-style: none;\n        float: left;\n        margin-right: 3px;\n        background-color: #E7F6FF;\n        border-radius: 3px;\n        padding: 8px 12px;\n        font-size: 11px;\n        cursor: move;\n        align-items: center;\n        background-color: #E7F6FF;\n        border: 1px solid #DDDDDD;\n        display: inline-flex;\n        flex-direction: row;\n    }\n    .label {\n    font-size: 13px;\n    width: 110px;\n    text-align: center;\n    color: #333333;\n    position: absolute;\n    left: -22px;\n    top: 66px;\n    text-align: center;\n    height: 54px;\n    overflow: hidden;\n    word-wrap: break-word;\n    pointer-events: none;\n    font-weight: normal;\n}\n\n#BusyBox\n{\nbackground: #F9F9F9;\nborder-top-left-radius: 5px;\nborder-top-right-radius: 5px;\nbottom: 0;\nfont-size: 0.8em;\nfont-style: normal;\nfont-weight: normal;\nleft: 25%;\nmargin-left: -45px;\npadding-top: 20px;\nposition: fixed;\ntext-align: center;\nwidth: 950px;\nheight: 280px;\nz-index: 1000;\nmargin-bottom: -350px;\nbackground-repeat:no-repeat;\nbackground-position: center center;\n}\n\n\n.nav-tabs { border-bottom: 2px solid #DDD; }\n    .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover { border-width: 0; }\n    .nav-tabs > li > a { border: none; color: #666; }\n    .nav-tabs > li.active > a, .nav-tabs > li > a:hover { border: none; color: #F4C269 !important; background: transparent; }\n    .nav-tabs > li > a::after { content: \"\"; background: #F4C269; height: 2px; position: absolute; width: 100%; left: 0px; bottom: -1px; transition: all 250ms ease 0s; transform: scale(0); }\n    .nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after { transform: scale(1); }\n    .tab-nav > li > a::after { background: #21527d none repeat scroll 0% 0%; color: #fff; }\n    .tab-pane { padding: 15px 0; }\n    .tab-content{padding:20px}\n.card {\n  /*background: #FFF none repeat scroll 0% 0%;\n  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3); */\n  margin-top:-8px;\n  padding-top: -25px;\n  margin-bottom: 30px;\n}\n\n</style>\n<div class=\"subnav-report\" id=\"subnav-report\">\n   <div class=\"container-fluid\">\n      <ul class=\"report-menu-list-rt\">\n\n          <li>\n              <a href=\"/project/";
+  if (helper = helpers.project_id) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.project_id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "/analysis/new\"><span id=\"save-icon\" class=\"glyphicon glyphicon-floppy-disk\"></span> SAVE WORKFLOW</a>\n          </li>\n\n          <li>\n              <a href=\"/project/";
+  if (helper = helpers.project_id) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.project_id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "/analysis/";
+  if (helper = helpers.id) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "/workflow/";
+  if (helper = helpers.make_id) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.make_id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "/ml\"><span class=\"glyphicon glyphicon-barcode\"></span> MODELS</a>\n          </li>\n\n          <li>\n              <a href=\"/project/";
+  if (helper = helpers.project_id) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.project_id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "/analysis/";
+  if (helper = helpers.id) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "/workflow/";
+  if (helper = helpers.make_id) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.make_id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\"><span class=\"glyphicon glyphicon-compressed\"></span> TASKS</a>\n          </li>\n\n      </ul>\n      <ul class=\"report-menu-list\">\n        <li>\n             <a href=\"/project/";
+  if (helper = helpers.project_id) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.project_id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\"><span class=\"glyphicon glyphicon-chevron-left\"></span> BACK TO PROJECT</a>\n         </li>\n         <li>\n             <a href=\"/project/";
+  if (helper = helpers.project_id) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.project_id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "/datasets\"><span class=\"glyphicon glyphicon-cloud-upload\"></span> DATASETS</a>\n         </li>\n         <li>\n             <a href=\"/project/";
+  if (helper = helpers.project_id) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.project_id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "/analysis\"><span class=\"glyphicon glyphicon-sort\"></span> ANALYSIS</a>\n         </li>\n\n\n      </ul>\n   </div>\n</div>\n<div class=\"page-header\" style=\"margin-top:15px; border-bottom:none;\">\n\n</div>\n\n\n<div class=\"row\">\n  <div class=\"app-sidebar\">\n    <div class=\"card\">\n      <ul class=\"nav nav-tabs\" role=\"tablist\" style=\"font-size:12px;\">\n        <li role=\"presentation\">\n          <a href=\"#content\" id=\"overview\" aria-controls=\"home\" title=\"Overview of Sales analytics\" role=\"tab\" data-toggle=\"tab\"><i class=\"fa fa-code-fork\"></i> Sampling</a>\n        </li>\n        <li role=\"presentation\" class=\"active\">\n            <a href=\"#content\" id=\"closedrevenue\" aria-controls=\"profile\" role=\"tab\" data-toggle=\"tab\">\n             <i class=\"fa fa-tasks\"></i>  Tasks\n            </a>\n        </li>\n      </ul>\n    </div>\n  </div>\n\n  <div class=\"main-app\" id=\"theCanvas\">\n    <div style=\"margin-bottom:10px; margin-left:10px; margin-top:2px;\">\n        Sample: <b>"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.model)),stack1 == null || stack1 === false ? stack1 : stack1.header_content)),stack1 == null || stack1 === false ? stack1 : stack1.length)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</b> rows, <b>"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.model)),stack1 == null || stack1 === false ? stack1 : stack1.header_list)),stack1 == null || stack1 === false ? stack1 : stack1.length)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</b> cols\n    </div>\n    <div style=\"overflow-y: auto; height:510px; border: 1px solid #EEEEEE;\">\n      <table class=\"table table-hover\">\n          <thead style=\"background-color: #ffffff;\">\n          <tr>\n              ";
+  stack1 = helpers.each.call(depth0, ((stack1 = (depth0 && depth0.model)),stack1 == null || stack1 === false ? stack1 : stack1.header_list), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n          </tr>\n          </thead>\n          <tbody>\n          ";
+  stack1 = helpers.each.call(depth0, ((stack1 = (depth0 && depth0.model)),stack1 == null || stack1 === false ? stack1 : stack1.header_content), {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n          </tbody>\n        </table>\n    </div>\n  </div>\n\n\n\n</div>";
   return buffer;
   });
 templates['build_model'] = template(function (Handlebars,depth0,helpers,partials,data) {
@@ -180,7 +285,7 @@ function program1(depth0,data) {
   if (helper = helpers.id) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "/analysis\"><span class=\"glyphicon glyphicon-sort\"></span> ANALYSIS</a>\n         </li>\n         <li>\n            <a href=\"javascript:void(0);\"><span class=\"glyphicon glyphicon-play\"></span> JOBS</a>\n         </li>\n         <li>\n             <a class=\"settings-link\" href=\"javascript:void(0);\">\n                 <span class=\"glyphicon glyphicon-cog\"></span> SETTINGS\n             </a>\n         </li>\n\n\n      </ul>\n   </div>\n</div>\n<div class=\"page-header\" style=\"margin-top:15px; border-bottom:none;\">\n\n</div>\n\n<div class=\"col-md-1\"></div>\n\n<div class=\"col-md-10\">\n    <div id=\"listPane\" class=\"tab-pane fade active in\">\n        <div class=\"panel panel-default\">\n            <div class=\"panel-heading\">\n                <h3 class=\"panel-title\">Datasets</h3>\n            </div>\n\n            <table class=\"table table-hover\">\n                <thead>\n                <tr>\n                    <th>Name</th>\n                    <th>Description</th>\n                    <th>Type</th>\n                    <th>Date</th>\n                    <th></th>\n                </tr>\n                </thead>\n                <tbody>\n                ";
+    + "/analysis\"><span class=\"glyphicon glyphicon-sort\"></span> ANALYSIS</a>\n         </li>\n\n\n      </ul>\n   </div>\n</div>\n<div class=\"page-header\" style=\"margin-top:15px; border-bottom:none;\">\n\n</div>\n\n<div class=\"col-md-1\"></div>\n\n<div class=\"col-md-10\">\n    <div id=\"listPane\" class=\"tab-pane fade active in\">\n        <div class=\"panel panel-default\">\n            <div class=\"panel-heading\">\n                <h3 class=\"panel-title\">Datasets</h3>\n            </div>\n\n            <table class=\"table table-hover\">\n                <thead>\n                <tr>\n                    <th>Name</th>\n                    <th>Description</th>\n                    <th>Type</th>\n                    <th>Date</th>\n                    <th></th>\n                </tr>\n                </thead>\n                <tbody>\n                ";
   stack1 = helpers.each.call(depth0, (depth0 && depth0.models), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n                </tbody>\n            </table>\n\n        </div>\n    </div>\n</div>";
@@ -203,6 +308,14 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
     + "</textarea>\n                    </div>\n                    <div class=\"form-atfooter\">\n                        <button type=\"submit\" class=\"btn btn-primary\" id=\"create-project\">Update Project</button>\n                        <button type=\"submit\" class=\"btn btn-default\" id=\"cancel\">Cancel</button>\n                    </div>\n                </form>\n            </div>\n        </div>\n    </div>\n    <div class=\"col-md-4 side-nav\"></div>\n</div>";
   return buffer;
   });
+templates['empty_drag'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "";
+
+
+  return buffer;
+  });
 templates['explore'] = template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
@@ -211,7 +324,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   var buffer = "", stack1, helper;
-  buffer += "\n                        <th class=\"fixed\" style=\"font-size:12px; white-space: nowrap; font-family: sans-serif;\">\n                        ";
+  buffer += "\n                        <th class=\"fixed\" style=\"font-size:12px; white-space: nowrap; font-family: sans-serif; border: 1px solid #EEEEEE;\">\n                        ";
   if (helper = helpers.name) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.name); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
@@ -235,7 +348,7 @@ function program3(depth0,data) {
 function program4(depth0,data) {
   
   var buffer = "", stack1, helper;
-  buffer += "\n                                <td style=\"font-size:12px; white-space: nowrap;\">";
+  buffer += "\n                                <td style=\"font-size:12px; white-space: nowrap; border: 1px solid #EEEEEE;\">";
   if (helper = helpers.value) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.value); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
@@ -259,9 +372,13 @@ function program4(depth0,data) {
   if (helper = helpers.id) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "/analysis\"><span class=\"glyphicon glyphicon-sort\"></span> ANALYSIS</a>\n         </li>\n         <li>\n            <a href=\"javascript:void(0);\"><span class=\"glyphicon glyphicon-play\"></span> JOBS</a>\n         </li>\n         <li>\n             <a class=\"settings-link\" href=\"javascript:void(0);\">\n                 <span class=\"glyphicon glyphicon-cog\"></span> SETTINGS\n             </a>\n         </li>\n\n\n      </ul>\n   </div>\n</div>\n<div class=\"page-header\" style=\"margin-top:15px; border-bottom:none;\">\n\n</div>\n\n\n\n<div class=\"col-md-12\">\n    <div id=\"listPane\" class=\"tab-pane fade active in\">\n        <div class=\"panel panel-default\">\n            <div class=\"panel-heading\">\n                <h3 class=\"panel-title\">Explore "
+    + "/analysis\"><span class=\"glyphicon glyphicon-sort\"></span> ANALYSIS</a>\n         </li>\n\n\n      </ul>\n   </div>\n</div>\n<div class=\"page-header\" style=\"margin-top:15px; border-bottom:none;\">\n\n</div>\n\n\n\n<div class=\"col-md-12\">\n    <div id=\"listPane\" class=\"tab-pane fade active in\">\n        <div class=\"panel panel-default\">\n            <div class=\" \"> <!-- panel-heading -->\n                <h3 class=\"panel-title\" style=\"margin-top:10px; margin-left: 10px;\">Explore "
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.model)),stack1 == null || stack1 === false ? stack1 : stack1.name)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + " dataset</h3>\n            </div>\n\n            <div style=\"overflow-y: auto; height:450px;\">\n                <table class=\"table table-hover\">\n                    <thead>\n                    <tr>\n                        ";
+    + " dataset</h3>\n            </div>\n            <div style=\"margin-bottom:10px; margin-left:10px; margin-top:10px;\">\n                Sample: <b>"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.model)),stack1 == null || stack1 === false ? stack1 : stack1.header_content)),stack1 == null || stack1 === false ? stack1 : stack1.length)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</b> rows, <b>"
+    + escapeExpression(((stack1 = ((stack1 = ((stack1 = (depth0 && depth0.model)),stack1 == null || stack1 === false ? stack1 : stack1.header_list)),stack1 == null || stack1 === false ? stack1 : stack1.length)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</b> cols\n            </div>\n            <div style=\"overflow-y: auto; height:410px;\">\n                <table class=\"table table-hover\">\n                    <thead>\n                    <tr>\n                        ";
   stack1 = helpers.each.call(depth0, ((stack1 = (depth0 && depth0.model)),stack1 == null || stack1 === false ? stack1 : stack1.header_list), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n                    </tr>\n                    </thead>\n                    <tbody>\n                    ";
@@ -277,6 +394,76 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 
 
   return "<div class=\"container-fluid\">\n    <ul class=\"report-menu-list\">\n        <li>\n            <a>Home</a>\n        </li>\n    </ul>\n</div>\n";
+  });
+templates['input'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  
+
+
+  return "<a href=\"javascript:void(0);\" class=\"option\"><div style=\"padding-left:8px;\"><i class=\"fa fa-database fa-2x\"></i></div>\n<div class=\"label\">Input Dataset</div>\n</a>";
+  });
+templates['loading'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  
+
+
+  return "<style type=\"text/css\">\n	#loadingDiv {\n    position: fixed;\n    top: 0px;\n    right: 0px;\n    width: 100%;\n    height: 100%;\n    background-color: #ffffff;\n    background-image: url('/static/images/loading.gif');\n    background-repeat: no-repeat;\n    background-position: center;\n    z-index: 10000000;\n    opacity: 0.4;\n    filter: alpha(opacity=40);\n    /* For IE8 and earlier */\n}\n</style>\n\n<div id=\"loadingDiv\"> \n</div>";
+  });
+templates['model'] = template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  var buffer = "", stack1, helper, functionType="function", escapeExpression=this.escapeExpression, self=this;
+
+function program1(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n                    <tr>\n                        <td>"
+    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.name)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</td>\n                        <td>"
+    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.created_at)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "</td>\n                        <td>\n                            <a href=\"/project/"
+    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.project_id)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "/analysis/"
+    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.id)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "/view\">View</a>&nbsp;\n                            <a href=\"/project/"
+    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.project_id)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "/analysis/"
+    + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.id)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "/delete\">Delete</a>\n                        </td>\n                    </tr>\n                ";
+  return buffer;
+  }
+
+  buffer += "<style>\ntable.fixed { table-layout:fixed; }\ntable.fixed td { overflow: hidden; }\n.column {\n    padding: 5px 10px;\n    margin-bottom: 2;\n    /*background: #d5b1b1;*/\n    background: #efe3e3;\n    border: 2px solid #d5b1b1;\n    color: #494949;\n    border-radius: 0;\n    font-size: 13px;\n    height: 30px;\n    cursor: move;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    border-bottom: 1px solid #be8a8a;\n    -webkit-transition: box-shadow 0.3s;\n    transition: box-shadow 0.3s;\n}\n.header:hover{\n  background: #ededed;\n  cursor: pointer;\n}\n.item {\n        height: 64px;\n        width: 64px;\n        position: absolute;\n        border: 1px solid #9c9c9c;\n        float: left;\n        text-align: center;\n        font-size: 12px;\n\n        list-style: none;\n        float: left;\n        margin-right: 3px;\n        background-color: #E7F6FF;\n        border-radius: 3px;\n        padding: 8px 12px;\n        font-size: 11px;\n        cursor: move;\n        align-items: center;\n        background-color: #E7F6FF;\n        border: 1px solid #DDDDDD;\n        display: inline-flex;\n        flex-direction: row;\n    }\n    .label {\n    font-size: 13px;\n    width: 110px;\n    text-align: center;\n    color: #333333;\n    position: absolute;\n    left: -22px;\n    top: 66px;\n    text-align: center;\n    height: 54px;\n    overflow: hidden;\n    word-wrap: break-word;\n    pointer-events: none;\n    font-weight: normal;\n}\n\n#BusyBox\n{\nbackground: #F9F9F9;\nborder-top-left-radius: 5px;\nborder-top-right-radius: 5px;\nbottom: 0;\nfont-size: 0.8em;\nfont-style: normal;\nfont-weight: normal;\nleft: 25%;\nmargin-left: -45px;\npadding-top: 20px;\nposition: fixed;\ntext-align: center;\nwidth: 950px;\nheight: 280px;\nz-index: 1000;\nmargin-bottom: -350px;\nbackground-repeat:no-repeat;\nbackground-position: center center;\n}\n\n\n.nav-tabs { border-bottom: 2px solid #DDD; }\n    .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover { border-width: 0; }\n    .nav-tabs > li > a { border: none; color: #666; }\n    .nav-tabs > li.active > a, .nav-tabs > li > a:hover { border: none; color: #F4C269 !important; background: transparent; }\n    .nav-tabs > li > a::after { content: \"\"; background: #F4C269; height: 2px; position: absolute; width: 100%; left: 0px; bottom: -1px; transition: all 250ms ease 0s; transform: scale(0); }\n    .nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after { transform: scale(1); }\n    .tab-nav > li > a::after { background: #21527d none repeat scroll 0% 0%; color: #fff; }\n    .tab-pane { padding: 15px 0; }\n    .tab-content{padding:20px}\n.card {\n  /*background: #FFF none repeat scroll 0% 0%;\n  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3); */\n  margin-top:-8px;\n  padding-top: -25px;\n  margin-bottom: 30px;\n}\ntable.fixed { table-layout:fixed; }\ntable.fixed td { overflow: hidden; }\n</style>\n<div class=\"subnav-report\" id=\"subnav-report\">\n   <div class=\"container-fluid\">\n      <ul class=\"report-menu-list-rt\">\n\n          <li>\n              <a href=\"/project/";
+  if (helper = helpers.project_id) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.project_id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "/analysis/";
+  if (helper = helpers.id) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "/workflow/";
+  if (helper = helpers.make_id) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.make_id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\"><span class=\"glyphicon glyphicon-compressed\"></span> TASKS</a>\n          </li>\n\n          <li>\n              <a href=\"javascript:void(0);\"><span class=\"glyphicon glyphicon-retweet\"></span> NEW MODELS</a>\n          </li>\n\n      </ul>\n      <ul class=\"report-menu-list\">\n        <li>\n             <a href=\"/project/";
+  if (helper = helpers.project_id) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.project_id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\"><span class=\"glyphicon glyphicon-chevron-left\"></span> BACK TO PROJECT</a>\n         </li>\n         <li>\n             <a href=\"/project/";
+  if (helper = helpers.project_id) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.project_id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "/datasets\"><span class=\"glyphicon glyphicon-cloud-upload\"></span> DATASETS</a>\n         </li>\n         <li>\n             <a href=\"/project/";
+  if (helper = helpers.project_id) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.project_id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "/analysis\"><span class=\"glyphicon glyphicon-sort\"></span> ANALYSIS</a>\n         </li>\n\n\n      </ul>\n   </div>\n</div>\n<div class=\"page-header\" style=\"margin-top:15px; border-bottom:none;\">\n\n</div>\n\n\n\n<div class=\"row\">\n\n<div class=\"col-md-2\"></div>\n\n<div class=\"col-md-8\">\n    <div id=\"listPane\" class=\"tab-pane fade active in\">\n        <div class=\"panel panel-default\">\n            <div class=\"panel-heading\">\n                <h3 class=\"panel-title\">Models</h3>\n            </div>\n\n            <table class=\"table table-hover\">\n                <thead>\n                <tr>\n                    <th>Name</th>\n                    <th>Date</th>\n                    <th></th>\n                </tr>\n                </thead>\n                <tbody>\n                ";
+  stack1 = helpers.each.call(depth0, (depth0 && depth0.models), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n                </tbody>\n            </table>\n\n        </div>\n    </div>\n</div>\n</div>";
+  return buffer;
   });
 templates['models'] = template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
@@ -472,7 +659,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   if (helper = helpers.id) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "/analysis\"><span class=\"glyphicon glyphicon-sort\"></span> ANALYSIS</a>\n         </li>\n         <li>\n            <a href=\"javascript:void(0);\"><span class=\"glyphicon glyphicon-play\"></span> JOBS</a>\n         </li>\n         <li>\n             <a class=\"settings-link\" href=\"javascript:void(0);\">\n                 <span class=\"glyphicon glyphicon-cog\"></span> SETTINGS\n             </a>\n         </li>\n\n\n      </ul>\n   </div>\n</div>\n<div class=\"page-header\" style=\"margin-top:15px; border-bottom:none;\">\n\n</div>\n\n<div class=\"row\">\n<div class=\"col-md-2\"></div>\n    <div class=\"col-md-8\">\n\n        <div class=\"panel panel-default\" style=\"\">\n            <div class=\"panel-body\">\n                <h4>";
+    + "/analysis\"><span class=\"glyphicon glyphicon-sort\"></span> ANALYSIS</a>\n         </li>\n         <li>\n             <a class=\"settings-link\" href=\"javascript:void(0);\">\n                 <span class=\"glyphicon glyphicon-cog\"></span> SETTINGS\n             </a>\n         </li>\n\n\n      </ul>\n   </div>\n</div>\n<div class=\"page-header\" style=\"margin-top:15px; border-bottom:none;\">\n\n</div>\n\n<div class=\"row\">\n<div class=\"col-md-2\"></div>\n    <div class=\"col-md-8\">\n\n        <div class=\"panel panel-default\" style=\"\">\n            <div class=\"panel-body\">\n                <h4>";
   if (helper = helpers.name) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.name); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
@@ -531,28 +718,28 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   var buffer = "", stack1;
-  buffer += "\n\n            <div class=\"col-md-4 col-sm-6\" id=\"project_"
+  buffer += "\n      <div class=\"col-md-4 col-sm-6\" id=\"project_"
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.id)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\">\n			        <div class=\"data-source-card\">\n			            <div class=\"ds-header\">\n							<div class=\"controls dropdown\">\n                                <a data-toggle=\"dropdown\" href=\"javscript://\" class=\"dropdown-toggle actions\">Actions\n                                    <b class=\"caret\"></b>\n                                </a>\n                                <ul class=\"dropdown-menu pull-right\">\n                                    <li>\n                                        <a  href=\"javascript://\" id=\""
+    + "\">\n         <div class=\"data-source-card\">\n            <div class=\"ds-header\">\n               <div class=\"controls dropdown\">\n                  <a data-toggle=\"dropdown\" href=\"javscript://\" class=\"dropdown-toggle actions\">Actions\n                  <b class=\"caret\"></b>\n                  </a>\n                  <ul class=\"dropdown-menu pull-right\">\n                     <li>\n                        <a  href=\"javascript://\" id=\""
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.id)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\" class=\"delete-project\">\n                                            <i class=\"fa fa-fw fa-ban\"></i>\n                                            Delete project\n                                        </a>\n                                    </li>\n                                </ul>\n                            </div>\n			            </div>\n			            <div class=\"ds-body\">\n			                <a data-form-method=\"post\" href=\"/project/"
+    + "\" class=\"delete-project\">\n                        <i class=\"fa fa-fw fa-ban\"></i>\n                        Delete project\n                        </a>\n                     </li>\n                  </ul>\n               </div>\n            </div>\n            <div class=\"ds-body\">\n               <a data-form-method=\"post\" href=\"/project/"
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.id)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\" class=\"ds-body-title\">\n			                    <div class=\"ds-body-inner\">\n			                        <div class=\"title\" style=\"font-size:18px;\">"
+    + "\" class=\"ds-body-title\">\n                  <div class=\"ds-body-inner\">\n                     <div class=\"title\" style=\"font-size:18px;\">"
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.name)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "...</div>\n			                        <div class=\"subtitle\"></div>\n                                    <div class=\"subtitle\">Created on: "
+    + "...</div>\n                     <div class=\"subtitle\"></div>\n                     <div class=\"subtitle\">Created on: "
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.created_at)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "</div>\n\n			                    </div>\n			                </a>\n			            </div>\n			            <div class=\"ds-footer\">\n\n                                <i class=\"fa fa-fw fa-pie-chart type\"  style=\"font-size:30px; color: #C2C6CB;\"></i>\n\n			                <div class=\"controls\">\n			                <a href=\"/project/edit/"
+    + "</div>\n                  </div>\n               </a>\n            </div>\n            <div class=\"ds-footer\">\n               <i class=\"fa fa-fw fa-pie-chart type\"  style=\"font-size:30px; color: #C2C6CB;\"></i>\n               <div class=\"controls\">\n                  <a href=\"/project/edit/"
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.id)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\"\n                               class=\"edit-project\" title=\"Edit this project's details.\" style=\"margin-top:5px;\">\n			                	<i class=\"fa fa-lg fa-gear\"  id=\""
+    + "\"\n                     class=\"edit-project\" title=\"Edit this project's details.\" style=\"margin-top:5px;\">\n                  <i class=\"fa fa-lg fa-gear\"  id=\""
     + escapeExpression(((stack1 = ((stack1 = (depth0 && depth0.attributes)),stack1 == null || stack1 === false ? stack1 : stack1.id)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\"></i>\n			                </a>\n			                </div>\n			            </div>\n			        </div>\n			    </div>\n\n            ";
+    + "\"></i>\n                  </a>\n               </div>\n            </div>\n         </div>\n      </div>\n      ";
   return buffer;
   }
 
-  buffer += "<style>\n.page-header {\n    padding-bottom: 9px;\n    margin: 10px 0 20px;\n    border-bottom: 1px solid #eee;\n\n}\n.page-header1 {\n    padding-bottom: 9px;\n    margin: 10px 0 20px;\n    border-bottom: 0px solid #eee;\n\n}\n</style>\n<div class=\"container-fluid\">\n    <ul class=\"report-menu-list\">\n        <li>\n            <a>PROJECTS</a>\n        </li>\n    </ul>\n</div>\n\n<div class=\"page-header page-header1\">\n\n</div>\n\n<div class=\"row\">\n\n    <div class=\"app-sidebar\" style=\"margin-top:4px;\">\n        <input name=\"\" class=\"form-control\" style=\"width:200px; margin-left:-5px;\"><br>\n        <a href=\"/project/add\" class=\"btn btn-default\" style=\"width:200px; margin-left:-5px;\">\n            <i class=\"fa fa-fw fa-plus\"></i> create project\n        </a>\n\n    </div>\n\n    <div id=\"main\" class=\"main-app\" style=\"margin-top:0px;\">\n\n        <div class=\"col-md-12 side-nav\" style=\"margin-top:30px;\" id=\"project-content\">\n\n\n            ";
+  buffer += "<style>\n   .page-header {\n   padding-bottom: 9px;\n   margin: 10px 0 20px;\n   border-bottom: 1px solid #eee;\n   }\n   .page-header1 {\n   padding-bottom: 9px;\n   margin: 10px 0 20px;\n   border-bottom: 0px solid #eee;\n   }\n</style>\n<div class=\"container-fluid\">\n   <ul class=\"report-menu-list-rt\">\n      <li>\n         <a href=\"/project/add\">Create project</a>\n      </li>\n   </ul>\n   <ul class=\"report-menu-list\">\n      <li>\n         <a>PROJECTS</a>\n      </li>\n   </ul>\n</div>\n\n\n\n<div class=\"row\">\n\n   <div class=\"col-md-1\"></div>\n   <div class=\"col-md-10 side-nav\" style=\"margin-top:30px; overflow:auto; height:500px;\" id=\"project-content\">\n      ";
   stack1 = helpers.each.call(depth0, (depth0 && depth0.models), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n\n        </div>\n\n    </div>\n\n\n    </div>";
+  buffer += "\n   </div>\n   <!-- <div class=\"app-sidebar\" style=\"margin-top:4px;\">\n      <input name=\"\" class=\"form-control\" style=\"width:200px; margin-left:-5px;\"><br>\n      <a href=\"/project/add\" class=\"btn btn-default\" style=\"width:200px; margin-left:-5px;\">\n          <i class=\"fa fa-fw fa-plus\"></i> create project\n      </a>\n      \n      </div>\n      \n      <div id=\"main\" class=\"main-app\" style=\"margin-top:0px;\">\n      \n      \n      \n      </div> -->\n</div>";
   return buffer;
   });
 })();

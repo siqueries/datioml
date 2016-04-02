@@ -5,10 +5,16 @@ Handlebars.registerHelper('if_eq', function(a, b, opts) {
         return opts.inverse(this);
     }
 });
+
+Handlebars.registerHelper('makeid', function(opts) {
+    return datioscience.makeid();
+});
 window.datioscience = _.extend({
     views: {},
     models: {},
     collections: {},
+    flag: 1,
+    openId: "",
     workflow: {
         "preprocess": [],
         "algorithm": {},
@@ -17,6 +23,16 @@ window.datioscience = _.extend({
         "newToOldIndicesList": [],
         "parameters": {},
         "model_name": ""
+    },
+    makeid: function()
+    {
+        var text = "";
+        var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+        for( var i=0; i < 70; i++ )
+            text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+        return text;
     },
     utils: {
         rand: function() {

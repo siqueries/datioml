@@ -1,8 +1,9 @@
 package com.siqueries.datio.server.resources
 
-import java.sql.{ Statement }
+import java.sql.{ ResultSetMetaData, ResultSet, Statement }
 import java.util
 
+import com.siqueries.datio.server.javautils.CsvUtil
 import com.siqueries.datio.server.utils.{ MysqlDB, SQLQueries }
 import com.twitter.finagle.Service
 import com.twitter.finagle.http.{ Status, Response, Request }
@@ -75,6 +76,32 @@ object Analysis {
         analysisList.add(analysis)
       }
       rep.setContentString(JSONValue.toJSONString(analysisList))
+      rep
+    }
+  }
+
+  class GetSingleAnalysisImpl extends Service[Request, Response] {
+    def apply(req: Request): Future[Response] = Future {
+      val rep = Response(req.getProtocolVersion(), Status.Ok)
+      val json: JsValue = Json.parse(req.getContentString())
+      val userId = (json \ "userId").as[String]
+      val analysisId = (json \ "analysisId").as[String]
+
+      val sql = String.format(SQLQueries.GET_SINGLE_ANALYSIS_SQL, userId, analysisId)
+      val con = MysqlDB.getConnection()
+      val statement = con.createStatement()
+      val resultSet = statement.executeQuery(sql)
+      val analysis = new util.HashMap[String, String]()
+
+      while (resultSet.next) {
+        analysis.put("name", resultSet.getString("name"))
+        analysis.put("dataset_id", resultSet.getString("dataset_id"))
+        analysis.put("project_id", resultSet.getString("project_id"))
+        analysis.put("user_id", resultSet.getString("user_id"))
+        analysis.put("id", resultSet.getString("id"))
+        analysis.put("created_at", resultSet.getString("created_at"))
+      }
+      rep.setContentString(JSONValue.toJSONString(analysis))
       rep
     }
   }

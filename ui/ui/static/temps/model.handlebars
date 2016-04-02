@@ -1,0 +1,177 @@
+<style>
+table.fixed { table-layout:fixed; }
+table.fixed td { overflow: hidden; }
+.column {
+    padding: 5px 10px;
+    margin-bottom: 2;
+    /*background: #d5b1b1;*/
+    background: #efe3e3;
+    border: 2px solid #d5b1b1;
+    color: #494949;
+    border-radius: 0;
+    font-size: 13px;
+    height: 30px;
+    cursor: move;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-bottom: 1px solid #be8a8a;
+    -webkit-transition: box-shadow 0.3s;
+    transition: box-shadow 0.3s;
+}
+.header:hover{
+  background: #ededed;
+  cursor: pointer;
+}
+.item {
+        height: 64px;
+        width: 64px;
+        position: absolute;
+        border: 1px solid #9c9c9c;
+        float: left;
+        text-align: center;
+        font-size: 12px;
+
+        list-style: none;
+        float: left;
+        margin-right: 3px;
+        background-color: #E7F6FF;
+        border-radius: 3px;
+        padding: 8px 12px;
+        font-size: 11px;
+        cursor: move;
+        align-items: center;
+        background-color: #E7F6FF;
+        border: 1px solid #DDDDDD;
+        display: inline-flex;
+        flex-direction: row;
+    }
+    .label {
+    font-size: 13px;
+    width: 110px;
+    text-align: center;
+    color: #333333;
+    position: absolute;
+    left: -22px;
+    top: 66px;
+    text-align: center;
+    height: 54px;
+    overflow: hidden;
+    word-wrap: break-word;
+    pointer-events: none;
+    font-weight: normal;
+}
+
+#BusyBox
+{
+background: #F9F9F9;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+bottom: 0;
+font-size: 0.8em;
+font-style: normal;
+font-weight: normal;
+left: 25%;
+margin-left: -45px;
+padding-top: 20px;
+position: fixed;
+text-align: center;
+width: 950px;
+height: 280px;
+z-index: 1000;
+margin-bottom: -350px;
+background-repeat:no-repeat;
+background-position: center center;
+}
+
+
+.nav-tabs { border-bottom: 2px solid #DDD; }
+    .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover { border-width: 0; }
+    .nav-tabs > li > a { border: none; color: #666; }
+    .nav-tabs > li.active > a, .nav-tabs > li > a:hover { border: none; color: #F4C269 !important; background: transparent; }
+    .nav-tabs > li > a::after { content: ""; background: #F4C269; height: 2px; position: absolute; width: 100%; left: 0px; bottom: -1px; transition: all 250ms ease 0s; transform: scale(0); }
+    .nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after { transform: scale(1); }
+    .tab-nav > li > a::after { background: #21527d none repeat scroll 0% 0%; color: #fff; }
+    .tab-pane { padding: 15px 0; }
+    .tab-content{padding:20px}
+.card {
+  /*background: #FFF none repeat scroll 0% 0%;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3); */
+  margin-top:-8px;
+  padding-top: -25px;
+  margin-bottom: 30px;
+}
+table.fixed { table-layout:fixed; }
+table.fixed td { overflow: hidden; }
+</style>
+<div class="subnav-report" id="subnav-report">
+   <div class="container-fluid">
+      <ul class="report-menu-list-rt">
+
+          <li>
+              <a href="/project/{{project_id}}/analysis/{{id}}/workflow/{{make_id}}"><span class="glyphicon glyphicon-compressed"></span> TASKS</a>
+          </li>
+
+          <li>
+              <a href="javascript:void(0);"><span class="glyphicon glyphicon-retweet"></span> NEW MODELS</a>
+          </li>
+
+      </ul>
+      <ul class="report-menu-list">
+        <li>
+             <a href="/project/{{project_id}}"><span class="glyphicon glyphicon-chevron-left"></span> BACK TO PROJECT</a>
+         </li>
+         <li>
+             <a href="/project/{{project_id}}/datasets"><span class="glyphicon glyphicon-cloud-upload"></span> DATASETS</a>
+         </li>
+         <li>
+             <a href="/project/{{project_id}}/analysis"><span class="glyphicon glyphicon-sort"></span> ANALYSIS</a>
+         </li>
+
+
+      </ul>
+   </div>
+</div>
+<div class="page-header" style="margin-top:15px; border-bottom:none;">
+
+</div>
+
+
+
+<div class="row">
+
+<div class="col-md-2"></div>
+
+<div class="col-md-8">
+    <div id="listPane" class="tab-pane fade active in">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Models</h3>
+            </div>
+
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#each models}}
+                    <tr>
+                        <td>{{attributes.name}}</td>
+                        <td>{{attributes.created_at}}</td>
+                        <td>
+                            <a href="/project/{{attributes.project_id}}/analysis/{{attributes.id}}/view">View</a>&nbsp;
+                            <a href="/project/{{attributes.project_id}}/analysis/{{attributes.id}}/delete">Delete</a>
+                        </td>
+                    </tr>
+                {{/each}}
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+</div>

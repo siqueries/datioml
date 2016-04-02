@@ -72,6 +72,14 @@ def api_get_analysis(user_id, project_id):
 	response = post_method(url, data)
 	return response
 
+def api_get_single_analysis(user_id, analysis_id):
+	url = "{api}/{path}".format(api=finagle_api, path="analysis/single")
+	data = dict()
+	data["userId"] = user_id
+	data["analysisId"] = analysis_id
+	response = post_method(url, data)
+	return response
+
 
 def api_get_metadata(user_id, analysis_id):
 	url = "{api}/{path}".format(api=finagle_api, path="datasets/metadata")

@@ -1,6 +1,5 @@
 package com.siqueries.datioml.resources;
 
-
 import java.util.HashMap;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -12,10 +11,7 @@ import org.json.simple.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-
-
 /**
- *
  * @author ebot
  */
 @Path("/")

@@ -57,6 +57,7 @@ object Main extends TwitterServer with Logging {
 
     HttpMuxer.addRichHandler("/api/v1/analysis/create", new CreateAnalysisImpl)
     HttpMuxer.addRichHandler("/api/v1/analysis", new GetAnalysisImpl)
+    HttpMuxer.addRichHandler("/api/v1/analysis/single", new GetSingleAnalysisImpl)
 
     HttpMuxer.addRichHandler("/api/v1/analysis/models/build", new BuildModelImpl(sendingChannel, queueName))
     HttpMuxer.addRichHandler("/api/v1/analysis/models", new GetAnalysisImpl)

@@ -21,14 +21,6 @@ table.fixed td { overflow: hidden; }
          <li>
              <a href="/project/{{id}}/analysis"><span class="glyphicon glyphicon-sort"></span> ANALYSIS</a>
          </li>
-         <li>
-            <a href="javascript:void(0);"><span class="glyphicon glyphicon-play"></span> JOBS</a>
-         </li>
-         <li>
-             <a class="settings-link" href="javascript:void(0);">
-                 <span class="glyphicon glyphicon-cog"></span> SETTINGS
-             </a>
-         </li>
 
 
       </ul>
@@ -64,8 +56,8 @@ table.fixed td { overflow: hidden; }
                         <td>{{attributes.name}}</td>
                         <td>{{attributes.created_at}}</td>
                         <td>
-                            <a href="/project/{{attributes.project_id}}/analysis/{{attributes.id}}/view">View</a>&nbsp;
-                             <a href="/project/{{attributes.project_id}}/analysis/{{attributes.id}}/models">Models</a>&nbsp;
+                            <a href="/project/{{attributes.project_id}}/analysis/{{attributes.id}}/workflow/{{makeid}}">Open Workflow</a>&nbsp;
+                             <a href="/project/{{attributes.project_id}}/analysis/{{attributes.id}}/edit">Edit</a>&nbsp;
                             <a href="/project/{{attributes.project_id}}/analysis/{{attributes.id}}/delete">Delete</a>
                         </td>
                     </tr>

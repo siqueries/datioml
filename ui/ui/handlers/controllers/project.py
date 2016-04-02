@@ -94,6 +94,13 @@ def get_analysis_count():
 
 
 @csrf.exempt
+@app.route('/api/projects/<project_id>/analysis/<analysis_id>')
+@login_required
+def get_single_analysis(project_id, analysis_id):
+	analysis = api_get_single_analysis(str(current_user.id), analysis_id)
+	return Response(response=json.dumps(analysis), status=200, mimetype="application/json")
+
+@csrf.exempt
 @app.route('/api/projects/<project_id>/analysis', methods=["GET", "POST"])
 @login_required
 def get_analysis(project_id):

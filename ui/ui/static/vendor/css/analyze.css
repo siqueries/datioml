@@ -161,7 +161,8 @@
     left: 0;
     top: 75px;
     bottom: 0;
-    width: 220px;
+    width: 320px;
+    /*width: 220px;*/
    /* overflow-y: auto;*/
     padding: 15px 8px 20px 15px;
     background-color: #f9f9f9;
@@ -212,11 +213,13 @@
 }
 .main-app, .main-app-view {
     position: fixed;
-    left: 220px;
+    /*left: 220px;*/
+    left: 314px;
     right: 0px;
     top: 75px;
     bottom: 0;
-    background-color: #fff;
+    /*background-color: #fff;*/
+    background-color: #F9F9F9;
     padding: 10px 20px 10px 10px;
     overflow: scroll;
 }

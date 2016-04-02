@@ -66,6 +66,21 @@ def gt_csv_upload(id):
 def new_analysis(id):
     return render_template("home/index.html", title="Welcome")
 
+@app.route('/project/<id>/analysis/<analysis_id>/view')
+@login_required
+def build_analysis(id, analysis_id):
+    return render_template("home/index.html", title="Welcome")
+
+@app.route('/project/<id>/analysis/<analysis_id>/workflow/<i>')
+@login_required
+def build_a(id, analysis_id, i):
+    return render_template("home/index.html", title="Welcome")
+
+@app.route('/project/<id>/analysis/<analysis_id>/workflow/<i>/ml')
+@login_required
+def build_ml(id, analysis_id, i):
+    return render_template("home/index.html", title="Welcome")
+
 
 @app.route('/project/<id>/analysis/<analysis_id>/models')
 @login_required

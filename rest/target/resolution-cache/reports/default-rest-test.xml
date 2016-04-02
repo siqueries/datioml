@@ -1,0 +1,1123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="default"
+		module="rest"
+		revision="1.0"
+		conf="test"
+		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
+		date="20160323152745"/>
+	<dependencies>
+		<module organisation="io.dropwizard" name="dropwizard-core">
+			<revision name="0.9.2" status="release" pubdate="20160120100424" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="8">
+				<metadata-artifact status="no" details="" size="58773" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard/dropwizard-core/ivy-0.9.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/dropwizard/dropwizard-core/0.9.2/dropwizard-core-0.9.2.pom"/>
+				<caller organisation="default" name="rest" conf="test, compile, runtime" rev="0.9.2" rev-constraint-default="0.9.2" rev-constraint-dynamic="0.9.2" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="dropwizard-core" type="jar" ext="jar" status="no" details="" size="39835" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard/dropwizard-core/jars/dropwizard-core-0.9.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/dropwizard/dropwizard-core/0.9.2/dropwizard-core-0.9.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.eclipse.jetty.toolchain.setuid" name="jetty-setuid-java">
+			<revision name="1.0.3" status="release" pubdate="20150413183650" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="83">
+				<metadata-artifact status="no" details="" size="3615" time="0" location="/Users/ebottabi/.ivy2/cache/org.eclipse.jetty.toolchain.setuid/jetty-setuid-java/ivy-1.0.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/eclipse/jetty/toolchain/setuid/jetty-setuid-java/1.0.3/jetty-setuid-java-1.0.3.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-core" conf="default, compile, runtime, master" rev="1.0.3" rev-constraint-default="1.0.3" rev-constraint-dynamic="1.0.3" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="jetty-setuid-java" type="jar" ext="jar" status="no" details="" size="13161" time="0" location="/Users/ebottabi/.ivy2/cache/org.eclipse.jetty.toolchain.setuid/jetty-setuid-java/jars/jetty-setuid-java-1.0.3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/eclipse/jetty/toolchain/setuid/jetty-setuid-java/1.0.3/jetty-setuid-java-1.0.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="net.sourceforge.argparse4j" name="argparse4j">
+			<revision name="0.6.0" status="release" pubdate="20150620155323" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://argparse4j.sourceforge.net" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="82">
+				<license name="MIT" url="https://raw.github.com/tatsuhiro-t/argparse4j/master/LICENSE.txt"/>
+				<metadata-artifact status="no" details="" size="3376" time="0" location="/Users/ebottabi/.ivy2/cache/net.sourceforge.argparse4j/argparse4j/ivy-0.6.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/net/sourceforge/argparse4j/argparse4j/0.6.0/argparse4j-0.6.0.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-core" conf="default, compile, runtime, master" rev="0.6.0" rev-constraint-default="0.6.0" rev-constraint-dynamic="0.6.0" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="argparse4j" type="jar" ext="jar" status="no" details="" size="86069" time="0" location="/Users/ebottabi/.ivy2/cache/net.sourceforge.argparse4j/argparse4j/jars/argparse4j-0.6.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/net/sourceforge/argparse4j/argparse4j/0.6.0/argparse4j-0.6.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.dropwizard.metrics" name="metrics-servlets">
+			<revision name="3.1.2" status="release" pubdate="20150426050241" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="79">
+				<metadata-artifact status="no" details="" size="6080" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard.metrics/metrics-servlets/ivy-3.1.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/dropwizard/metrics/metrics-servlets/3.1.2/metrics-servlets-3.1.2.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-core" conf="default, compile, runtime, master" rev="3.1.2" rev-constraint-default="3.1.2" rev-constraint-dynamic="3.1.2" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="metrics-servlets" type="bundle" ext="jar" status="no" details="" size="16568" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard.metrics/metrics-servlets/bundles/metrics-servlets-3.1.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/dropwizard/metrics/metrics-servlets/3.1.2/metrics-servlets-3.1.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.dropwizard.metrics" name="metrics-json">
+			<revision name="3.1.2" status="release" pubdate="20150426050149" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="81">
+				<metadata-artifact status="no" details="" size="5281" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard.metrics/metrics-json/ivy-3.1.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/dropwizard/metrics/metrics-json/3.1.2/metrics-json-3.1.2.pom"/>
+				<caller organisation="io.dropwizard.metrics" name="metrics-servlets" conf="compile, runtime" rev="3.1.2" rev-constraint-default="3.1.2" rev-constraint-dynamic="3.1.2" callerrev="3.1.2"/>
+				<artifacts>
+					<artifact name="metrics-json" type="bundle" ext="jar" status="no" details="" size="15827" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard.metrics/metrics-json/bundles/metrics-json-3.1.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/dropwizard/metrics/metrics-json/3.1.2/metrics-json-3.1.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.dropwizard.metrics" name="metrics-healthchecks">
+			<revision name="3.1.2" status="release" pubdate="20150426045933" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="80">
+				<metadata-artifact status="no" details="" size="5066" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard.metrics/metrics-healthchecks/ivy-3.1.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/dropwizard/metrics/metrics-healthchecks/3.1.2/metrics-healthchecks-3.1.2.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-core" conf="default, compile, runtime, master" rev="3.1.2" rev-constraint-default="3.1.2" rev-constraint-dynamic="3.1.2" callerrev="0.9.2"/>
+				<caller organisation="io.dropwizard.metrics" name="metrics-servlets" conf="compile, runtime" rev="3.1.2" rev-constraint-default="3.1.2" rev-constraint-dynamic="3.1.2" callerrev="3.1.2"/>
+				<artifacts>
+					<artifact name="metrics-healthchecks" type="bundle" ext="jar" status="no" details="" size="10170" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard.metrics/metrics-healthchecks/bundles/metrics-healthchecks-3.1.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/dropwizard/metrics/metrics-healthchecks/3.1.2/metrics-healthchecks-3.1.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.dropwizard.metrics" name="metrics-jvm">
+			<revision name="3.1.2" status="release" pubdate="20150426045923" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="78">
+				<metadata-artifact status="no" details="" size="5013" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard.metrics/metrics-jvm/ivy-3.1.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/dropwizard/metrics/metrics-jvm/3.1.2/metrics-jvm-3.1.2.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-core" conf="default, compile, runtime, master" rev="3.1.2" rev-constraint-default="3.1.2" rev-constraint-dynamic="3.1.2" callerrev="0.9.2"/>
+				<caller organisation="io.dropwizard.metrics" name="metrics-servlets" conf="compile, runtime" rev="3.1.2" rev-constraint-default="3.1.2" rev-constraint-dynamic="3.1.2" callerrev="3.1.2"/>
+				<artifacts>
+					<artifact name="metrics-jvm" type="bundle" ext="jar" status="no" details="" size="39280" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard.metrics/metrics-jvm/bundles/metrics-jvm-3.1.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/dropwizard/metrics/metrics-jvm/3.1.2/metrics-jvm-3.1.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.dropwizard" name="dropwizard-jetty">
+			<revision name="0.9.2" status="release" pubdate="20160120100350" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="75">
+				<metadata-artifact status="no" details="" size="56657" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard/dropwizard-jetty/ivy-0.9.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/dropwizard/dropwizard-jetty/0.9.2/dropwizard-jetty-0.9.2.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-core" conf="default, compile, runtime, master" rev="0.9.2" rev-constraint-default="0.9.2" rev-constraint-dynamic="0.9.2" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="dropwizard-jetty" type="jar" ext="jar" status="no" details="" size="34136" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard/dropwizard-jetty/jars/dropwizard-jetty-0.9.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/dropwizard/dropwizard-jetty/0.9.2/dropwizard-jetty-0.9.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.eclipse.jetty" name="jetty-servlets">
+			<revision name="9.2.13.v20150730" status="release" pubdate="20150730182119" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.eclipse.org/jetty" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="77">
+				<metadata-artifact status="no" details="" size="15215" time="0" location="/Users/ebottabi/.ivy2/cache/org.eclipse.jetty/jetty-servlets/ivy-9.2.13.v20150730.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-servlets/9.2.13.v20150730/jetty-servlets-9.2.13.v20150730.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-jetty" conf="compile, runtime" rev="9.2.13.v20150730" rev-constraint-default="9.2.13.v20150730" rev-constraint-dynamic="9.2.13.v20150730" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="jetty-servlets" type="jar" ext="jar" status="no" details="" size="122602" time="0" location="/Users/ebottabi/.ivy2/cache/org.eclipse.jetty/jetty-servlets/jars/jetty-servlets-9.2.13.v20150730.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-servlets/9.2.13.v20150730/jetty-servlets-9.2.13.v20150730.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.dropwizard.metrics" name="metrics-jetty9">
+			<revision name="3.1.2" status="release" pubdate="20150426050127" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="76">
+				<metadata-artifact status="no" details="" size="5412" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard.metrics/metrics-jetty9/ivy-3.1.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/dropwizard/metrics/metrics-jetty9/3.1.2/metrics-jetty9-3.1.2.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-jetty" conf="compile, runtime" rev="3.1.2" rev-constraint-default="3.1.2" rev-constraint-dynamic="3.1.2" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="metrics-jetty9" type="bundle" ext="jar" status="no" details="" size="19327" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard.metrics/metrics-jetty9/bundles/metrics-jetty9-3.1.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/dropwizard/metrics/metrics-jetty9/3.1.2/metrics-jetty9-3.1.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.dropwizard" name="dropwizard-servlets">
+			<revision name="0.9.2" status="release" pubdate="20160120100322" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="74">
+				<metadata-artifact status="no" details="" size="56473" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard/dropwizard-servlets/ivy-0.9.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/dropwizard/dropwizard-servlets/0.9.2/dropwizard-servlets-0.9.2.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-core" conf="default, compile, runtime, master" rev="0.9.2" rev-constraint-default="0.9.2" rev-constraint-dynamic="0.9.2" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="dropwizard-servlets" type="jar" ext="jar" status="no" details="" size="28398" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard/dropwizard-servlets/jars/dropwizard-servlets-0.9.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/dropwizard/dropwizard-servlets/0.9.2/dropwizard-servlets-0.9.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.dropwizard" name="dropwizard-jersey">
+			<revision name="0.9.2" status="release" pubdate="20160120100247" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="45">
+				<metadata-artifact status="no" details="" size="58918" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard/dropwizard-jersey/ivy-0.9.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/dropwizard/dropwizard-jersey/0.9.2/dropwizard-jersey-0.9.2.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-core" conf="default, compile, runtime, master" rev="0.9.2" rev-constraint-default="0.9.2" rev-constraint-dynamic="0.9.2" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="dropwizard-jersey" type="jar" ext="jar" status="no" details="" size="64194" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard/dropwizard-jersey/jars/dropwizard-jersey-0.9.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/dropwizard/dropwizard-jersey/0.9.2/dropwizard-jersey-0.9.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.eclipse.jetty" name="jetty-continuation">
+			<revision name="9.2.13.v20150730" status="release" pubdate="20150730181801" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.eclipse.org/jetty" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="73">
+				<metadata-artifact status="no" details="" size="14094" time="0" location="/Users/ebottabi/.ivy2/cache/org.eclipse.jetty/jetty-continuation/ivy-9.2.13.v20150730.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-continuation/9.2.13.v20150730/jetty-continuation-9.2.13.v20150730.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-jersey" conf="compile, runtime" rev="9.2.13.v20150730" rev-constraint-default="9.2.13.v20150730" rev-constraint-dynamic="9.2.13.v20150730" callerrev="0.9.2"/>
+				<caller organisation="org.eclipse.jetty" name="jetty-servlets" conf="compile, runtime" rev="9.2.13.v20150730" rev-constraint-default="9.2.13.v20150730" rev-constraint-dynamic="9.2.13.v20150730" callerrev="9.2.13.v20150730"/>
+				<artifacts>
+					<artifact name="jetty-continuation" type="jar" ext="jar" status="no" details="" size="15996" time="0" location="/Users/ebottabi/.ivy2/cache/org.eclipse.jetty/jetty-continuation/jars/jetty-continuation-9.2.13.v20150730.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-continuation/9.2.13.v20150730/jetty-continuation-9.2.13.v20150730.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.eclipse.jetty" name="jetty-webapp">
+			<revision name="9.2.13.v20150730" status="release" pubdate="20150730181628" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.eclipse.org/jetty" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="69">
+				<metadata-artifact status="no" details="" size="14581" time="0" location="/Users/ebottabi/.ivy2/cache/org.eclipse.jetty/jetty-webapp/ivy-9.2.13.v20150730.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-webapp/9.2.13.v20150730/jetty-webapp-9.2.13.v20150730.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-jersey" conf="compile, runtime" rev="9.2.13.v20150730" rev-constraint-default="9.2.13.v20150730" rev-constraint-dynamic="9.2.13.v20150730" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="jetty-webapp" type="jar" ext="jar" status="no" details="" size="107866" time="0" location="/Users/ebottabi/.ivy2/cache/org.eclipse.jetty/jetty-webapp/jars/jetty-webapp-9.2.13.v20150730.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-webapp/9.2.13.v20150730/jetty-webapp-9.2.13.v20150730.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.eclipse.jetty" name="jetty-servlet">
+			<revision name="9.2.13.v20150730" status="release" pubdate="20150730181603" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.eclipse.org/jetty" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="71">
+				<metadata-artifact status="no" details="" size="14423" time="0" location="/Users/ebottabi/.ivy2/cache/org.eclipse.jetty/jetty-servlet/ivy-9.2.13.v20150730.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-servlet/9.2.13.v20150730/jetty-servlet-9.2.13.v20150730.pom"/>
+				<caller organisation="org.eclipse.jetty" name="jetty-webapp" conf="compile, runtime" rev="9.2.13.v20150730" rev-constraint-default="9.2.13.v20150730" rev-constraint-dynamic="9.2.13.v20150730" callerrev="9.2.13.v20150730"/>
+				<caller organisation="io.dropwizard" name="dropwizard-jetty" conf="compile, runtime" rev="9.2.13.v20150730" rev-constraint-default="9.2.13.v20150730" rev-constraint-dynamic="9.2.13.v20150730" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="jetty-servlet" type="jar" ext="jar" status="no" details="" size="115670" time="0" location="/Users/ebottabi/.ivy2/cache/org.eclipse.jetty/jetty-servlet/jars/jetty-servlet-9.2.13.v20150730.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-servlet/9.2.13.v20150730/jetty-servlet-9.2.13.v20150730.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.eclipse.jetty" name="jetty-security">
+			<revision name="9.2.13.v20150730" status="release" pubdate="20150730181531" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.eclipse.org/jetty" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="72">
+				<metadata-artifact status="no" details="" size="14293" time="0" location="/Users/ebottabi/.ivy2/cache/org.eclipse.jetty/jetty-security/ivy-9.2.13.v20150730.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-security/9.2.13.v20150730/jetty-security-9.2.13.v20150730.pom"/>
+				<caller organisation="org.eclipse.jetty" name="jetty-servlet" conf="compile, runtime" rev="9.2.13.v20150730" rev-constraint-default="9.2.13.v20150730" rev-constraint-dynamic="9.2.13.v20150730" callerrev="9.2.13.v20150730"/>
+				<artifacts>
+					<artifact name="jetty-security" type="jar" ext="jar" status="no" details="" size="95927" time="0" location="/Users/ebottabi/.ivy2/cache/org.eclipse.jetty/jetty-security/jars/jetty-security-9.2.13.v20150730.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-security/9.2.13.v20150730/jetty-security-9.2.13.v20150730.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.glassfish.jersey.containers" name="jersey-container-servlet">
+			<revision name="2.22.1" status="release" pubdate="20151007115733" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="67">
+				<metadata-artifact status="no" details="" size="47753" time="0" location="/Users/ebottabi/.ivy2/cache/org.glassfish.jersey.containers/jersey-container-servlet/ivy-2.22.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/glassfish/jersey/containers/jersey-container-servlet/2.22.1/jersey-container-servlet-2.22.1.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-jersey" conf="compile, runtime" rev="2.22.1" rev-constraint-default="2.22.1" rev-constraint-dynamic="2.22.1" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="jersey-container-servlet" type="jar" ext="jar" status="no" details="" size="16610" time="0" location="/Users/ebottabi/.ivy2/cache/org.glassfish.jersey.containers/jersey-container-servlet/jars/jersey-container-servlet-2.22.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/glassfish/jersey/containers/jersey-container-servlet/2.22.1/jersey-container-servlet-2.22.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.glassfish.jersey.containers" name="jersey-container-servlet-core">
+			<revision name="2.22.1" status="release" pubdate="20151007115717" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="68">
+				<metadata-artifact status="no" details="" size="47889" time="0" location="/Users/ebottabi/.ivy2/cache/org.glassfish.jersey.containers/jersey-container-servlet-core/ivy-2.22.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/glassfish/jersey/containers/jersey-container-servlet-core/2.22.1/jersey-container-servlet-core-2.22.1.pom"/>
+				<caller organisation="org.glassfish.jersey.containers" name="jersey-container-servlet" conf="compile, runtime" rev="2.22.1" rev-constraint-default="2.22.1" rev-constraint-dynamic="2.22.1" callerrev="2.22.1"/>
+				<artifacts>
+					<artifact name="jersey-container-servlet-core" type="jar" ext="jar" status="no" details="" size="64787" time="0" location="/Users/ebottabi/.ivy2/cache/org.glassfish.jersey.containers/jersey-container-servlet-core/jars/jersey-container-servlet-core-2.22.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/glassfish/jersey/containers/jersey-container-servlet-core/2.22.1/jersey-container-servlet-core-2.22.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.fasterxml.jackson.jaxrs" name="jackson-jaxrs-json-provider">
+			<revision name="2.6.3" status="release" pubdate="20151012215735" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="64">
+				<metadata-artifact status="no" details="" size="11226" time="0" location="/Users/ebottabi/.ivy2/cache/com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/ivy-2.6.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/jaxrs/jackson-jaxrs-json-provider/2.6.3/jackson-jaxrs-json-provider-2.6.3.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-jersey" conf="compile, runtime" rev="2.6.3" rev-constraint-default="2.6.3" rev-constraint-dynamic="2.6.3" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="jackson-jaxrs-json-provider" type="bundle" ext="jar" status="no" details="" size="16844" time="0" location="/Users/ebottabi/.ivy2/cache/com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/bundles/jackson-jaxrs-json-provider-2.6.3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/jaxrs/jackson-jaxrs-json-provider/2.6.3/jackson-jaxrs-json-provider-2.6.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.fasterxml.jackson.module" name="jackson-module-jaxb-annotations">
+			<revision name="2.6.3" status="release" pubdate="20151012194316" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://wiki.fasterxml.com/JacksonJAXBAnnotations" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="66">
+				<metadata-artifact status="no" details="" size="8274" time="0" location="/Users/ebottabi/.ivy2/cache/com.fasterxml.jackson.module/jackson-module-jaxb-annotations/ivy-2.6.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.6.3/jackson-module-jaxb-annotations-2.6.3.pom"/>
+				<caller organisation="com.fasterxml.jackson.jaxrs" name="jackson-jaxrs-json-provider" conf="compile, runtime" rev="2.6.3" rev-constraint-default="2.6.3" rev-constraint-dynamic="2.6.3" callerrev="2.6.3"/>
+				<artifacts>
+					<artifact name="jackson-module-jaxb-annotations" type="bundle" ext="jar" status="no" details="" size="32618" time="0" location="/Users/ebottabi/.ivy2/cache/com.fasterxml.jackson.module/jackson-module-jaxb-annotations/bundles/jackson-module-jaxb-annotations-2.6.3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.6.3/jackson-module-jaxb-annotations-2.6.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.fasterxml.jackson.jaxrs" name="jackson-jaxrs-base">
+			<revision name="2.6.3" status="release" pubdate="20151012215714" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="65">
+				<metadata-artifact status="no" details="" size="10390" time="0" location="/Users/ebottabi/.ivy2/cache/com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/ivy-2.6.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/jaxrs/jackson-jaxrs-base/2.6.3/jackson-jaxrs-base-2.6.3.pom"/>
+				<caller organisation="com.fasterxml.jackson.jaxrs" name="jackson-jaxrs-json-provider" conf="compile, runtime" rev="2.6.3" rev-constraint-default="2.6.3" rev-constraint-dynamic="2.6.3" callerrev="2.6.3"/>
+				<artifacts>
+					<artifact name="jackson-jaxrs-base" type="bundle" ext="jar" status="no" details="" size="29997" time="0" location="/Users/ebottabi/.ivy2/cache/com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/bundles/jackson-jaxrs-base-2.6.3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/jaxrs/jackson-jaxrs-base/2.6.3/jackson-jaxrs-base-2.6.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.dropwizard.metrics" name="metrics-jersey2">
+			<revision name="3.1.2" status="release" pubdate="20150426050104" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="62">
+				<metadata-artifact status="no" details="" size="5617" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard.metrics/metrics-jersey2/ivy-3.1.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/dropwizard/metrics/metrics-jersey2/3.1.2/metrics-jersey2-3.1.2.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-jersey" conf="compile, runtime" rev="3.1.2" rev-constraint-default="3.1.2" rev-constraint-dynamic="3.1.2" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="metrics-jersey2" type="bundle" ext="jar" status="no" details="" size="13136" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard.metrics/metrics-jersey2/bundles/metrics-jersey2-3.1.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/dropwizard/metrics/metrics-jersey2/3.1.2/metrics-jersey2-3.1.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.dropwizard.metrics" name="metrics-annotation">
+			<revision name="3.1.2" status="release" pubdate="20150426045844" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="63">
+				<metadata-artifact status="no" details="" size="4843" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard.metrics/metrics-annotation/ivy-3.1.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/dropwizard/metrics/metrics-annotation/3.1.2/metrics-annotation-3.1.2.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-servlets" conf="compile, runtime" rev="3.1.2" rev-constraint-default="3.1.2" rev-constraint-dynamic="3.1.2" callerrev="0.9.2"/>
+				<caller organisation="io.dropwizard.metrics" name="metrics-jersey2" conf="compile, runtime" rev="3.1.2" rev-constraint-default="3.1.2" rev-constraint-dynamic="3.1.2" callerrev="3.1.2"/>
+				<artifacts>
+					<artifact name="metrics-annotation" type="bundle" ext="jar" status="no" details="" size="6583" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard.metrics/metrics-annotation/bundles/metrics-annotation-3.1.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/dropwizard/metrics/metrics-annotation/3.1.2/metrics-annotation-3.1.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.glassfish.jersey.ext" name="jersey-bean-validation">
+			<revision name="2.22.1" status="release" pubdate="20151007121026" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="61">
+				<metadata-artifact status="no" details="" size="48486" time="0" location="/Users/ebottabi/.ivy2/cache/org.glassfish.jersey.ext/jersey-bean-validation/ivy-2.22.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/glassfish/jersey/ext/jersey-bean-validation/2.22.1/jersey-bean-validation-2.22.1.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-jersey" conf="compile, runtime" rev="2.22.1" rev-constraint-default="2.22.1" rev-constraint-dynamic="2.22.1" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="jersey-bean-validation" type="jar" ext="jar" status="no" details="" size="40604" time="0" location="/Users/ebottabi/.ivy2/cache/org.glassfish.jersey.ext/jersey-bean-validation/jars/jersey-bean-validation-2.22.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/glassfish/jersey/ext/jersey-bean-validation/2.22.1/jersey-bean-validation-2.22.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.glassfish.jersey.ext" name="jersey-metainf-services">
+			<revision name="2.22.1" status="release" pubdate="20151007124631" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="60">
+				<metadata-artifact status="no" details="" size="47553" time="0" location="/Users/ebottabi/.ivy2/cache/org.glassfish.jersey.ext/jersey-metainf-services/ivy-2.22.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/glassfish/jersey/ext/jersey-metainf-services/2.22.1/jersey-metainf-services-2.22.1.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-jersey" conf="compile, runtime" rev="2.22.1" rev-constraint-default="2.22.1" rev-constraint-dynamic="2.22.1" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="jersey-metainf-services" type="jar" ext="jar" status="no" details="" size="6789" time="0" location="/Users/ebottabi/.ivy2/cache/org.glassfish.jersey.ext/jersey-metainf-services/jars/jersey-metainf-services-2.22.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/glassfish/jersey/ext/jersey-metainf-services/2.22.1/jersey-metainf-services-2.22.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.glassfish.jersey.core" name="jersey-server">
+			<revision name="2.22.1" status="release" pubdate="20151007115649" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="46">
+				<metadata-artifact status="no" details="" size="49035" time="0" location="/Users/ebottabi/.ivy2/cache/org.glassfish.jersey.core/jersey-server/ivy-2.22.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/glassfish/jersey/core/jersey-server/2.22.1/jersey-server-2.22.1.pom"/>
+				<caller organisation="org.glassfish.jersey.containers" name="jersey-container-servlet" conf="compile, runtime" rev="2.22.1" rev-constraint-default="2.22.1" rev-constraint-dynamic="2.22.1" callerrev="2.22.1"/>
+				<caller organisation="io.dropwizard" name="dropwizard-jersey" conf="compile, runtime" rev="2.22.1" rev-constraint-default="2.22.1" rev-constraint-dynamic="2.22.1" callerrev="0.9.2"/>
+				<caller organisation="org.glassfish.jersey.ext" name="jersey-bean-validation" conf="compile, runtime" rev="2.22.1" rev-constraint-default="2.22.1" rev-constraint-dynamic="2.22.1" callerrev="2.22.1"/>
+				<caller organisation="org.glassfish.jersey.containers" name="jersey-container-servlet-core" conf="compile, runtime" rev="2.22.1" rev-constraint-default="2.22.1" rev-constraint-dynamic="2.22.1" callerrev="2.22.1"/>
+				<artifacts>
+					<artifact name="jersey-server" type="jar" ext="jar" status="no" details="" size="951633" time="0" location="/Users/ebottabi/.ivy2/cache/org.glassfish.jersey.core/jersey-server/jars/jersey-server-2.22.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/glassfish/jersey/core/jersey-server/2.22.1/jersey-server-2.22.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.glassfish.jersey.media" name="jersey-media-jaxb">
+			<revision name="2.22.1" status="release" pubdate="20151007115526" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="59">
+				<metadata-artifact status="no" details="" size="48064" time="0" location="/Users/ebottabi/.ivy2/cache/org.glassfish.jersey.media/jersey-media-jaxb/ivy-2.22.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/glassfish/jersey/media/jersey-media-jaxb/2.22.1/jersey-media-jaxb-2.22.1.pom"/>
+				<caller organisation="org.glassfish.jersey.core" name="jersey-server" conf="compile, runtime" rev="2.22.1" rev-constraint-default="2.22.1" rev-constraint-dynamic="2.22.1" callerrev="2.22.1"/>
+				<artifacts>
+					<artifact name="jersey-media-jaxb" type="jar" ext="jar" status="no" details="" size="72738" time="0" location="/Users/ebottabi/.ivy2/cache/org.glassfish.jersey.media/jersey-media-jaxb/jars/jersey-media-jaxb-2.22.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/glassfish/jersey/media/jersey-media-jaxb/2.22.1/jersey-media-jaxb-2.22.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.glassfish.jersey.core" name="jersey-client">
+			<revision name="2.22.1" status="release" pubdate="20151007115547" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="58">
+				<metadata-artifact status="no" details="" size="47721" time="0" location="/Users/ebottabi/.ivy2/cache/org.glassfish.jersey.core/jersey-client/ivy-2.22.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/glassfish/jersey/core/jersey-client/2.22.1/jersey-client-2.22.1.pom"/>
+				<caller organisation="org.glassfish.jersey.core" name="jersey-server" conf="compile, runtime" rev="2.22.1" rev-constraint-default="2.22.1" rev-constraint-dynamic="2.22.1" callerrev="2.22.1"/>
+				<artifacts>
+					<artifact name="jersey-client" type="jar" ext="jar" status="no" details="" size="163417" time="0" location="/Users/ebottabi/.ivy2/cache/org.glassfish.jersey.core/jersey-client/jars/jersey-client-2.22.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/glassfish/jersey/core/jersey-client/2.22.1/jersey-client-2.22.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.glassfish.jersey.core" name="jersey-common">
+			<revision name="2.22.1" status="release" pubdate="20151007115459" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="47">
+				<metadata-artifact status="no" details="" size="48533" time="0" location="/Users/ebottabi/.ivy2/cache/org.glassfish.jersey.core/jersey-common/ivy-2.22.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/glassfish/jersey/core/jersey-common/2.22.1/jersey-common-2.22.1.pom"/>
+				<caller organisation="org.glassfish.jersey.ext" name="jersey-metainf-services" conf="compile, runtime" rev="2.22.1" rev-constraint-default="2.22.1" rev-constraint-dynamic="2.22.1" callerrev="2.22.1"/>
+				<caller organisation="org.glassfish.jersey.media" name="jersey-media-jaxb" conf="compile, runtime" rev="2.22.1" rev-constraint-default="2.22.1" rev-constraint-dynamic="2.22.1" callerrev="2.22.1"/>
+				<caller organisation="org.glassfish.jersey.containers" name="jersey-container-servlet" conf="compile, runtime" rev="2.22.1" rev-constraint-default="2.22.1" rev-constraint-dynamic="2.22.1" callerrev="2.22.1"/>
+				<caller organisation="org.glassfish.jersey.core" name="jersey-client" conf="compile, runtime" rev="2.22.1" rev-constraint-default="2.22.1" rev-constraint-dynamic="2.22.1" callerrev="2.22.1"/>
+				<caller organisation="org.glassfish.jersey.core" name="jersey-server" conf="compile, runtime" rev="2.22.1" rev-constraint-default="2.22.1" rev-constraint-dynamic="2.22.1" callerrev="2.22.1"/>
+				<caller organisation="org.glassfish.jersey.ext" name="jersey-bean-validation" conf="compile, runtime" rev="2.22.1" rev-constraint-default="2.22.1" rev-constraint-dynamic="2.22.1" callerrev="2.22.1"/>
+				<caller organisation="org.glassfish.jersey.containers" name="jersey-container-servlet-core" conf="compile, runtime" rev="2.22.1" rev-constraint-default="2.22.1" rev-constraint-dynamic="2.22.1" callerrev="2.22.1"/>
+				<artifacts>
+					<artifact name="jersey-common" type="jar" ext="jar" status="no" details="" size="696004" time="0" location="/Users/ebottabi/.ivy2/cache/org.glassfish.jersey.core/jersey-common/jars/jersey-common-2.22.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/glassfish/jersey/core/jersey-common/2.22.1/jersey-common-2.22.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.glassfish.hk2" name="hk2-locator">
+			<revision name="2.4.0-b31" status="release" pubdate="20150806235010" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="55">
+				<metadata-artifact status="no" details="" size="36423" time="0" location="/Users/ebottabi/.ivy2/cache/org.glassfish.hk2/hk2-locator/ivy-2.4.0-b31.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/glassfish/hk2/hk2-locator/2.4.0-b31/hk2-locator-2.4.0-b31.pom"/>
+				<caller organisation="org.glassfish.jersey.media" name="jersey-media-jaxb" conf="compile, runtime" rev="2.4.0-b31" rev-constraint-default="2.4.0-b31" rev-constraint-dynamic="2.4.0-b31" callerrev="2.22.1"/>
+				<caller organisation="org.glassfish.jersey.core" name="jersey-client" conf="compile, runtime" rev="2.4.0-b31" rev-constraint-default="2.4.0-b31" rev-constraint-dynamic="2.4.0-b31" callerrev="2.22.1"/>
+				<caller organisation="org.glassfish.jersey.core" name="jersey-server" conf="compile, runtime" rev="2.4.0-b31" rev-constraint-default="2.4.0-b31" rev-constraint-dynamic="2.4.0-b31" callerrev="2.22.1"/>
+				<caller organisation="org.glassfish.jersey.core" name="jersey-common" conf="compile, runtime" rev="2.4.0-b31" rev-constraint-default="2.4.0-b31" rev-constraint-dynamic="2.4.0-b31" callerrev="2.22.1"/>
+				<artifacts>
+					<artifact name="hk2-locator" type="jar" ext="jar" status="no" details="" size="179705" time="0" location="/Users/ebottabi/.ivy2/cache/org.glassfish.hk2/hk2-locator/jars/hk2-locator-2.4.0-b31.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/glassfish/hk2/hk2-locator/2.4.0-b31/hk2-locator-2.4.0-b31.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.javassist" name="javassist">
+			<revision name="3.18.1-GA" status="release" pubdate="20151125082859" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.javassist.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="56">
+				<license name="MPL 1.1" url="http://www.mozilla.org/MPL/MPL-1.1.html"/>
+				<license name="LGPL 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
+				<license name="Apache License 2.0" url="http://www.apache.org/licenses/"/>
+				<metadata-artifact status="no" details="" size="3060" time="0" location="/Users/ebottabi/.ivy2/cache/org.javassist/javassist/ivy-3.18.1-GA.xml" searched="false" origin-is-local="true" origin-location="/srv/activator-dist-1.3.7/repository/org.javassist/javassist/3.18.1-GA/ivys/ivy.xml"/>
+				<caller organisation="org.glassfish.hk2" name="hk2-locator" conf="compile, runtime" rev="3.18.1-GA" rev-constraint-default="3.18.1-GA" rev-constraint-dynamic="3.18.1-GA" callerrev="2.4.0-b31"/>
+				<caller organisation="org.msgpack" name="msgpack" conf="compile, runtime" rev="3.16.1-GA" rev-constraint-default="3.16.1-GA" rev-constraint-dynamic="3.16.1-GA" callerrev="0.6.7"/>
+				<artifacts>
+					<artifact name="javassist" type="bundle" ext="jar" status="no" details="" size="714194" time="0" location="/srv/activator-dist-1.3.7/repository/org.javassist/javassist/3.18.1-GA/bundles/javassist.jar">
+						<origin-location is-local="true" location="/srv/activator-dist-1.3.7/repository/org.javassist/javassist/3.18.1-GA/bundles/javassist.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+			<revision name="3.16.1-GA" status="release" pubdate="20120306163712" resolver="sbt-chain" artresolver="sbt-chain" evicted="latest-revision" evicted-reason="" homepage="http://www.javassist.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="-1">
+				<license name="MPL 1.1" url="http://www.mozilla.org/MPL/MPL-1.1.html"/>
+				<license name="LGPL 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
+				<license name="Apache License 2.0" url="http://www.apache.org/licenses/"/>
+				<metadata-artifact status="no" details="" size="3070" time="0" location="/Users/ebottabi/.ivy2/cache/org.javassist/javassist/ivy-3.16.1-GA.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/javassist/javassist/3.16.1-GA/javassist-3.16.1-GA.pom"/>
+				<evicted-by rev="3.18.1-GA"/>
+				<caller organisation="org.msgpack" name="msgpack" conf="compile, runtime" rev="3.16.1-GA" rev-constraint-default="3.16.1-GA" rev-constraint-dynamic="3.16.1-GA" callerrev="0.6.7"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.glassfish.hk2.external" name="javax.inject">
+			<revision name="2.4.0-b31" status="release" pubdate="20150806234858" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="54">
+				<metadata-artifact status="no" details="" size="36848" time="0" location="/Users/ebottabi/.ivy2/cache/org.glassfish.hk2.external/javax.inject/ivy-2.4.0-b31.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/glassfish/hk2/external/javax.inject/2.4.0-b31/javax.inject-2.4.0-b31.pom"/>
+				<caller organisation="org.glassfish.jersey.media" name="jersey-media-jaxb" conf="compile, runtime" rev="2.4.0-b31" rev-constraint-default="2.4.0-b31" rev-constraint-dynamic="2.4.0-b31" callerrev="2.22.1"/>
+				<caller organisation="org.glassfish.jersey.core" name="jersey-client" conf="compile, runtime" rev="2.4.0-b31" rev-constraint-default="2.4.0-b31" rev-constraint-dynamic="2.4.0-b31" callerrev="2.22.1"/>
+				<caller organisation="org.glassfish.jersey.core" name="jersey-server" conf="compile, runtime" rev="2.4.0-b31" rev-constraint-default="2.4.0-b31" rev-constraint-dynamic="2.4.0-b31" callerrev="2.22.1"/>
+				<caller organisation="org.glassfish.jersey.core" name="jersey-common" conf="compile, runtime" rev="2.4.0-b31" rev-constraint-default="2.4.0-b31" rev-constraint-dynamic="2.4.0-b31" callerrev="2.22.1"/>
+				<caller organisation="org.glassfish.hk2" name="hk2-locator" conf="compile, runtime" rev="2.4.0-b31" rev-constraint-default="2.4.0-b31" rev-constraint-dynamic="2.4.0-b31" callerrev="2.4.0-b31"/>
+				<caller organisation="org.glassfish.jersey.ext" name="jersey-bean-validation" conf="compile, runtime" rev="2.4.0-b31" rev-constraint-default="2.4.0-b31" rev-constraint-dynamic="2.4.0-b31" callerrev="2.22.1"/>
+				<caller organisation="org.glassfish.jersey.containers" name="jersey-container-servlet-core" conf="compile, runtime" rev="2.4.0-b31" rev-constraint-default="2.4.0-b31" rev-constraint-dynamic="2.4.0-b31" callerrev="2.22.1"/>
+				<artifacts>
+					<artifact name="javax.inject" type="jar" ext="jar" status="no" details="" size="5951" time="0" location="/Users/ebottabi/.ivy2/cache/org.glassfish.hk2.external/javax.inject/jars/javax.inject-2.4.0-b31.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/glassfish/hk2/external/javax.inject/2.4.0-b31/javax.inject-2.4.0-b31.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.glassfish.hk2" name="hk2-api">
+			<revision name="2.4.0-b31" status="release" pubdate="20150806234939" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="51">
+				<metadata-artifact status="no" details="" size="36121" time="0" location="/Users/ebottabi/.ivy2/cache/org.glassfish.hk2/hk2-api/ivy-2.4.0-b31.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/glassfish/hk2/hk2-api/2.4.0-b31/hk2-api-2.4.0-b31.pom"/>
+				<caller organisation="org.glassfish.jersey.media" name="jersey-media-jaxb" conf="compile, runtime" rev="2.4.0-b31" rev-constraint-default="2.4.0-b31" rev-constraint-dynamic="2.4.0-b31" callerrev="2.22.1"/>
+				<caller organisation="org.glassfish.jersey.core" name="jersey-client" conf="compile, runtime" rev="2.4.0-b31" rev-constraint-default="2.4.0-b31" rev-constraint-dynamic="2.4.0-b31" callerrev="2.22.1"/>
+				<caller organisation="org.glassfish.jersey.core" name="jersey-server" conf="compile, runtime" rev="2.4.0-b31" rev-constraint-default="2.4.0-b31" rev-constraint-dynamic="2.4.0-b31" callerrev="2.22.1"/>
+				<caller organisation="org.glassfish.jersey.core" name="jersey-common" conf="compile, runtime" rev="2.4.0-b31" rev-constraint-default="2.4.0-b31" rev-constraint-dynamic="2.4.0-b31" callerrev="2.22.1"/>
+				<caller organisation="org.glassfish.hk2" name="hk2-locator" conf="compile, runtime" rev="2.4.0-b31" rev-constraint-default="2.4.0-b31" rev-constraint-dynamic="2.4.0-b31" callerrev="2.4.0-b31"/>
+				<artifacts>
+					<artifact name="hk2-api" type="jar" ext="jar" status="no" details="" size="173037" time="0" location="/Users/ebottabi/.ivy2/cache/org.glassfish.hk2/hk2-api/jars/hk2-api-2.4.0-b31.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/glassfish/hk2/hk2-api/2.4.0-b31/hk2-api-2.4.0-b31.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.glassfish.hk2.external" name="aopalliance-repackaged">
+			<revision name="2.4.0-b31" status="release" pubdate="20150806234906" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="53">
+				<metadata-artifact status="no" details="" size="36769" time="0" location="/Users/ebottabi/.ivy2/cache/org.glassfish.hk2.external/aopalliance-repackaged/ivy-2.4.0-b31.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/glassfish/hk2/external/aopalliance-repackaged/2.4.0-b31/aopalliance-repackaged-2.4.0-b31.pom"/>
+				<caller organisation="org.glassfish.hk2" name="hk2-api" conf="compile, runtime" rev="2.4.0-b31" rev-constraint-default="2.4.0-b31" rev-constraint-dynamic="2.4.0-b31" callerrev="2.4.0-b31"/>
+				<caller organisation="org.glassfish.hk2" name="hk2-locator" conf="compile, runtime" rev="2.4.0-b31" rev-constraint-default="2.4.0-b31" rev-constraint-dynamic="2.4.0-b31" callerrev="2.4.0-b31"/>
+				<artifacts>
+					<artifact name="aopalliance-repackaged" type="jar" ext="jar" status="no" details="" size="14765" time="0" location="/Users/ebottabi/.ivy2/cache/org.glassfish.hk2.external/aopalliance-repackaged/jars/aopalliance-repackaged-2.4.0-b31.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/glassfish/hk2/external/aopalliance-repackaged/2.4.0-b31/aopalliance-repackaged-2.4.0-b31.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.glassfish.hk2" name="hk2-utils">
+			<revision name="2.4.0-b31" status="release" pubdate="20150806234925" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="52">
+				<metadata-artifact status="no" details="" size="35718" time="0" location="/Users/ebottabi/.ivy2/cache/org.glassfish.hk2/hk2-utils/ivy-2.4.0-b31.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/glassfish/hk2/hk2-utils/2.4.0-b31/hk2-utils-2.4.0-b31.pom"/>
+				<caller organisation="org.glassfish.hk2" name="hk2-api" conf="compile, runtime" rev="2.4.0-b31" rev-constraint-default="2.4.0-b31" rev-constraint-dynamic="2.4.0-b31" callerrev="2.4.0-b31"/>
+				<caller organisation="org.glassfish.hk2" name="hk2-locator" conf="compile, runtime" rev="2.4.0-b31" rev-constraint-default="2.4.0-b31" rev-constraint-dynamic="2.4.0-b31" callerrev="2.4.0-b31"/>
+				<artifacts>
+					<artifact name="hk2-utils" type="jar" ext="jar" status="no" details="" size="101088" time="0" location="/Users/ebottabi/.ivy2/cache/org.glassfish.hk2/hk2-utils/jars/hk2-utils-2.4.0-b31.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/glassfish/hk2/hk2-utils/2.4.0-b31/hk2-utils-2.4.0-b31.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="javax.inject" name="javax.inject">
+			<revision name="1" status="release" pubdate="20091013233500" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://code.google.com/p/atinject/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*)" position="84">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2506" time="0" location="/Users/ebottabi/.ivy2/cache/javax.inject/javax.inject/ivy-1.xml" searched="false" origin-is-local="false" origin-location="https://jcenter.bintray.com/javax/inject/javax.inject/1/javax.inject-1.pom"/>
+				<caller organisation="org.glassfish.hk2" name="hk2-api" conf="compile, runtime" rev="1" rev-constraint-default="1" rev-constraint-dynamic="1" callerrev="2.4.0-b31"/>
+				<caller organisation="org.glassfish.hk2" name="hk2-utils" conf="compile, runtime" rev="1" rev-constraint-default="1" rev-constraint-dynamic="1" callerrev="2.4.0-b31"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.glassfish.hk2" name="osgi-resource-locator">
+			<revision name="1.0.1" status="release" pubdate="20110113160008" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="57">
+				<metadata-artifact status="no" details="" size="2926" time="0" location="/Users/ebottabi/.ivy2/cache/org.glassfish.hk2/osgi-resource-locator/ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/glassfish/hk2/osgi-resource-locator/1.0.1/osgi-resource-locator-1.0.1.pom"/>
+				<caller organisation="org.glassfish.jersey.media" name="jersey-media-jaxb" conf="compile, runtime" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="2.22.1"/>
+				<caller organisation="org.glassfish.jersey.core" name="jersey-common" conf="compile, runtime" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="2.22.1"/>
+				<artifacts>
+					<artifact name="osgi-resource-locator" type="jar" ext="jar" status="no" details="" size="20235" time="0" location="/Users/ebottabi/.ivy2/cache/org.glassfish.hk2/osgi-resource-locator/jars/osgi-resource-locator-1.0.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/glassfish/hk2/osgi-resource-locator/1.0.1/osgi-resource-locator-1.0.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.glassfish.jersey.bundles.repackaged" name="jersey-guava">
+			<revision name="2.22.1" status="release" pubdate="20151007115402" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="50">
+				<metadata-artifact status="no" details="" size="47748" time="0" location="/Users/ebottabi/.ivy2/cache/org.glassfish.jersey.bundles.repackaged/jersey-guava/ivy-2.22.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/glassfish/jersey/bundles/repackaged/jersey-guava/2.22.1/jersey-guava-2.22.1.pom"/>
+				<caller organisation="org.glassfish.jersey.core" name="jersey-common" conf="compile, runtime" rev="2.22.1" rev-constraint-default="2.22.1" rev-constraint-dynamic="2.22.1" callerrev="2.22.1"/>
+				<artifacts>
+					<artifact name="jersey-guava" type="bundle" ext="jar" status="no" details="" size="971278" time="0" location="/Users/ebottabi/.ivy2/cache/org.glassfish.jersey.bundles.repackaged/jersey-guava/bundles/jersey-guava-2.22.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/glassfish/jersey/bundles/repackaged/jersey-guava/2.22.1/jersey-guava-2.22.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="javax.annotation" name="javax.annotation-api">
+			<revision name="1.2" status="release" pubdate="20130426183829" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://jcp.org/en/jsr/detail?id=250" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="49">
+				<license name="CDDL + GPLv2 with classpath exception" url="https://glassfish.dev.java.net/nonav/public/CDDL+GPL.html"/>
+				<metadata-artifact status="no" details="" size="4009" time="0" location="/Users/ebottabi/.ivy2/cache/javax.annotation/javax.annotation-api/ivy-1.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.pom"/>
+				<caller organisation="org.glassfish.jersey.core" name="jersey-server" conf="compile, runtime" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="2.22.1"/>
+				<caller organisation="org.glassfish.jersey.core" name="jersey-common" conf="compile, runtime" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="2.22.1"/>
+				<artifacts>
+					<artifact name="javax.annotation-api" type="jar" ext="jar" status="no" details="" size="26366" time="0" location="/Users/ebottabi/.ivy2/cache/javax.annotation/javax.annotation-api/jars/javax.annotation-api-1.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="javax.ws.rs" name="javax.ws.rs-api">
+			<revision name="2.0.1" status="release" pubdate="20140807130813" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://jax-rs-spec.java.net" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="48">
+				<license name="CDDL 1.1" url="http://glassfish.java.net/public/CDDL+GPL_1_1.html"/>
+				<license name="GPL2 w/ CPE" url="http://glassfish.java.net/public/CDDL+GPL_1_1.html"/>
+				<metadata-artifact status="no" details="" size="3897" time="0" location="/Users/ebottabi/.ivy2/cache/javax.ws.rs/javax.ws.rs-api/ivy-2.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/javax/ws/rs/javax.ws.rs-api/2.0.1/javax.ws.rs-api-2.0.1.pom"/>
+				<caller organisation="org.glassfish.jersey.ext" name="jersey-metainf-services" conf="compile, runtime" rev="2.0.1" rev-constraint-default="2.0.1" rev-constraint-dynamic="2.0.1" callerrev="2.22.1"/>
+				<caller organisation="org.glassfish.jersey.containers" name="jersey-container-servlet" conf="compile, runtime" rev="2.0.1" rev-constraint-default="2.0.1" rev-constraint-dynamic="2.0.1" callerrev="2.22.1"/>
+				<caller organisation="org.glassfish.jersey.core" name="jersey-client" conf="compile, runtime" rev="2.0.1" rev-constraint-default="2.0.1" rev-constraint-dynamic="2.0.1" callerrev="2.22.1"/>
+				<caller organisation="org.glassfish.jersey.core" name="jersey-server" conf="compile, runtime" rev="2.0.1" rev-constraint-default="2.0.1" rev-constraint-dynamic="2.0.1" callerrev="2.22.1"/>
+				<caller organisation="org.glassfish.jersey.core" name="jersey-common" conf="compile, runtime" rev="2.0.1" rev-constraint-default="2.0.1" rev-constraint-dynamic="2.0.1" callerrev="2.22.1"/>
+				<caller organisation="org.glassfish.jersey.ext" name="jersey-bean-validation" conf="compile, runtime" rev="2.0.1" rev-constraint-default="2.0.1" rev-constraint-dynamic="2.0.1" callerrev="2.22.1"/>
+				<caller organisation="org.glassfish.jersey.containers" name="jersey-container-servlet-core" conf="compile, runtime" rev="2.0.1" rev-constraint-default="2.0.1" rev-constraint-dynamic="2.0.1" callerrev="2.22.1"/>
+				<artifacts>
+					<artifact name="javax.ws.rs-api" type="jar" ext="jar" status="no" details="" size="115534" time="0" location="/Users/ebottabi/.ivy2/cache/javax.ws.rs/javax.ws.rs-api/jars/javax.ws.rs-api-2.0.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/javax/ws/rs/javax.ws.rs-api/2.0.1/javax.ws.rs-api-2.0.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.dropwizard" name="dropwizard-metrics">
+			<revision name="0.9.2" status="release" pubdate="20160120100151" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="40">
+				<metadata-artifact status="no" details="" size="56329" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard/dropwizard-metrics/ivy-0.9.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/dropwizard/dropwizard-metrics/0.9.2/dropwizard-metrics-0.9.2.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-core" conf="default, compile, runtime, master" rev="0.9.2" rev-constraint-default="0.9.2" rev-constraint-dynamic="0.9.2" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="dropwizard-metrics" type="jar" ext="jar" status="no" details="" size="17449" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard/dropwizard-metrics/jars/dropwizard-metrics-0.9.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/dropwizard/dropwizard-metrics/0.9.2/dropwizard-metrics-0.9.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.dropwizard" name="dropwizard-lifecycle">
+			<revision name="0.9.2" status="release" pubdate="20160120100127" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="41">
+				<metadata-artifact status="no" details="" size="55924" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard/dropwizard-lifecycle/ivy-0.9.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/dropwizard/dropwizard-lifecycle/0.9.2/dropwizard-lifecycle-0.9.2.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-metrics" conf="compile, runtime" rev="0.9.2" rev-constraint-default="0.9.2" rev-constraint-dynamic="0.9.2" callerrev="0.9.2"/>
+				<caller organisation="io.dropwizard" name="dropwizard-core" conf="default, compile, runtime, master" rev="0.9.2" rev-constraint-default="0.9.2" rev-constraint-dynamic="0.9.2" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="dropwizard-lifecycle" type="jar" ext="jar" status="no" details="" size="11292" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard/dropwizard-lifecycle/jars/dropwizard-lifecycle-0.9.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/dropwizard/dropwizard-lifecycle/0.9.2/dropwizard-lifecycle-0.9.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.eclipse.jetty" name="jetty-server">
+			<revision name="9.2.13.v20150730" status="release" pubdate="20150730181503" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.eclipse.org/jetty" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="42">
+				<metadata-artifact status="no" details="" size="15086" time="0" location="/Users/ebottabi/.ivy2/cache/org.eclipse.jetty/jetty-server/ivy-9.2.13.v20150730.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-server/9.2.13.v20150730/jetty-server-9.2.13.v20150730.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-jersey" conf="compile, runtime" rev="9.2.13.v20150730" rev-constraint-default="9.2.13.v20150730" rev-constraint-dynamic="9.2.13.v20150730" callerrev="0.9.2"/>
+				<caller organisation="io.dropwizard" name="dropwizard-lifecycle" conf="compile, runtime" rev="9.2.13.v20150730" rev-constraint-default="9.2.13.v20150730" rev-constraint-dynamic="9.2.13.v20150730" callerrev="0.9.2"/>
+				<caller organisation="org.eclipse.jetty" name="jetty-security" conf="compile, runtime" rev="9.2.13.v20150730" rev-constraint-default="9.2.13.v20150730" rev-constraint-dynamic="9.2.13.v20150730" callerrev="9.2.13.v20150730"/>
+				<caller organisation="io.dropwizard" name="dropwizard-jetty" conf="compile, runtime" rev="9.2.13.v20150730" rev-constraint-default="9.2.13.v20150730" rev-constraint-dynamic="9.2.13.v20150730" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="jetty-server" type="jar" ext="jar" status="no" details="" size="418791" time="0" location="/Users/ebottabi/.ivy2/cache/org.eclipse.jetty/jetty-server/jars/jetty-server-9.2.13.v20150730.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-server/9.2.13.v20150730/jetty-server-9.2.13.v20150730.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.eclipse.jetty" name="jetty-xml">
+			<revision name="9.2.13.v20150730" status="release" pubdate="20150730181346" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.eclipse.org/jetty" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="70">
+				<metadata-artifact status="no" details="" size="14217" time="0" location="/Users/ebottabi/.ivy2/cache/org.eclipse.jetty/jetty-xml/ivy-9.2.13.v20150730.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-xml/9.2.13.v20150730/jetty-xml-9.2.13.v20150730.pom"/>
+				<caller organisation="org.eclipse.jetty" name="jetty-webapp" conf="compile, runtime" rev="9.2.13.v20150730" rev-constraint-default="9.2.13.v20150730" rev-constraint-dynamic="9.2.13.v20150730" callerrev="9.2.13.v20150730"/>
+				<artifacts>
+					<artifact name="jetty-xml" type="jar" ext="jar" status="no" details="" size="44135" time="0" location="/Users/ebottabi/.ivy2/cache/org.eclipse.jetty/jetty-xml/jars/jetty-xml-9.2.13.v20150730.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-xml/9.2.13.v20150730/jetty-xml-9.2.13.v20150730.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.eclipse.jetty" name="jetty-io">
+			<revision name="9.2.13.v20150730" status="release" pubdate="20150730181320" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.eclipse.org/jetty" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="44">
+				<metadata-artifact status="no" details="" size="14397" time="0" location="/Users/ebottabi/.ivy2/cache/org.eclipse.jetty/jetty-io/ivy-9.2.13.v20150730.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-io/9.2.13.v20150730/jetty-io-9.2.13.v20150730.pom"/>
+				<caller organisation="org.eclipse.jetty" name="jetty-server" conf="compile, runtime" rev="9.2.13.v20150730" rev-constraint-default="9.2.13.v20150730" rev-constraint-dynamic="9.2.13.v20150730" callerrev="9.2.13.v20150730"/>
+				<caller organisation="org.eclipse.jetty" name="jetty-servlets" conf="compile, runtime" rev="9.2.13.v20150730" rev-constraint-default="9.2.13.v20150730" rev-constraint-dynamic="9.2.13.v20150730" callerrev="9.2.13.v20150730"/>
+				<artifacts>
+					<artifact name="jetty-io" type="jar" ext="jar" status="no" details="" size="108315" time="0" location="/Users/ebottabi/.ivy2/cache/org.eclipse.jetty/jetty-io/jars/jetty-io-9.2.13.v20150730.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-io/9.2.13.v20150730/jetty-io-9.2.13.v20150730.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.eclipse.jetty" name="jetty-http">
+			<revision name="9.2.13.v20150730" status="release" pubdate="20150730181258" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.eclipse.org/jetty" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="43">
+				<metadata-artifact status="no" details="" size="14178" time="0" location="/Users/ebottabi/.ivy2/cache/org.eclipse.jetty/jetty-http/ivy-9.2.13.v20150730.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-http/9.2.13.v20150730/jetty-http-9.2.13.v20150730.pom"/>
+				<caller organisation="org.eclipse.jetty" name="jetty-server" conf="compile, runtime" rev="9.2.13.v20150730" rev-constraint-default="9.2.13.v20150730" rev-constraint-dynamic="9.2.13.v20150730" callerrev="9.2.13.v20150730"/>
+				<caller organisation="org.eclipse.jetty" name="jetty-servlets" conf="compile, runtime" rev="9.2.13.v20150730" rev-constraint-default="9.2.13.v20150730" rev-constraint-dynamic="9.2.13.v20150730" callerrev="9.2.13.v20150730"/>
+				<caller organisation="io.dropwizard" name="dropwizard-jetty" conf="compile, runtime" rev="9.2.13.v20150730" rev-constraint-default="9.2.13.v20150730" rev-constraint-dynamic="9.2.13.v20150730" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="jetty-http" type="jar" ext="jar" status="no" details="" size="105859" time="0" location="/Users/ebottabi/.ivy2/cache/org.eclipse.jetty/jetty-http/jars/jetty-http-9.2.13.v20150730.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-http/9.2.13.v20150730/jetty-http-9.2.13.v20150730.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.dropwizard" name="dropwizard-logging">
+			<revision name="0.9.2" status="release" pubdate="20160120100105" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="33">
+				<metadata-artifact status="no" details="" size="57156" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard/dropwizard-logging/ivy-0.9.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/dropwizard/dropwizard-logging/0.9.2/dropwizard-logging-0.9.2.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-jersey" conf="compile, runtime" rev="0.9.2" rev-constraint-default="0.9.2" rev-constraint-dynamic="0.9.2" callerrev="0.9.2"/>
+				<caller organisation="io.dropwizard" name="dropwizard-core" conf="default, compile, runtime, master" rev="0.9.2" rev-constraint-default="0.9.2" rev-constraint-dynamic="0.9.2" callerrev="0.9.2"/>
+				<caller organisation="io.dropwizard" name="dropwizard-jetty" conf="compile, runtime" rev="0.9.2" rev-constraint-default="0.9.2" rev-constraint-dynamic="0.9.2" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="dropwizard-logging" type="jar" ext="jar" status="no" details="" size="27179" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard/dropwizard-logging/jars/dropwizard-logging-0.9.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/dropwizard/dropwizard-logging/0.9.2/dropwizard-logging-0.9.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.eclipse.jetty" name="jetty-util">
+			<revision name="9.2.13.v20150730" status="release" pubdate="20150730181232" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.eclipse.org/jetty" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="39">
+				<metadata-artifact status="no" details="" size="14668" time="0" location="/Users/ebottabi/.ivy2/cache/org.eclipse.jetty/jetty-util/ivy-9.2.13.v20150730.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-util/9.2.13.v20150730/jetty-util-9.2.13.v20150730.pom"/>
+				<caller organisation="org.eclipse.jetty" name="jetty-http" conf="compile, runtime" rev="9.2.13.v20150730" rev-constraint-default="9.2.13.v20150730" rev-constraint-dynamic="9.2.13.v20150730" callerrev="9.2.13.v20150730"/>
+				<caller organisation="org.eclipse.jetty" name="jetty-xml" conf="compile, runtime" rev="9.2.13.v20150730" rev-constraint-default="9.2.13.v20150730" rev-constraint-dynamic="9.2.13.v20150730" callerrev="9.2.13.v20150730"/>
+				<caller organisation="org.eclipse.jetty" name="jetty-servlets" conf="compile, runtime" rev="9.2.13.v20150730" rev-constraint-default="9.2.13.v20150730" rev-constraint-dynamic="9.2.13.v20150730" callerrev="9.2.13.v20150730"/>
+				<caller organisation="org.eclipse.jetty" name="jetty-io" conf="compile, runtime" rev="9.2.13.v20150730" rev-constraint-default="9.2.13.v20150730" rev-constraint-dynamic="9.2.13.v20150730" callerrev="9.2.13.v20150730"/>
+				<caller organisation="io.dropwizard" name="dropwizard-logging" conf="compile, runtime" rev="9.2.13.v20150730" rev-constraint-default="9.2.13.v20150730" rev-constraint-dynamic="9.2.13.v20150730" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="jetty-util" type="jar" ext="jar" status="no" details="" size="358143" time="0" location="/Users/ebottabi/.ivy2/cache/org.eclipse.jetty/jetty-util/jars/jetty-util-9.2.13.v20150730.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-util/9.2.13.v20150730/jetty-util-9.2.13.v20150730.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.slf4j" name="jcl-over-slf4j">
+			<revision name="1.7.12" status="release" pubdate="20151123133005" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="38">
+				<metadata-artifact status="no" details="" size="4816" time="0" location="/Users/ebottabi/.ivy2/cache/org.slf4j/jcl-over-slf4j/ivy-1.7.12.xml" searched="false" origin-is-local="true" origin-location="/srv/activator-dist-1.3.7/repository/org.slf4j/jcl-over-slf4j/1.7.12/ivys/ivy.xml"/>
+				<caller organisation="io.dropwizard" name="dropwizard-logging" conf="compile, runtime" rev="1.7.12" rev-constraint-default="1.7.12" rev-constraint-dynamic="1.7.12" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="jcl-over-slf4j" type="jar" ext="jar" status="no" details="" size="16618" time="0" location="/srv/activator-dist-1.3.7/repository/org.slf4j/jcl-over-slf4j/1.7.12/jars/jcl-over-slf4j.jar">
+						<origin-location is-local="true" location="/srv/activator-dist-1.3.7/repository/org.slf4j/jcl-over-slf4j/1.7.12/jars/jcl-over-slf4j.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.slf4j" name="log4j-over-slf4j">
+			<revision name="1.7.12" status="release" pubdate="20150326215139" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="37">
+				<license name="Apache Software Licenses" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="5109" time="0" location="/Users/ebottabi/.ivy2/cache/org.slf4j/log4j-over-slf4j/ivy-1.7.12.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/slf4j/log4j-over-slf4j/1.7.12/log4j-over-slf4j-1.7.12.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-logging" conf="compile, runtime" rev="1.7.12" rev-constraint-default="1.7.12" rev-constraint-dynamic="1.7.12" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="log4j-over-slf4j" type="jar" ext="jar" status="no" details="" size="24567" time="0" location="/Users/ebottabi/.ivy2/cache/org.slf4j/log4j-over-slf4j/jars/log4j-over-slf4j-1.7.12.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/slf4j/log4j-over-slf4j/1.7.12/log4j-over-slf4j-1.7.12.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.slf4j" name="jul-to-slf4j">
+			<revision name="1.7.12" status="release" pubdate="20151123133002" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="36">
+				<metadata-artifact status="no" details="" size="4855" time="0" location="/Users/ebottabi/.ivy2/cache/org.slf4j/jul-to-slf4j/ivy-1.7.12.xml" searched="false" origin-is-local="true" origin-location="/srv/activator-dist-1.3.7/repository/org.slf4j/jul-to-slf4j/1.7.12/ivys/ivy.xml"/>
+				<caller organisation="io.dropwizard" name="dropwizard-logging" conf="compile, runtime" rev="1.7.12" rev-constraint-default="1.7.12" rev-constraint-dynamic="1.7.12" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="jul-to-slf4j" type="jar" ext="jar" status="no" details="" size="4736" time="0" location="/srv/activator-dist-1.3.7/repository/org.slf4j/jul-to-slf4j/1.7.12/jars/jul-to-slf4j.jar">
+						<origin-location is-local="true" location="/srv/activator-dist-1.3.7/repository/org.slf4j/jul-to-slf4j/1.7.12/jars/jul-to-slf4j.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.dropwizard.metrics" name="metrics-logback">
+			<revision name="3.1.2" status="release" pubdate="20150426050220" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="34">
+				<metadata-artifact status="no" details="" size="5165" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard.metrics/metrics-logback/ivy-3.1.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/dropwizard/metrics/metrics-logback/3.1.2/metrics-logback-3.1.2.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-logging" conf="compile, runtime" rev="3.1.2" rev-constraint-default="3.1.2" rev-constraint-dynamic="3.1.2" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="metrics-logback" type="bundle" ext="jar" status="no" details="" size="4134" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard.metrics/metrics-logback/bundles/metrics-logback-3.1.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/dropwizard/metrics/metrics-logback/3.1.2/metrics-logback-3.1.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.dropwizard.metrics" name="metrics-core">
+			<revision name="3.1.2" status="release" pubdate="20150426045901" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="35">
+				<metadata-artifact status="no" details="" size="4992" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard.metrics/metrics-core/ivy-3.1.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/dropwizard/metrics/metrics-core/3.1.2/metrics-core-3.1.2.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-servlets" conf="compile, runtime" rev="3.1.2" rev-constraint-default="3.1.2" rev-constraint-dynamic="3.1.2" callerrev="0.9.2"/>
+				<caller organisation="io.dropwizard.metrics" name="metrics-logback" conf="compile, runtime" rev="3.1.2" rev-constraint-default="3.1.2" rev-constraint-dynamic="3.1.2" callerrev="3.1.2"/>
+				<caller organisation="io.dropwizard" name="dropwizard-metrics" conf="compile, runtime" rev="3.1.2" rev-constraint-default="3.1.2" rev-constraint-dynamic="3.1.2" callerrev="0.9.2"/>
+				<caller organisation="io.dropwizard.metrics" name="metrics-jersey2" conf="compile, runtime" rev="3.1.2" rev-constraint-default="3.1.2" rev-constraint-dynamic="3.1.2" callerrev="3.1.2"/>
+				<caller organisation="io.dropwizard.metrics" name="metrics-json" conf="compile, runtime" rev="3.1.2" rev-constraint-default="3.1.2" rev-constraint-dynamic="3.1.2" callerrev="3.1.2"/>
+				<caller organisation="io.dropwizard" name="dropwizard-core" conf="default, compile, runtime, master" rev="3.1.2" rev-constraint-default="3.1.2" rev-constraint-dynamic="3.1.2" callerrev="0.9.2"/>
+				<caller organisation="io.dropwizard.metrics" name="metrics-jetty9" conf="compile, runtime" rev="3.1.2" rev-constraint-default="3.1.2" rev-constraint-dynamic="3.1.2" callerrev="3.1.2"/>
+				<caller organisation="io.dropwizard.metrics" name="metrics-servlets" conf="compile, runtime" rev="3.1.2" rev-constraint-default="3.1.2" rev-constraint-dynamic="3.1.2" callerrev="3.1.2"/>
+				<caller organisation="io.dropwizard.metrics" name="metrics-jvm" conf="compile, runtime" rev="3.1.2" rev-constraint-default="3.1.2" rev-constraint-dynamic="3.1.2" callerrev="3.1.2"/>
+				<artifacts>
+					<artifact name="metrics-core" type="bundle" ext="jar" status="no" details="" size="112558" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard.metrics/metrics-core/bundles/metrics-core-3.1.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/dropwizard/metrics/metrics-core/3.1.2/metrics-core-3.1.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.dropwizard" name="dropwizard-configuration">
+			<revision name="0.9.2" status="release" pubdate="20160120100039" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="29">
+				<metadata-artifact status="no" details="" size="55901" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard/dropwizard-configuration/ivy-0.9.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/dropwizard/dropwizard-configuration/0.9.2/dropwizard-configuration-0.9.2.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-core" conf="default, compile, runtime, master" rev="0.9.2" rev-constraint-default="0.9.2" rev-constraint-dynamic="0.9.2" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="dropwizard-configuration" type="jar" ext="jar" status="no" details="" size="23203" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard/dropwizard-configuration/jars/dropwizard-configuration-0.9.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/dropwizard/dropwizard-configuration/0.9.2/dropwizard-configuration-0.9.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.fasterxml.jackson.dataformat" name="jackson-dataformat-yaml">
+			<revision name="2.6.3" status="release" pubdate="20151012212802" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/FasterXML/jackson" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="30">
+				<metadata-artifact status="no" details="" size="8716" time="0" location="/Users/ebottabi/.ivy2/cache/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/ivy-2.6.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.6.3/jackson-dataformat-yaml-2.6.3.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-configuration" conf="compile, runtime" rev="2.6.3" rev-constraint-default="2.6.3" rev-constraint-dynamic="2.6.3" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="jackson-dataformat-yaml" type="bundle" ext="jar" status="no" details="" size="320442" time="0" location="/Users/ebottabi/.ivy2/cache/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml/bundles/jackson-dataformat-yaml-2.6.3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.6.3/jackson-dataformat-yaml-2.6.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.yaml" name="snakeyaml">
+			<revision name="1.15" status="release" pubdate="20151125083315" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.snakeyaml.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="31">
+				<license name="Apache License Version 2.0" url="LICENSE.txt"/>
+				<metadata-artifact status="no" details="" size="3454" time="0" location="/Users/ebottabi/.ivy2/cache/org.yaml/snakeyaml/ivy-1.15.xml" searched="false" origin-is-local="true" origin-location="/srv/activator-dist-1.3.7/repository/org.yaml/snakeyaml/1.15/ivys/ivy.xml"/>
+				<caller organisation="com.fasterxml.jackson.dataformat" name="jackson-dataformat-yaml" conf="compile, runtime" rev="1.15" rev-constraint-default="1.15" rev-constraint-dynamic="1.15" callerrev="2.6.3"/>
+				<artifacts>
+					<artifact name="snakeyaml" type="bundle" ext="jar" status="no" details="" size="269295" time="0" location="/srv/activator-dist-1.3.7/repository/org.yaml/snakeyaml/1.15/bundles/snakeyaml.jar">
+						<origin-location is-local="true" location="/srv/activator-dist-1.3.7/repository/org.yaml/snakeyaml/1.15/bundles/snakeyaml.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.dropwizard" name="dropwizard-validation">
+			<revision name="0.9.2" status="release" pubdate="20160120095953" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="23">
+				<metadata-artifact status="no" details="" size="55785" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard/dropwizard-validation/ivy-0.9.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/dropwizard/dropwizard-validation/0.9.2/dropwizard-validation-0.9.2.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-configuration" conf="compile, runtime" rev="0.9.2" rev-constraint-default="0.9.2" rev-constraint-dynamic="0.9.2" callerrev="0.9.2"/>
+				<caller organisation="io.dropwizard" name="dropwizard-jersey" conf="compile, runtime" rev="0.9.2" rev-constraint-default="0.9.2" rev-constraint-dynamic="0.9.2" callerrev="0.9.2"/>
+				<caller organisation="io.dropwizard" name="dropwizard-metrics" conf="compile, runtime" rev="0.9.2" rev-constraint-default="0.9.2" rev-constraint-dynamic="0.9.2" callerrev="0.9.2"/>
+				<caller organisation="io.dropwizard" name="dropwizard-core" conf="default, compile, runtime, master" rev="0.9.2" rev-constraint-default="0.9.2" rev-constraint-dynamic="0.9.2" callerrev="0.9.2"/>
+				<caller organisation="io.dropwizard" name="dropwizard-logging" conf="compile, runtime" rev="0.9.2" rev-constraint-default="0.9.2" rev-constraint-dynamic="0.9.2" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="dropwizard-validation" type="jar" ext="jar" status="no" details="" size="21682" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard/dropwizard-validation/jars/dropwizard-validation-0.9.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/dropwizard/dropwizard-validation/0.9.2/dropwizard-validation-0.9.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.commons" name="commons-lang3">
+			<revision name="3.4" status="release" pubdate="20151123131028" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/proper/commons-lang/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, default(compile), compile(*), master, default" position="32">
+				<metadata-artifact status="no" details="" size="11561" time="0" location="/Users/ebottabi/.ivy2/cache/org.apache.commons/commons-lang3/ivy-3.4.xml" searched="false" origin-is-local="true" origin-location="/srv/activator-dist-1.3.7/repository/org.apache.commons/commons-lang3/3.4/ivys/ivy.xml"/>
+				<caller organisation="io.dropwizard" name="dropwizard-configuration" conf="compile, runtime" rev="3.4" rev-constraint-default="3.4" rev-constraint-dynamic="3.4" callerrev="0.9.2"/>
+				<caller organisation="io.dropwizard" name="dropwizard-jersey" conf="compile, runtime" rev="3.4" rev-constraint-default="3.4" rev-constraint-dynamic="3.4" callerrev="0.9.2"/>
+				<caller organisation="default" name="rest" conf="test, compile, runtime" rev="3.4" rev-constraint-default="3.4" rev-constraint-dynamic="3.0" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="commons-lang3" type="jar" ext="jar" status="no" details="" size="434678" time="0" location="/srv/activator-dist-1.3.7/repository/org.apache.commons/commons-lang3/3.4/jars/commons-lang3.jar">
+						<origin-location is-local="true" location="/srv/activator-dist-1.3.7/repository/org.apache.commons/commons-lang3/3.4/jars/commons-lang3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+			<revision name="3.0" status="release" pubdate="20110719043605" resolver="sbt-chain" artresolver="sbt-chain" evicted="latest-revision" evicted-reason="" homepage="http://commons.apache.org/lang/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="-1">
+				<metadata-artifact status="no" details="" size="6679" time="0" location="/Users/ebottabi/.ivy2/cache/org.apache.commons/commons-lang3/ivy-3.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.0/commons-lang3-3.0.pom"/>
+				<evicted-by rev="3.4"/>
+				<caller organisation="default" name="rest" conf="test, compile, runtime" rev="3.0" rev-constraint-default="3.0" rev-constraint-dynamic="3.0" callerrev="1.0"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.glassfish" name="javax.el">
+			<revision name="3.0.0" status="release" pubdate="20130426000338" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://el-spec.java.net" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="28">
+				<license name="CDDL + GPLv2 with classpath exception" url="https://glassfish.dev.java.net/nonav/public/CDDL+GPL.html"/>
+				<metadata-artifact status="no" details="" size="4064" time="0" location="/Users/ebottabi/.ivy2/cache/org.glassfish/javax.el/ivy-3.0.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/glassfish/javax.el/3.0.0/javax.el-3.0.0.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-validation" conf="compile, runtime" rev="3.0.0" rev-constraint-default="3.0.0" rev-constraint-dynamic="3.0.0" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="javax.el" type="jar" ext="jar" status="no" details="" size="224014" time="0" location="/Users/ebottabi/.ivy2/cache/org.glassfish/javax.el/jars/javax.el-3.0.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/glassfish/javax.el/3.0.0/javax.el-3.0.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.hibernate" name="hibernate-validator">
+			<revision name="5.2.2.Final" status="release" pubdate="20150929141808" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="24">
+				<metadata-artifact status="no" details="" size="30212" time="0" location="/Users/ebottabi/.ivy2/cache/org.hibernate/hibernate-validator/ivy-5.2.2.Final.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/hibernate/hibernate-validator/5.2.2.Final/hibernate-validator-5.2.2.Final.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-validation" conf="compile, runtime" rev="5.2.2.Final" rev-constraint-default="5.2.2.Final" rev-constraint-dynamic="5.2.2.Final" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="hibernate-validator" type="jar" ext="jar" status="no" details="" size="697321" time="0" location="/Users/ebottabi/.ivy2/cache/org.hibernate/hibernate-validator/jars/hibernate-validator-5.2.2.Final.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/hibernate/hibernate-validator/5.2.2.Final/hibernate-validator-5.2.2.Final.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.fasterxml" name="classmate">
+			<revision name="1.1.0" status="release" pubdate="20140820012148" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/cowtowncoder/java-classmate" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="27">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3259" time="0" location="/Users/ebottabi/.ivy2/cache/com.fasterxml/classmate/ivy-1.1.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/classmate/1.1.0/classmate-1.1.0.pom"/>
+				<caller organisation="org.hibernate" name="hibernate-validator" conf="compile, runtime" rev="1.1.0" rev-constraint-default="1.1.0" rev-constraint-dynamic="1.1.0" callerrev="5.2.2.Final"/>
+				<artifacts>
+					<artifact name="classmate" type="bundle" ext="jar" status="no" details="" size="62873" time="0" location="/Users/ebottabi/.ivy2/cache/com.fasterxml/classmate/bundles/classmate-1.1.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/classmate/1.1.0/classmate-1.1.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.jboss.logging" name="jboss-logging">
+			<revision name="3.2.1.Final" status="release" pubdate="20151125083340" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.jboss.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="26">
+				<license name="Apache License, version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="9349" time="0" location="/Users/ebottabi/.ivy2/cache/org.jboss.logging/jboss-logging/ivy-3.2.1.Final.xml" searched="false" origin-is-local="true" origin-location="/srv/activator-dist-1.3.7/repository/org.jboss.logging/jboss-logging/3.2.1.Final/ivys/ivy.xml"/>
+				<caller organisation="org.hibernate" name="hibernate-validator" conf="compile, runtime" rev="3.2.1.Final" rev-constraint-default="3.2.1.Final" rev-constraint-dynamic="3.2.1.Final" callerrev="5.2.2.Final"/>
+				<artifacts>
+					<artifact name="jboss-logging" type="jar" ext="jar" status="no" details="" size="66711" time="0" location="/srv/activator-dist-1.3.7/repository/org.jboss.logging/jboss-logging/3.2.1.Final/jars/jboss-logging.jar">
+						<origin-location is-local="true" location="/srv/activator-dist-1.3.7/repository/org.jboss.logging/jboss-logging/3.2.1.Final/jars/jboss-logging.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="javax.validation" name="validation-api">
+			<revision name="1.1.0.Final" status="release" pubdate="20151125083333" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://beanvalidation.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="25">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3063" time="0" location="/Users/ebottabi/.ivy2/cache/javax.validation/validation-api/ivy-1.1.0.Final.xml" searched="false" origin-is-local="true" origin-location="/srv/activator-dist-1.3.7/repository/javax.validation/validation-api/1.1.0.Final/ivys/ivy.xml"/>
+				<caller organisation="org.hibernate" name="hibernate-validator" conf="compile, runtime" rev="1.1.0.Final" rev-constraint-default="1.1.0.Final" rev-constraint-dynamic="1.1.0.Final" callerrev="5.2.2.Final"/>
+				<caller organisation="org.glassfish.jersey.core" name="jersey-server" conf="compile, runtime" rev="1.1.0.Final" rev-constraint-default="1.1.0.Final" rev-constraint-dynamic="1.1.0.Final" callerrev="2.22.1"/>
+				<caller organisation="org.glassfish.jersey.ext" name="jersey-bean-validation" conf="compile, runtime" rev="1.1.0.Final" rev-constraint-default="1.1.0.Final" rev-constraint-dynamic="1.1.0.Final" callerrev="2.22.1"/>
+				<artifacts>
+					<artifact name="validation-api" type="jar" ext="jar" status="no" details="" size="63777" time="0" location="/srv/activator-dist-1.3.7/repository/javax.validation/validation-api/1.1.0.Final/jars/validation-api.jar">
+						<origin-location is-local="true" location="/srv/activator-dist-1.3.7/repository/javax.validation/validation-api/1.1.0.Final/jars/validation-api.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.dropwizard" name="dropwizard-jackson">
+			<revision name="0.9.2" status="release" pubdate="20160120095932" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="13">
+				<metadata-artifact status="no" details="" size="57293" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard/dropwizard-jackson/ivy-0.9.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/dropwizard/dropwizard-jackson/0.9.2/dropwizard-jackson-0.9.2.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-configuration" conf="compile, runtime" rev="0.9.2" rev-constraint-default="0.9.2" rev-constraint-dynamic="0.9.2" callerrev="0.9.2"/>
+				<caller organisation="io.dropwizard" name="dropwizard-jersey" conf="compile, runtime" rev="0.9.2" rev-constraint-default="0.9.2" rev-constraint-dynamic="0.9.2" callerrev="0.9.2"/>
+				<caller organisation="io.dropwizard" name="dropwizard-metrics" conf="compile, runtime" rev="0.9.2" rev-constraint-default="0.9.2" rev-constraint-dynamic="0.9.2" callerrev="0.9.2"/>
+				<caller organisation="io.dropwizard" name="dropwizard-core" conf="default, compile, runtime, master" rev="0.9.2" rev-constraint-default="0.9.2" rev-constraint-dynamic="0.9.2" callerrev="0.9.2"/>
+				<caller organisation="io.dropwizard" name="dropwizard-logging" conf="compile, runtime" rev="0.9.2" rev-constraint-default="0.9.2" rev-constraint-dynamic="0.9.2" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="dropwizard-jackson" type="jar" ext="jar" status="no" details="" size="20192" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard/dropwizard-jackson/jars/dropwizard-jackson-0.9.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/dropwizard/dropwizard-jackson/0.9.2/dropwizard-jackson-0.9.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="ch.qos.logback" name="logback-classic">
+			<revision name="1.1.3" status="release" pubdate="20151123133019" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="21">
+				<metadata-artifact status="no" details="" size="9798" time="0" location="/Users/ebottabi/.ivy2/cache/ch.qos.logback/logback-classic/ivy-1.1.3.xml" searched="false" origin-is-local="true" origin-location="/srv/activator-dist-1.3.7/repository/ch.qos.logback/logback-classic/1.1.3/ivys/ivy.xml"/>
+				<caller organisation="io.dropwizard" name="dropwizard-servlets" conf="compile, runtime" rev="1.1.3" rev-constraint-default="1.1.3" rev-constraint-dynamic="1.1.3" callerrev="0.9.2"/>
+				<caller organisation="io.dropwizard" name="dropwizard-jackson" conf="compile, runtime" rev="1.1.3" rev-constraint-default="1.1.3" rev-constraint-dynamic="1.1.3" callerrev="0.9.2"/>
+				<caller organisation="io.dropwizard" name="dropwizard-logging" conf="compile, runtime" rev="1.1.3" rev-constraint-default="1.1.3" rev-constraint-dynamic="1.1.3" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="logback-classic" type="jar" ext="jar" status="no" details="" size="280928" time="0" location="/srv/activator-dist-1.3.7/repository/ch.qos.logback/logback-classic/1.1.3/jars/logback-classic.jar">
+						<origin-location is-local="true" location="/srv/activator-dist-1.3.7/repository/ch.qos.logback/logback-classic/1.1.3/jars/logback-classic.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="ch.qos.logback" name="logback-core">
+			<revision name="1.1.3" status="release" pubdate="20151123133007" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="22">
+				<metadata-artifact status="no" details="" size="7451" time="0" location="/Users/ebottabi/.ivy2/cache/ch.qos.logback/logback-core/ivy-1.1.3.xml" searched="false" origin-is-local="true" origin-location="/srv/activator-dist-1.3.7/repository/ch.qos.logback/logback-core/1.1.3/ivys/ivy.xml"/>
+				<caller organisation="ch.qos.logback" name="logback-classic" conf="compile, runtime" rev="1.1.3" rev-constraint-default="1.1.3" rev-constraint-dynamic="1.1.3" callerrev="1.1.3"/>
+				<caller organisation="io.dropwizard" name="dropwizard-logging" conf="compile, runtime" rev="1.1.3" rev-constraint-default="1.1.3" rev-constraint-dynamic="1.1.3" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="logback-core" type="jar" ext="jar" status="no" details="" size="455041" time="0" location="/srv/activator-dist-1.3.7/repository/ch.qos.logback/logback-core/1.1.3/jars/logback-core.jar">
+						<origin-location is-local="true" location="/srv/activator-dist-1.3.7/repository/ch.qos.logback/logback-core/1.1.3/jars/logback-core.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.mockito" name="mockito-core">
+			<revision name="1.9.5" status="release" pubdate="20151125082336" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.mockito.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="85">
+				<license name="The MIT License" url="http://code.google.com/p/mockito/wiki/License"/>
+				<metadata-artifact status="no" details="" size="2657" time="0" location="/Users/ebottabi/.ivy2/cache/org.mockito/mockito-core/ivy-1.9.5.xml" searched="false" origin-is-local="true" origin-location="/srv/activator-dist-1.3.7/repository/org.mockito/mockito-core/1.9.5/ivys/ivy.xml"/>
+				<caller organisation="default" name="rest" conf="test, compile, runtime" rev="1.9.5" rev-constraint-default="1.9.5" rev-constraint-dynamic="1.9.5" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="mockito-core" type="jar" ext="jar" status="no" details="" size="1500011" time="0" location="/srv/activator-dist-1.3.7/repository/org.mockito/mockito-core/1.9.5/jars/mockito-core.jar">
+						<origin-location is-local="true" location="/srv/activator-dist-1.3.7/repository/org.mockito/mockito-core/1.9.5/jars/mockito-core.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.objenesis" name="objenesis">
+			<revision name="1.0" status="release" pubdate="20151125082337" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://objenesis.googlecode.com/svn/docs/index.html" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="86">
+				<license name="MIT License" url="http://objenesis.googlecode.com/svn/docs/license.html"/>
+				<metadata-artifact status="no" details="" size="2381" time="0" location="/Users/ebottabi/.ivy2/cache/org.objenesis/objenesis/ivy-1.0.xml" searched="false" origin-is-local="true" origin-location="/srv/activator-dist-1.3.7/repository/org.objenesis/objenesis/1.0/ivys/ivy.xml"/>
+				<caller organisation="org.mockito" name="mockito-core" conf="default, compile, runtime, master" rev="1.0" rev-constraint-default="1.0" rev-constraint-dynamic="1.0" callerrev="1.9.5"/>
+				<artifacts>
+					<artifact name="objenesis" type="jar" ext="jar" status="no" details="" size="28569" time="0" location="/srv/activator-dist-1.3.7/repository/org.objenesis/objenesis/1.0/jars/objenesis.jar">
+						<origin-location is-local="true" location="/srv/activator-dist-1.3.7/repository/org.objenesis/objenesis/1.0/jars/objenesis.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.slf4j" name="slf4j-api">
+			<revision name="1.7.12" status="release" pubdate="20151123132314" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="20">
+				<metadata-artifact status="no" details="" size="4638" time="0" location="/Users/ebottabi/.ivy2/cache/org.slf4j/slf4j-api/ivy-1.7.12.xml" searched="false" origin-is-local="true" origin-location="/srv/activator-dist-1.3.7/repository/org.slf4j/slf4j-api/1.7.12/ivys/ivy.xml"/>
+				<caller organisation="io.dropwizard" name="dropwizard-servlets" conf="compile, runtime" rev="1.7.12" rev-constraint-default="1.7.12" rev-constraint-dynamic="1.7.12" callerrev="0.9.2"/>
+				<caller organisation="org.slf4j" name="jcl-over-slf4j" conf="compile, runtime" rev="1.7.12" rev-constraint-default="1.7.12" rev-constraint-dynamic="1.7.12" callerrev="1.7.12"/>
+				<caller organisation="org.slf4j" name="log4j-over-slf4j" conf="compile, runtime" rev="1.7.12" rev-constraint-default="1.7.12" rev-constraint-dynamic="1.7.12" callerrev="1.7.12"/>
+				<caller organisation="io.dropwizard" name="dropwizard-lifecycle" conf="compile, runtime" rev="1.7.12" rev-constraint-default="1.7.12" rev-constraint-dynamic="1.7.12" callerrev="0.9.2"/>
+				<caller organisation="org.slf4j" name="jul-to-slf4j" conf="compile, runtime" rev="1.7.12" rev-constraint-default="1.7.12" rev-constraint-dynamic="1.7.12" callerrev="1.7.12"/>
+				<caller organisation="io.dropwizard" name="dropwizard-metrics" conf="compile, runtime" rev="1.7.12" rev-constraint-default="1.7.12" rev-constraint-dynamic="1.7.12" callerrev="0.9.2"/>
+				<caller organisation="io.dropwizard" name="dropwizard-jackson" conf="compile, runtime" rev="1.7.12" rev-constraint-default="1.7.12" rev-constraint-dynamic="1.7.12" callerrev="0.9.2"/>
+				<caller organisation="io.dropwizard.metrics" name="metrics-annotation" conf="compile, runtime" rev="1.7.12" rev-constraint-default="1.7.12" rev-constraint-dynamic="1.7.7" callerrev="3.1.2"/>
+				<caller organisation="io.dropwizard" name="dropwizard-logging" conf="compile, runtime" rev="1.7.12" rev-constraint-default="1.7.12" rev-constraint-dynamic="1.7.12" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="slf4j-api" type="jar" ext="jar" status="no" details="" size="32127" time="0" location="/srv/activator-dist-1.3.7/repository/org.slf4j/slf4j-api/1.7.12/jars/slf4j-api.jar">
+						<origin-location is-local="true" location="/srv/activator-dist-1.3.7/repository/org.slf4j/slf4j-api/1.7.12/jars/slf4j-api.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-joda">
+			<revision name="2.6.3" status="release" pubdate="20151012230700" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://wiki.fasterxml.com/JacksonModuleJoda" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="19">
+				<metadata-artifact status="no" details="" size="7238" time="0" location="/Users/ebottabi/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-joda/ivy-2.6.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-joda/2.6.3/jackson-datatype-joda-2.6.3.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-jackson" conf="compile, runtime" rev="2.6.3" rev-constraint-default="2.6.3" rev-constraint-dynamic="2.6.3" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="jackson-datatype-joda" type="bundle" ext="jar" status="no" details="" size="64295" time="0" location="/Users/ebottabi/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-joda/bundles/jackson-datatype-joda-2.6.3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-joda/2.6.3/jackson-datatype-joda-2.6.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.fasterxml.jackson.module" name="jackson-module-afterburner">
+			<revision name="2.6.3" status="release" pubdate="20151012194108" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://wiki.fasterxml.com/JacksonHome" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="18">
+				<metadata-artifact status="no" details="" size="8322" time="0" location="/Users/ebottabi/.ivy2/cache/com.fasterxml.jackson.module/jackson-module-afterburner/ivy-2.6.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/module/jackson-module-afterburner/2.6.3/jackson-module-afterburner-2.6.3.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-jackson" conf="compile, runtime" rev="2.6.3" rev-constraint-default="2.6.3" rev-constraint-dynamic="2.6.3" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="jackson-module-afterburner" type="bundle" ext="jar" status="no" details="" size="146352" time="0" location="/Users/ebottabi/.ivy2/cache/com.fasterxml.jackson.module/jackson-module-afterburner/bundles/jackson-module-afterburner-2.6.3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/module/jackson-module-afterburner/2.6.3/jackson-module-afterburner-2.6.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-guava">
+			<revision name="2.6.3" status="release" pubdate="20151012223934" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/FasterXML/jackson-datatype-guava" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="17">
+				<metadata-artifact status="no" details="" size="8292" time="0" location="/Users/ebottabi/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-guava/ivy-2.6.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-guava/2.6.3/jackson-datatype-guava-2.6.3.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-jackson" conf="compile, runtime" rev="2.6.3" rev-constraint-default="2.6.3" rev-constraint-dynamic="2.6.3" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="jackson-datatype-guava" type="bundle" ext="jar" status="no" details="" size="75382" time="0" location="/Users/ebottabi/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-guava/bundles/jackson-datatype-guava-2.6.3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-guava/2.6.3/jackson-datatype-guava-2.6.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-jdk7">
+			<revision name="2.6.3" status="release" pubdate="20151012224704" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="16">
+				<metadata-artifact status="no" details="" size="7132" time="0" location="/Users/ebottabi/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk7/ivy-2.6.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jdk7/2.6.3/jackson-datatype-jdk7-2.6.3.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-jackson" conf="compile, runtime" rev="2.6.3" rev-constraint-default="2.6.3" rev-constraint-dynamic="2.6.3" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="jackson-datatype-jdk7" type="bundle" ext="jar" status="no" details="" size="6380" time="0" location="/Users/ebottabi/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk7/bundles/jackson-datatype-jdk7-2.6.3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jdk7/2.6.3/jackson-datatype-jdk7-2.6.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.dropwizard" name="dropwizard-util">
+			<revision name="0.9.2" status="release" pubdate="20160120095907" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="9">
+				<metadata-artifact status="no" details="" size="55929" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard/dropwizard-util/ivy-0.9.2.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/dropwizard/dropwizard-util/0.9.2/dropwizard-util-0.9.2.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-servlets" conf="compile, runtime" rev="0.9.2" rev-constraint-default="0.9.2" rev-constraint-dynamic="0.9.2" callerrev="0.9.2"/>
+				<caller organisation="io.dropwizard" name="dropwizard-lifecycle" conf="compile, runtime" rev="0.9.2" rev-constraint-default="0.9.2" rev-constraint-dynamic="0.9.2" callerrev="0.9.2"/>
+				<caller organisation="io.dropwizard" name="dropwizard-core" conf="default, compile, runtime, master" rev="0.9.2" rev-constraint-default="0.9.2" rev-constraint-dynamic="0.9.2" callerrev="0.9.2"/>
+				<caller organisation="io.dropwizard" name="dropwizard-jackson" conf="compile, runtime" rev="0.9.2" rev-constraint-default="0.9.2" rev-constraint-dynamic="0.9.2" callerrev="0.9.2"/>
+				<caller organisation="io.dropwizard" name="dropwizard-validation" conf="compile, runtime" rev="0.9.2" rev-constraint-default="0.9.2" rev-constraint-dynamic="0.9.2" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="dropwizard-util" type="jar" ext="jar" status="no" details="" size="10913" time="0" location="/Users/ebottabi/.ivy2/cache/io.dropwizard/dropwizard-util/jars/dropwizard-util-0.9.2.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/dropwizard/dropwizard-util/0.9.2/dropwizard-util-0.9.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.fasterxml.jackson.core" name="jackson-databind">
+			<revision name="2.6.3" status="release" pubdate="20151012193152" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/FasterXML/jackson" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="15">
+				<metadata-artifact status="no" details="" size="8602" time="0" location="/Users/ebottabi/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/ivy-2.6.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.6.3/jackson-databind-2.6.3.pom"/>
+				<caller organisation="com.fasterxml.jackson.module" name="jackson-module-afterburner" conf="compile, runtime" rev="2.6.3" rev-constraint-default="2.6.3" rev-constraint-dynamic="2.6.3" callerrev="2.6.3"/>
+				<caller organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-joda" conf="compile, runtime" rev="2.6.3" rev-constraint-default="2.6.3" rev-constraint-dynamic="2.6.3" callerrev="2.6.3"/>
+				<caller organisation="io.dropwizard" name="dropwizard-jackson" conf="compile, runtime" rev="2.6.3" rev-constraint-default="2.6.3" rev-constraint-dynamic="2.6.3" callerrev="0.9.2"/>
+				<caller organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-jdk7" conf="compile, runtime" rev="2.6.3" rev-constraint-default="2.6.3" rev-constraint-dynamic="2.6.3" callerrev="2.6.3"/>
+				<caller organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-guava" conf="compile, runtime" rev="2.6.3" rev-constraint-default="2.6.3" rev-constraint-dynamic="2.6.3" callerrev="2.6.3"/>
+				<artifacts>
+					<artifact name="jackson-databind" type="bundle" ext="jar" status="no" details="" size="1170801" time="0" location="/Users/ebottabi/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.6.3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.6.3/jackson-databind-2.6.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.fasterxml.jackson.core" name="jackson-core">
+			<revision name="2.6.3" status="release" pubdate="20151012180759" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/FasterXML/jackson-core" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="14">
+				<metadata-artifact status="no" details="" size="6707" time="0" location="/Users/ebottabi/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/ivy-2.6.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.6.3/jackson-core-2.6.3.pom"/>
+				<caller organisation="com.fasterxml.jackson.dataformat" name="jackson-dataformat-yaml" conf="compile, runtime" rev="2.6.3" rev-constraint-default="2.6.3" rev-constraint-dynamic="2.6.3" callerrev="2.6.3"/>
+				<caller organisation="com.fasterxml.jackson.module" name="jackson-module-afterburner" conf="compile, runtime" rev="2.6.3" rev-constraint-default="2.6.3" rev-constraint-dynamic="2.6.3" callerrev="2.6.3"/>
+				<caller organisation="com.fasterxml.jackson.core" name="jackson-databind" conf="compile, runtime" rev="2.6.3" rev-constraint-default="2.6.3" rev-constraint-dynamic="2.6.3" callerrev="2.6.3"/>
+				<caller organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-joda" conf="compile, runtime" rev="2.6.3" rev-constraint-default="2.6.3" rev-constraint-dynamic="2.6.3" callerrev="2.6.3"/>
+				<caller organisation="io.dropwizard" name="dropwizard-jackson" conf="compile, runtime" rev="2.6.3" rev-constraint-default="2.6.3" rev-constraint-dynamic="2.6.3" callerrev="0.9.2"/>
+				<caller organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-jdk7" conf="compile, runtime" rev="2.6.3" rev-constraint-default="2.6.3" rev-constraint-dynamic="2.6.3" callerrev="2.6.3"/>
+				<caller organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-guava" conf="compile, runtime" rev="2.6.3" rev-constraint-default="2.6.3" rev-constraint-dynamic="2.6.3" callerrev="2.6.3"/>
+				<artifacts>
+					<artifact name="jackson-core" type="bundle" ext="jar" status="no" details="" size="258875" time="0" location="/Users/ebottabi/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles/jackson-core-2.6.3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.6.3/jackson-core-2.6.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="joda-time" name="joda-time">
+			<revision name="2.9" status="release" pubdate="20151024104829" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.joda.org/joda-time/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="12">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="6467" time="0" location="/Users/ebottabi/.ivy2/cache/joda-time/joda-time/ivy-2.9.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/joda-time/joda-time/2.9/joda-time-2.9.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-util" conf="compile, runtime" rev="2.9" rev-constraint-default="2.9" rev-constraint-dynamic="2.9" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="joda-time" type="jar" ext="jar" status="no" details="" size="625993" time="0" location="/Users/ebottabi/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.9.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/joda-time/joda-time/2.9/joda-time-2.9.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.code.findbugs" name="jsr305">
+			<revision name="3.0.1" status="release" pubdate="20151009060635" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://findbugs.sourceforge.net/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="11">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3142" time="0" location="/Users/ebottabi/.ivy2/cache/com.google.code.findbugs/jsr305/ivy-3.0.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1.pom"/>
+				<caller organisation="io.dropwizard" name="dropwizard-util" conf="compile, runtime" rev="3.0.1" rev-constraint-default="3.0.1" rev-constraint-dynamic="3.0.1" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="jsr305" type="jar" ext="jar" status="no" details="" size="19943" time="0" location="/Users/ebottabi/.ivy2/cache/com.google.code.findbugs/jsr305/jars/jsr305-3.0.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/google/code/findbugs/jsr305/3.0.1/jsr305-3.0.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.guava" name="guava">
+			<revision name="18.0" status="release" pubdate="20151123131133" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="10">
+				<metadata-artifact status="no" details="" size="5399" time="0" location="/Users/ebottabi/.ivy2/cache/com.google.guava/guava/ivy-18.0.xml" searched="false" origin-is-local="true" origin-location="/srv/activator-dist-1.3.7/repository/com.google.guava/guava/18.0/ivys/ivy.xml"/>
+				<caller organisation="io.dropwizard" name="dropwizard-lifecycle" conf="compile, runtime" rev="18.0" rev-constraint-default="18.0" rev-constraint-dynamic="18.0" callerrev="0.9.2"/>
+				<caller organisation="io.dropwizard" name="dropwizard-jackson" conf="compile, runtime" rev="18.0" rev-constraint-default="18.0" rev-constraint-dynamic="18.0" callerrev="0.9.2"/>
+				<caller organisation="io.dropwizard" name="dropwizard-util" conf="compile, runtime" rev="18.0" rev-constraint-default="18.0" rev-constraint-dynamic="18.0" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="guava" type="bundle" ext="jar" status="no" details="" size="2256213" time="0" location="/srv/activator-dist-1.3.7/repository/com.google.guava/guava/18.0/bundles/guava.jar">
+						<origin-location is-local="true" location="/srv/activator-dist-1.3.7/repository/com.google.guava/guava/18.0/bundles/guava.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="javax.servlet" name="javax.servlet-api">
+			<revision name="3.1.0" status="release" pubdate="20130426005239" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://servlet-spec.java.net" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="7">
+				<license name="CDDL + GPLv2 with classpath exception" url="https://glassfish.dev.java.net/nonav/public/CDDL+GPL.html"/>
+				<metadata-artifact status="no" details="" size="4150" time="0" location="/Users/ebottabi/.ivy2/cache/javax.servlet/javax.servlet-api/ivy-3.1.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.pom"/>
+				<caller organisation="org.eclipse.jetty" name="jetty-server" conf="compile, runtime" rev="3.1.0" rev-constraint-default="3.1.0" rev-constraint-dynamic="3.1.0" callerrev="9.2.13.v20150730"/>
+				<caller organisation="default" name="rest" conf="test, compile, runtime" rev="3.1.0" rev-constraint-default="3.1.0" rev-constraint-dynamic="3.1.0" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="javax.servlet-api" type="jar" ext="jar" status="no" details="" size="95806" time="0" location="/Users/ebottabi/.ivy2/cache/javax.servlet/javax.servlet-api/jars/javax.servlet-api-3.1.0.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.fasterxml.jackson.core" name="jackson-annotations">
+			<revision name="2.7.3" status="release" pubdate="20160316021424" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/FasterXML/jackson" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master, runtime(*), master(compile), compile(*)" position="6">
+				<metadata-artifact status="no" details="" size="6626" time="0" location="/Users/ebottabi/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/ivy-2.7.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.7.3/jackson-annotations-2.7.3.pom"/>
+				<caller organisation="com.fasterxml.jackson.core" name="jackson-databind" conf="compile, runtime" rev="2.6.0" rev-constraint-default="2.6.0" rev-constraint-dynamic="2.6.0" callerrev="2.6.3"/>
+				<caller organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-joda" conf="compile, runtime" rev="2.6.0" rev-constraint-default="2.6.0" rev-constraint-dynamic="2.6.0" callerrev="2.6.3"/>
+				<caller organisation="io.dropwizard" name="dropwizard-jackson" conf="compile, runtime" rev="2.6.0" rev-constraint-default="2.6.0" rev-constraint-dynamic="2.6.0" callerrev="0.9.2"/>
+				<caller organisation="default" name="rest" conf="test, compile, runtime" rev="2.7.3" rev-constraint-default="2.7.3" rev-constraint-dynamic="2.7.3" callerrev="1.0"/>
+				<caller organisation="io.dropwizard" name="dropwizard-util" conf="compile, runtime" rev="2.6.0" rev-constraint-default="2.6.0" rev-constraint-dynamic="2.6.0" callerrev="0.9.2"/>
+				<artifacts>
+					<artifact name="jackson-annotations" type="bundle" ext="jar" status="no" details="" size="50897" time="0" location="/Users/ebottabi/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.7.3.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.7.3/jackson-annotations-2.7.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+			<revision name="2.6.0" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="-1">
+				<evicted-by rev="2.7.3"/>
+				<caller organisation="com.fasterxml.jackson.core" name="jackson-databind" conf="compile, runtime" rev="2.6.0" rev-constraint-default="2.6.0" rev-constraint-dynamic="2.6.0" callerrev="2.6.3"/>
+				<caller organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-joda" conf="compile, runtime" rev="2.6.0" rev-constraint-default="2.6.0" rev-constraint-dynamic="2.6.0" callerrev="2.6.3"/>
+				<caller organisation="io.dropwizard" name="dropwizard-jackson" conf="compile, runtime" rev="2.6.0" rev-constraint-default="2.6.0" rev-constraint-dynamic="2.6.0" callerrev="0.9.2"/>
+				<caller organisation="default" name="rest" conf="test, compile, runtime" rev="2.6.0" rev-constraint-default="2.6.0" rev-constraint-dynamic="2.7.3" callerrev="1.0"/>
+				<caller organisation="io.dropwizard" name="dropwizard-util" conf="compile, runtime" rev="2.6.0" rev-constraint-default="2.6.0" rev-constraint-dynamic="2.6.0" callerrev="0.9.2"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.fluentd" name="fluent-logger">
+			<revision name="0.2.10" status="release" pubdate="20130710063043" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/fluent/fluent-logger-java" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="1">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3455" time="0" location="/Users/ebottabi/.ivy2/cache/org.fluentd/fluent-logger/ivy-0.2.10.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/fluentd/fluent-logger/0.2.10/fluent-logger-0.2.10.pom"/>
+				<caller organisation="default" name="rest" conf="test, compile, runtime" rev="0.2.10" rev-constraint-default="0.2.10" rev-constraint-dynamic="0.2.10" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="fluent-logger" type="jar" ext="jar" status="no" details="" size="18129" time="0" location="/Users/ebottabi/.ivy2/cache/org.fluentd/fluent-logger/jars/fluent-logger-0.2.10.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/fluentd/fluent-logger/0.2.10/fluent-logger-0.2.10.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.msgpack" name="msgpack">
+			<revision name="0.6.7" status="release" pubdate="20121209065936" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://msgpack.org/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="2">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3591" time="0" location="/Users/ebottabi/.ivy2/cache/org.msgpack/msgpack/ivy-0.6.7.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/msgpack/msgpack/0.6.7/msgpack-0.6.7.pom"/>
+				<caller organisation="org.fluentd" name="fluent-logger" conf="default, compile, runtime, master" rev="0.6.7" rev-constraint-default="0.6.7" rev-constraint-dynamic="0.6.7" callerrev="0.2.10"/>
+				<artifacts>
+					<artifact name="msgpack" type="bundle" ext="jar" status="no" details="" size="277931" time="0" location="/Users/ebottabi/.ivy2/cache/org.msgpack/msgpack/bundles/msgpack-0.6.7.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/msgpack/msgpack/0.6.7/msgpack-0.6.7.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.googlecode.json-simple" name="json-simple">
+			<revision name="1.1.1" status="release" pubdate="20120321061134" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://code.google.com/p/json-simple/" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="3">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2860" time="0" location="/Users/ebottabi/.ivy2/cache/com.googlecode.json-simple/json-simple/ivy-1.1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.pom"/>
+				<caller organisation="default" name="rest" conf="test, compile, runtime" rev="1.1.1" rev-constraint-default="1.1.1" rev-constraint-dynamic="1.1.1" callerrev="1.0"/>
+				<caller organisation="org.msgpack" name="msgpack" conf="compile, runtime" rev="1.1.1" rev-constraint-default="1.1.1" rev-constraint-dynamic="1.1.1" callerrev="0.6.7"/>
+				<artifacts>
+					<artifact name="json-simple" type="bundle" ext="jar" status="no" details="" size="23931" time="0" location="/Users/ebottabi/.ivy2/cache/com.googlecode.json-simple/json-simple/bundles/json-simple-1.1.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.commons" name="commons-math3">
+			<revision name="3.1.1" status="release" pubdate="20130109171459" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/math/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="0">
+				<metadata-artifact status="no" details="" size="8123" time="0" location="/Users/ebottabi/.ivy2/cache/org.apache.commons/commons-math3/ivy-3.1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/apache/commons/commons-math3/3.1.1/commons-math3-3.1.1.pom"/>
+				<caller organisation="default" name="rest" conf="test, compile, runtime" rev="3.1.1" rev-constraint-default="3.1.1" rev-constraint-dynamic="3.1.1" callerrev="1.0"/>
+				<artifacts>
+					<artifact name="commons-math3" type="jar" ext="jar" status="no" details="" size="1599627" time="0" location="/Users/ebottabi/.ivy2/cache/org.apache.commons/commons-math3/jars/commons-math3-3.1.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/apache/commons/commons-math3/3.1.1/commons-math3-3.1.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="junit" name="junit">
+			<revision name="4.10" status="release" pubdate="20151125083834" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://junit.org" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="4">
+				<license name="Common Public License Version 1.0" url="http://www.opensource.org/licenses/cpl1.0.txt"/>
+				<metadata-artifact status="no" details="" size="2760" time="0" location="/Users/ebottabi/.ivy2/cache/junit/junit/ivy-4.10.xml" searched="false" origin-is-local="true" origin-location="/srv/activator-dist-1.3.7/repository/junit/junit/4.10/ivys/ivy.xml"/>
+				<caller organisation="com.googlecode.json-simple" name="json-simple" conf="compile, runtime" rev="4.10" rev-constraint-default="4.10" rev-constraint-dynamic="4.10" callerrev="1.1.1"/>
+				<artifacts>
+					<artifact name="junit" type="jar" ext="jar" status="no" details="" size="253160" time="0" location="/srv/activator-dist-1.3.7/repository/junit/junit/4.10/jars/junit.jar">
+						<origin-location is-local="true" location="/srv/activator-dist-1.3.7/repository/junit/junit/4.10/jars/junit.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.hamcrest" name="hamcrest-core">
+			<revision name="1.1" status="release" pubdate="20151125083705" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="5">
+				<metadata-artifact status="no" details="" size="4328" time="0" location="/Users/ebottabi/.ivy2/cache/org.hamcrest/hamcrest-core/ivy-1.1.xml" searched="false" origin-is-local="true" origin-location="/srv/activator-dist-1.3.7/repository/org.hamcrest/hamcrest-core/1.1/ivys/ivy.xml"/>
+				<caller organisation="junit" name="junit" conf="compile, runtime" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="4.10"/>
+				<caller organisation="org.mockito" name="mockito-core" conf="default, compile, runtime, master" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="1.9.5"/>
+				<artifacts>
+					<artifact name="hamcrest-core" type="jar" ext="jar" status="no" details="" size="76643" time="0" location="/srv/activator-dist-1.3.7/repository/org.hamcrest/hamcrest-core/1.1/jars/hamcrest-core.jar">
+						<origin-location is-local="true" location="/srv/activator-dist-1.3.7/repository/org.hamcrest/hamcrest-core/1.1/jars/hamcrest-core.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+	</dependencies>
+</ivy-report>

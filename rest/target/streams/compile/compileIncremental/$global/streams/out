@@ -1,0 +1,53 @@
+[0m[[0mdebug[0m] [0m[0m
+[0m[[0mdebug[0m] [0mInitial source changes: [0m
+[0m[[0mdebug[0m] [0m	removed:Set()[0m
+[0m[[0mdebug[0m] [0m	added: Set(/opt/datioml/rest/src/main/java/com/siqueries/datioml/RestServer.java, /opt/datioml/rest/src/main/java/com/siqueries/datioml/config/ServiceConfiguration.java, /opt/datioml/rest/src/main/java/com/siqueries/datioml/resources/HomeResource.java)[0m
+[0m[[0mdebug[0m] [0m	modified: Set()[0m
+[0m[[0mdebug[0m] [0mRemoved products: Set()[0m
+[0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set()[0m
+[0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
+[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(/opt/datioml/rest/src/main/java/com/siqueries/datioml/RestServer.java, /opt/datioml/rest/src/main/java/com/siqueries/datioml/config/ServiceConfiguration.java, /opt/datioml/rest/src/main/java/com/siqueries/datioml/resources/HomeResource.java)[0m
+[0m[[0mdebug[0m] [0m[0m
+[0m[[0mdebug[0m] [0mSources indirectly invalidated by:[0m
+[0m[[0mdebug[0m] [0m	product: Set()[0m
+[0m[[0mdebug[0m] [0m	binary dep: Set()[0m
+[0m[[0mdebug[0m] [0m	external source: Set()[0m
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/opt/datioml/rest/src/main/java/com/siqueries/datioml/RestServer.java, /opt/datioml/rest/src/main/java/com/siqueries/datioml/config/ServiceConfiguration.java, /opt/datioml/rest/src/main/java/com/siqueries/datioml/resources/HomeResource.java)[0m
+[0m[[0mdebug[0m] [0mRecompiling all 3 sources: invalidated sources (3) exceeded 50.0% of all sources[0m
+[0m[[0minfo[0m] [0mCompiling 3 Java sources to /opt/datioml/rest/target/classes...[0m
+[0m[[0mdebug[0m] [0mAttempting to call com.sun.tools.javac.api.JavacTool@56acfbe5 directly...[0m
+[0m[[0mdebug[0m] [0mJava compilation took 1.255405009 s[0m
+[0m[[0mdebug[0m] [0mJava analysis took 0.287119977 s[0m
+[0m[[0mdebug[0m] [0mJava compile + analysis took 1.642870958 s[0m
+[0m[[0mdebug[0m] [0mInvalidating /opt/datioml/rest/src/main/java/com/siqueries/datioml/RestServer.java...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /opt/datioml/rest/src/main/java/com/siqueries/datioml/RestServer.java...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/opt/datioml/rest/src/main/java/com/siqueries/datioml/RestServer.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/opt/datioml/rest/src/main/java/com/siqueries/datioml/RestServer.java)[0m
+[0m[[0mdebug[0m] [0mThe /opt/datioml/rest/src/main/java/com/siqueries/datioml/RestServer.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	notify, production, getConfigurationClass, wait, logger, equals, run, RestServer, main, notifyAll, getName, initialize, <init>, toString, getClass, hashCode.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mName hashing optimization doesn't apply to non-Scala dependency: /opt/datioml/rest/src/main/java/com/siqueries/datioml/RestServer.java[0m
+[0m[[0mdebug[0m] [0mInvalidating /opt/datioml/rest/src/main/java/com/siqueries/datioml/config/ServiceConfiguration.java...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /opt/datioml/rest/src/main/java/com/siqueries/datioml/config/ServiceConfiguration.java...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/opt/datioml/rest/src/main/java/com/siqueries/datioml/config/ServiceConfiguration.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/opt/datioml/rest/src/main/java/com/siqueries/datioml/config/ServiceConfiguration.java)[0m
+[0m[[0mdebug[0m] [0mThe /opt/datioml/rest/src/main/java/com/siqueries/datioml/config/ServiceConfiguration.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	notify, getServerFactory, wait, setMetricsFactory, getLoggingFactory, setLoggingFactory, equals, getMetricsFactory, notifyAll, <init>, ServiceConfiguration, toString, setServerFactory, getClass, hashCode.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mName hashing optimization doesn't apply to non-Scala dependency: /opt/datioml/rest/src/main/java/com/siqueries/datioml/config/ServiceConfiguration.java[0m
+[0m[[0mdebug[0m] [0mName hashing optimization doesn't apply to non-Scala dependency: /opt/datioml/rest/src/main/java/com/siqueries/datioml/RestServer.java[0m
+[0m[[0mdebug[0m] [0mInvalidating /opt/datioml/rest/src/main/java/com/siqueries/datioml/resources/HomeResource.java...[0m
+[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from /opt/datioml/rest/src/main/java/com/siqueries/datioml/resources/HomeResource.java...[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(/opt/datioml/rest/src/main/java/com/siqueries/datioml/resources/HomeResource.java)[0m
+[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(/opt/datioml/rest/src/main/java/com/siqueries/datioml/resources/HomeResource.java)[0m
+[0m[[0mdebug[0m] [0mThe /opt/datioml/rest/src/main/java/com/siqueries/datioml/resources/HomeResource.java source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	notify, wait, logger, equals, notifyAll, <init>, HomeResource, toString, getClass, index, hashCode.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mName hashing optimization doesn't apply to non-Scala dependency: /opt/datioml/rest/src/main/java/com/siqueries/datioml/RestServer.java[0m
+[0m[[0mdebug[0m] [0mName hashing optimization doesn't apply to non-Scala dependency: /opt/datioml/rest/src/main/java/com/siqueries/datioml/resources/HomeResource.java[0m
+[0m[[0mdebug[0m] [0mNew invalidations:[0m
+[0m[[0mdebug[0m] [0m	Set()[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set()[0m
+[0m[[0mdebug[0m] [0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
+[0m[[0mdebug[0m] [0m	Set()[0m
+[0m[[0mdebug[0m] [0mAll newly invalidated sources after taking into account (previously) recompiled sources:Set()[0m
