@@ -16,6 +16,6 @@ Platform Details:
 
 1: Data sources and data formats: CSV, TSV, MySQL, PostgreSQL.
 
-2: Data exploration: Analyzing and visualizing the characteristics and structure of the data is considered one of the most imparative tasks in data science. Most often, choosing the right machine learning algorithm depends on the understanding a user has about the data that he/she is dealing with. In order to identify relations among the features of datasets, know statistical metrics such as mean, standard deviation and skewness, indentify class imbalancies and frequencies, and to visualize how data is structured, WSO2 ML provides the following graphs which are considered as standard methods of data visualizaiton.
+2: Data exploration: Analyzing and visualizing the characteristics and structure of the data is considered one of the most imparative tasks in data science. Most often, choosing the right machine learning algorithm depends on the understanding a user has about the data that he/she is dealing with. In order to identify relations among the features of datasets, know statistical metrics such as mean, standard deviation and skewness, indentify class imbalancies and frequencies, and to visualize how data is structured, DatioML provides the following graphs which are considered as standard methods of data visualizaiton.
 
 3: 
